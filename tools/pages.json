@@ -3,168 +3,196 @@
     "stem": "About",
     "title": "About Saad Tamari · AI Engineer and SKAI Group co-founder",
     "desc": "About Saad Tamari: AI engineer and co-founder of SKAI Group in Amman, Jordan. How I build, the tools I use, and 15+ competition wins.",
-    "url": "https://saadaltamari.com/about"
+    "url": "https://saadaltamari.com/about",
+    "img": "https://saadaltamari.com/assets/og/about.jpg"
   },
   "case-context-engine": {
     "stem": "Case-ContextEngine",
     "title": "Context Engine · AI case study by Saad Tamari",
     "desc": "A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and why?",
-    "url": "https://saadaltamari.com/case-context-engine"
+    "url": "https://saadaltamari.com/case-context-engine",
+    "img": "https://saadaltamari.com/assets/og/case-context-engine.jpg"
   },
   "case-control-panel": {
     "stem": "Case-ControlPanel",
     "title": "Agent Control Panel · AI case study by Saad Tamari",
     "desc": "Mission control for 350+ agents across 35+ apps. One login, and every agent is observable, measurable and remotely controllable.",
-    "url": "https://saadaltamari.com/case-control-panel"
+    "url": "https://saadaltamari.com/case-control-panel",
+    "img": "https://saadaltamari.com/assets/og/case-control-panel.jpg"
   },
   "case-dubljly": {
     "stem": "Case-Dubljly",
     "title": "Dubljly · AI case study by Saad Tamari",
     "desc": "Paste an English lecture. Get it back in Arabic: a synced voice-over, subtitles, a study pack, and a tutor that knows the lecture.",
-    "url": "https://saadaltamari.com/case-dubljly"
+    "url": "https://saadaltamari.com/case-dubljly",
+    "img": "https://saadaltamari.com/assets/og/case-dubljly.jpg"
   },
   "case-flora": {
     "stem": "Case-Flora",
     "title": "Flora AI · AI case study by Saad Tamari",
     "desc": "An Arabic AI nutritionist that builds meal plans from your profile, and the first startup I founded.",
-    "url": "https://saadaltamari.com/case-flora"
+    "url": "https://saadaltamari.com/case-flora",
+    "img": "https://saadaltamari.com/assets/og/case-flora.jpg"
   },
   "case-hemolock": {
     "stem": "Case-Hemolock",
     "title": "Hemolock · AI case study by Saad Tamari",
     "desc": "An emergency kit for a medical-device team. Flip one switch, and it sends your GPS location and places a phone call.",
-    "url": "https://saadaltamari.com/case-hemolock"
+    "url": "https://saadaltamari.com/case-hemolock",
+    "img": "https://saadaltamari.com/assets/og/case-hemolock.jpg"
   },
   "case-investor-day": {
     "stem": "Case-InvestorDay",
     "title": "Investor Day App · AI case study by Saad Tamari",
     "desc": "An invite-only networking engine for 300 founders, VCs and LPs at Willis Tower, Chicago. One question per person: who should I talk to right now?",
-    "url": "https://saadaltamari.com/case-investor-day"
+    "url": "https://saadaltamari.com/case-investor-day",
+    "img": "https://saadaltamari.com/assets/og/case-investor-day.jpg"
   },
   "case-jo-fotara": {
     "stem": "Case-JoFotara",
     "title": "JoFotara POS · AI case study by Saad Tamari",
     "desc": "A multi-tenant point of sale built to Jordan’s UBL 2.1 e-invoicing standard, with zero third-party packages.",
-    "url": "https://saadaltamari.com/case-jo-fotara"
+    "url": "https://saadaltamari.com/case-jo-fotara",
+    "img": "https://saadaltamari.com/assets/og/case-jo-fotara.jpg"
   },
   "case-mcp-hub": {
     "stem": "Case-MCPHub",
     "title": "MCP Hub · AI case study by Saad Tamari",
     "desc": "An air-traffic controller for data. Every app talks to the Hub, the Hub talks to the database, and no app holds a credential.",
-    "url": "https://saadaltamari.com/case-mcp-hub"
+    "url": "https://saadaltamari.com/case-mcp-hub",
+    "img": "https://saadaltamari.com/assets/og/case-mcp-hub.jpg"
   },
   "case-masraf": {
     "stem": "Case-Masraf",
     "title": "Masraf · AI case study by Saad Tamari",
     "desc": "An Arabic-first voice co-pilot for freelancers’ money. Speak a command, and the app answers while it moves the screen with you.",
-    "url": "https://saadaltamari.com/case-masraf"
+    "url": "https://saadaltamari.com/case-masraf",
+    "img": "https://saadaltamari.com/assets/og/case-masraf.jpg"
   },
   "case-product-enhancer": {
     "stem": "Case-ProductEnhancer",
     "title": "AI Product Enhancer · AI case study by Saad Tamari",
     "desc": "Reviews an AI product end to end from its demo video, its memo and its architecture, then writes the prompt that fixes it.",
-    "url": "https://saadaltamari.com/case-product-enhancer"
+    "url": "https://saadaltamari.com/case-product-enhancer",
+    "img": "https://saadaltamari.com/assets/og/case-product-enhancer.jpg"
   },
   "case-skills-os": {
     "stem": "Case-SkillsOS",
     "title": "Agent Skills OS · AI case study by Saad Tamari",
     "desc": "A content system and test lab for the skills AI agents load at runtime. Skills are A/B tested against real agents, and the losers get rewritten.",
-    "url": "https://saadaltamari.com/case-skills-os"
+    "url": "https://saadaltamari.com/case-skills-os",
+    "img": "https://saadaltamari.com/assets/og/case-skills-os.jpg"
   },
   "index": {
     "stem": "Main",
     "title": "Saad Tamari · Full-Stack AI Engineer in Amman, Jordan",
     "desc": "Saad Tamari, AI engineer in Amman. I design and ship AI products end to end: the agents, the data underneath, and the app people use. 20+ projects shipped.",
-    "url": "https://saadaltamari.com/"
+    "url": "https://saadaltamari.com/",
+    "img": "https://saadaltamari.com/assets/img/og.jpg"
   },
   "writing-agi-benchmarks": {
     "stem": "Note-AGIBenchmarks",
     "title": "An AGI benchmark score is not a coding score · Saad Tamari",
     "desc": "GPT-6 Astra hit 99.9% on ARC-AGI-3 and gained about two points on the coding indexes. Here is why both are true, and what it says about reading any benchmark.",
-    "url": "https://saadaltamari.com/writing-agi-benchmarks"
+    "url": "https://saadaltamari.com/writing-agi-benchmarks",
+    "img": "https://saadaltamari.com/assets/og/writing-agi-benchmarks.jpg"
   },
   "writing-agent-orchestration": {
     "stem": "Note-AgentOrchestration",
     "title": "Agent orchestration, the hard parts · Saad Tamari",
     "desc": "The loop is ten lines. Everything that makes it survive real traffic lives around it: reliability you can measure, side effects that happen once, a context…",
-    "url": "https://saadaltamari.com/writing-agent-orchestration"
+    "url": "https://saadaltamari.com/writing-agent-orchestration",
+    "img": "https://saadaltamari.com/assets/og/writing-agent-orchestration.jpg"
   },
   "writing-arabic-dubbing": {
     "stem": "Note-ArabicDubbing",
     "title": "Dubbing Arabic without drifting off the speaker · Saad Tamari",
     "desc": "The obvious way to dub a lecture is to translate it, voice it and join the clips. In Arabic, that slowly pulls the voice away from the face.",
-    "url": "https://saadaltamari.com/writing-arabic-dubbing"
+    "url": "https://saadaltamari.com/writing-arabic-dubbing",
+    "img": "https://saadaltamari.com/assets/og/writing-arabic-dubbing.jpg"
   },
   "writing-bypass-gateway": {
     "stem": "Note-BypassGateway",
     "title": "When not to use your own gateway · Saad Tamari",
     "desc": "I built a gateway that every app in the firm goes through. Then I built one platform that deliberately goes around it, and I would defend that call in any…",
-    "url": "https://saadaltamari.com/writing-bypass-gateway"
+    "url": "https://saadaltamari.com/writing-bypass-gateway",
+    "img": "https://saadaltamari.com/assets/og/writing-bypass-gateway.jpg"
   },
   "writing-context-budget": {
     "stem": "Note-ContextBudget",
     "title": "Why my context engine leaves budget unspent · Saad Tamari",
     "desc": "Past a point, adding context makes answers worse while cost and latency keep rising. Most retrieval systems have nothing that ever says stop. I built one…",
-    "url": "https://saadaltamari.com/writing-context-budget"
+    "url": "https://saadaltamari.com/writing-context-budget",
+    "img": "https://saadaltamari.com/assets/og/writing-context-budget.jpg"
   },
   "writing-control-plane": {
     "stem": "Note-ControlPlane",
     "title": "Mission control for 350 agents · Saad Tamari",
     "desc": "Once 350+ agents run across 35+ apps, the first question stops being “is the model good?” It becomes: which agent is failing, what is it costing, and can I…",
-    "url": "https://saadaltamari.com/writing-control-plane"
+    "url": "https://saadaltamari.com/writing-control-plane",
+    "img": "https://saadaltamari.com/assets/og/writing-control-plane.jpg"
   },
   "writing-fair-matching": {
     "stem": "Note-FairMatching",
     "title": "Let the code decide, let the model explain · Saad Tamari",
     "desc": "300 founders, VCs and LPs in one room for one day, and every attendee asking the same question: who should I be talking to right now, and what do I say?",
-    "url": "https://saadaltamari.com/writing-fair-matching"
+    "url": "https://saadaltamari.com/writing-fair-matching",
+    "img": "https://saadaltamari.com/assets/og/writing-fair-matching.jpg"
   },
   "writing-gateway-200": {
     "stem": "Note-Gateway200",
     "title": "A 200 doesn’t mean your data is useful · Saad Tamari",
     "desc": "Every write through the gateway came back 200. The dashboards were still empty. So I stopped trusting status codes and audited the data itself.",
-    "url": "https://saadaltamari.com/writing-gateway-200"
+    "url": "https://saadaltamari.com/writing-gateway-200",
+    "img": "https://saadaltamari.com/assets/og/writing-gateway-200.jpg"
   },
   "writing-rag-eval": {
     "stem": "Note-RAGEval",
     "title": "Evaluating RAG end to end without fooling yourself",
     "desc": "One accuracy number blends six different failures. Here is how to measure each layer, tie it to the end-to-end result, and report intervals that hold up.",
-    "url": "https://saadaltamari.com/writing-rag-eval"
+    "url": "https://saadaltamari.com/writing-rag-eval",
+    "img": "https://saadaltamari.com/assets/og/writing-rag-eval.jpg"
   },
   "writing-rag-retrieval": {
     "stem": "Note-RAGRetrieval",
     "title": "RAG past the tutorial: where retrieval quietly breaks",
     "desc": "Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.",
-    "url": "https://saadaltamari.com/writing-rag-retrieval"
+    "url": "https://saadaltamari.com/writing-rag-retrieval",
+    "img": "https://saadaltamari.com/assets/og/writing-rag-retrieval.jpg"
   },
   "writing-schema-contract": {
     "stem": "Note-SchemaContract",
     "title": "28 apps, 756 connections: why the database is the contract",
     "desc": "Decasonic had 300+ agents spread across 10 to 15 products, each with its own database and no shared memory. I replaced the mesh with one rule: every app…",
-    "url": "https://saadaltamari.com/writing-schema-contract"
+    "url": "https://saadaltamari.com/writing-schema-contract",
+    "img": "https://saadaltamari.com/assets/og/writing-schema-contract.jpg"
   },
   "writing-skills-loop": {
     "stem": "Note-SkillsLoop",
     "title": "Skills that get better by losing · Saad Tamari",
     "desc": "A skill is a block of instructions an agent loads at runtime. Most teams write them once and hope. We tested them against real agents, and let the losers be…",
-    "url": "https://saadaltamari.com/writing-skills-loop"
+    "url": "https://saadaltamari.com/writing-skills-loop",
+    "img": "https://saadaltamari.com/assets/og/writing-skills-loop.jpg"
   },
   "writing": {
     "stem": "Notes",
     "title": "Writing on RAG, agents and AI evaluation · Saad Tamari",
     "desc": "Field guides and build notes by Saad Tamari on RAG, agent orchestration, evaluation, context engineering, MCP gateways and AGI benchmarks.",
-    "url": "https://saadaltamari.com/writing"
+    "url": "https://saadaltamari.com/writing",
+    "img": "https://saadaltamari.com/assets/og/writing.jpg"
   },
   "services": {
     "stem": "Services",
     "title": "Hire an AI Engineer · Services by Saad Tamari",
     "desc": "Hire Saad Tamari, AI engineer: full-time, part-time or contract roles, AI product builds, agent and RAG systems, and hands-on AI workshops for teams.",
-    "url": "https://saadaltamari.com/services"
+    "url": "https://saadaltamari.com/services",
+    "img": "https://saadaltamari.com/assets/og/services.jpg"
   },
   "work": {
     "stem": "Work",
     "title": "Work · 11 AI case studies by Saad Tamari",
     "desc": "Selected work by Saad Tamari: 11 case studies across agent platforms, MCP gateways, context engines, Arabic AI products and full-stack apps.",
-    "url": "https://saadaltamari.com/work"
+    "url": "https://saadaltamari.com/work",
+    "img": "https://saadaltamari.com/assets/og/work.jpg"
   }
 }

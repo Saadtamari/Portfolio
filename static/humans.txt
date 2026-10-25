@@ -4,5 +4,5 @@ Contact: saadaltamari@gmail.com
 From: Amman, Jordan
 
 /* SITE */
-Designed in Claude Design, hosted on Cloudflare Workers.
+Hosted on Cloudflare Workers.
 Fonts: Anybody, Geist, Geist Mono, Instrument Serif

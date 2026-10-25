@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the deployable site (public/) from the Claude Design source pages.
+"""Build the deployable site (public/) from the design source pages.
 
   python3 tools/build.py            # writes public/
   node tools/prerender.cjs          # bakes the rendered HTML into every page + llms-full.txt
@@ -168,9 +168,11 @@ def main():
             title = title.replace('Saad Al-Tamari', 'Saad Tamari')
         desc = DESC.get(name) or describe(s)
         url = SITE + path_of(name)
+        og_img = SITE + ('/assets/og/' + name + '.jpg' if os.path.exists(os.path.join(STATIC, 'assets/og', name + '.jpg'))
+                         else '/assets/img/og.jpg')
         title = seo_title(name, title)
         s = re.sub(r'<title>.*?</title>', '<title>' + html.escape(title, quote=False) + '</title>', s, count=1, flags=re.S)
-        info[name] = {'stem': p, 'title': title, 'desc': desc, 'url': url}
+        info[name] = {'stem': p, 'title': title, 'desc': desc, 'url': url, 'img': og_img}
 
         # ---------- structured data ----------
         graph = []
@@ -207,7 +209,7 @@ def main():
                    '@id': url + '#article', 'headline': head, 'description': desc, 'url': url,
                    'mainEntityOfPage': url, 'author': {'@id': PERSON_ID}, 'publisher': {'@id': PERSON_ID},
                    'datePublished': PUBLISHED, 'dateModified': TODAY, 'inLanguage': 'en',
-                   'image': SITE + '/assets/img/og.jpg', 'isPartOf': {'@id': WEBSITE_ID}}
+                   'image': og_img, 'isPartOf': {'@id': WEBSITE_ID}}
             if m.get('kind'):
                 art['articleSection'] = m['kind']
             if m.get('mins'):
@@ -236,20 +238,24 @@ def main():
             '<link rel="apple-touch-icon" href="/apple-touch-icon.png">',
             '<link rel="manifest" href="/site.webmanifest">',
             '<link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt">',
+            '<link rel="alternate" type="application/atom+xml" title="Saad Tamari · Writing" href="/feed.xml">',
+            f'<link rel="alternate" hreflang="en" href="{url}">',
+            f'<link rel="alternate" hreflang="x-default" href="{url}">',
             f'<meta property="og:type" content="{og_type}">',
             '<meta property="og:site_name" content="Saad Tamari">',
             '<meta property="og:locale" content="en_US">',
             f'<meta property="og:title" content="{e(title)}">',
             f'<meta property="og:description" content="{e(desc)}">',
             f'<meta property="og:url" content="{url}">',
-            f'<meta property="og:image" content="{SITE}/assets/img/og.jpg">',
+            f'<meta property="og:image" content="{og_img}">',
             '<meta property="og:image:width" content="1200">',
             '<meta property="og:image:height" content="630">',
-            '<meta property="og:image:alt" content="Saad Tamari, AI Engineer">',
+            f'<meta property="og:image:alt" content="{e(title)}">',
             '<meta name="twitter:card" content="summary_large_image">',
             f'<meta name="twitter:title" content="{e(title)}">',
             f'<meta name="twitter:description" content="{e(desc)}">',
-            f'<meta name="twitter:image" content="{SITE}/assets/img/og.jpg">',
+            f'<meta name="twitter:image" content="{og_img}">',
+            f'<meta name="twitter:image:alt" content="{e(title)}">',
             '<link rel="preconnect" href="https://fonts.googleapis.com">',
             '<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>',
             # Prerendered HTML (#ssr) is for crawlers and no-JS readers; the live components replace it.
@@ -283,10 +289,31 @@ def main():
     order = ['index', 'work', 'services', 'about', 'writing'] + sorted(n for n in info if n.startswith('case-')) + \
             sorted(n for n in info if n.startswith('writing-'))
     pri = lambda n: '1.0' if n == 'index' else ('0.8' if n in ('work', 'services', 'about', 'writing') else '0.6')
+    def imgs(n):
+        out = [info[n]['img']] + ([SITE + '/assets/img/portrait.jpg'] if n in ('index', 'about') else [])
+        return ''.join(f'<image:image><image:loc>{u}</image:loc></image:image>' for u in out)
     open(os.path.join(OUT, 'sitemap.xml'), 'w').write(
-        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n' +
-        ''.join(f'  <url><loc>{info[n]["url"]}</loc><lastmod>{TODAY}</lastmod><priority>{pri(n)}</priority></url>\n'
+        '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" '
+        'xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n' +
+        ''.join(f'  <url><loc>{info[n]["url"]}</loc><lastmod>{TODAY}</lastmod><priority>{pri(n)}</priority>{imgs(n)}</url>\n'
                 for n in order) + '</urlset>\n')
+
+    # Atom feed for the writing
+    X = lambda t: html.escape(t, quote=True)
+    posts = [n for n in order if n.startswith('writing-')]
+    feed = ['<?xml version="1.0" encoding="utf-8"?>', '<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">',
+            '  <title>Saad Tamari · Writing</title>',
+            '  <subtitle>Field guides and build notes on RAG, agents, evaluation and AI infrastructure.</subtitle>',
+            f'  <link href="{SITE}/writing"/>', f'  <link rel="self" href="{SITE}/feed.xml"/>',
+            f'  <id>{SITE}/writing</id>', f'  <updated>{TODAY}T00:00:00Z</updated>',
+            f'  <author><name>Saad Tamari</name><uri>{SITE}/</uri></author>', f'  <icon>{SITE}/favicon.svg</icon>']
+    for n in posts:
+        i = info[n]; head = i['title'].rsplit(' · Saad Tamari', 1)[0]
+        feed += ['  <entry>', f'    <title>{X(head)}</title>', f'    <link href="{i["url"]}"/>', f'    <id>{i["url"]}</id>',
+                 f'    <published>{PUBLISHED}T00:00:00Z</published>', f'    <updated>{TODAY}T00:00:00Z</updated>',
+                 f'    <summary>{X(i["desc"])}</summary>', '  </entry>']
+    feed.append('</feed>')
+    open(os.path.join(OUT, 'feed.xml'), 'w', encoding='utf-8').write('\n'.join(feed) + '\n')
 
     bots = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User',
             'anthropic-ai', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Googlebot', 'Bingbot',
@@ -306,6 +333,7 @@ def main():
             f'- [{info[n]["title"].split(" · ")[0] if n != "index" else "Home"}]({info[n]["url"]}): {info[n]["desc"]}\n'
             for n in ns)
     llms += (f'\n## Optional\n\n- [Full text of every page]({SITE}/llms-full.txt): all pages as plain Markdown\n'
+             f'- [Writing feed (Atom)]({SITE}/feed.xml)\n'
              f'- [CV, AI Specialist (PDF)]({SITE}/cv/Saad-Al-Tamari-CV-AI-Specialist.pdf)\n'
              f'- [CV, AI Trainer (PDF)]({SITE}/cv/Saad-Al-Tamari-CV-AI-Trainer.pdf)\n')
     open(os.path.join(OUT, 'llms.txt'), 'w', encoding='utf-8').write(llms)

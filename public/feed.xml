@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+  <title>Saad Tamari · Writing</title>
+  <subtitle>Field guides and build notes on RAG, agents, evaluation and AI infrastructure.</subtitle>
+  <link href="https://saadaltamari.com/writing"/>
+  <link rel="self" href="https://saadaltamari.com/feed.xml"/>
+  <id>https://saadaltamari.com/writing</id>
+  <updated>2026-10-25T00:00:00Z</updated>
+  <author><name>Saad Tamari</name><uri>https://saadaltamari.com/</uri></author>
+  <icon>https://saadaltamari.com/favicon.svg</icon>
+  <entry>
+    <title>Agent orchestration, the hard parts</title>
+    <link href="https://saadaltamari.com/writing-agent-orchestration"/>
+    <id>https://saadaltamari.com/writing-agent-orchestration</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>The loop is ten lines. Everything that makes it survive real traffic lives around it: reliability you can measure, side effects that happen once, a context…</summary>
+  </entry>
+  <entry>
+    <title>An AGI benchmark score is not a coding score</title>
+    <link href="https://saadaltamari.com/writing-agi-benchmarks"/>
+    <id>https://saadaltamari.com/writing-agi-benchmarks</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>GPT-6 Astra hit 99.9% on ARC-AGI-3 and gained about two points on the coding indexes. Here is why both are true, and what it says about reading any benchmark.</summary>
+  </entry>
+  <entry>
+    <title>Dubbing Arabic without drifting off the speaker</title>
+    <link href="https://saadaltamari.com/writing-arabic-dubbing"/>
+    <id>https://saadaltamari.com/writing-arabic-dubbing</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>The obvious way to dub a lecture is to translate it, voice it and join the clips. In Arabic, that slowly pulls the voice away from the face.</summary>
+  </entry>
+  <entry>
+    <title>When not to use your own gateway</title>
+    <link href="https://saadaltamari.com/writing-bypass-gateway"/>
+    <id>https://saadaltamari.com/writing-bypass-gateway</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>I built a gateway that every app in the firm goes through. Then I built one platform that deliberately goes around it, and I would defend that call in any…</summary>
+  </entry>
+  <entry>
+    <title>Why my context engine leaves budget unspent</title>
+    <link href="https://saadaltamari.com/writing-context-budget"/>
+    <id>https://saadaltamari.com/writing-context-budget</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>Past a point, adding context makes answers worse while cost and latency keep rising. Most retrieval systems have nothing that ever says stop. I built one…</summary>
+  </entry>
+  <entry>
+    <title>Mission control for 350 agents</title>
+    <link href="https://saadaltamari.com/writing-control-plane"/>
+    <id>https://saadaltamari.com/writing-control-plane</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>Once 350+ agents run across 35+ apps, the first question stops being “is the model good?” It becomes: which agent is failing, what is it costing, and can I…</summary>
+  </entry>
+  <entry>
+    <title>Let the code decide, let the model explain</title>
+    <link href="https://saadaltamari.com/writing-fair-matching"/>
+    <id>https://saadaltamari.com/writing-fair-matching</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>300 founders, VCs and LPs in one room for one day, and every attendee asking the same question: who should I be talking to right now, and what do I say?</summary>
+  </entry>
+  <entry>
+    <title>A 200 doesn’t mean your data is useful</title>
+    <link href="https://saadaltamari.com/writing-gateway-200"/>
+    <id>https://saadaltamari.com/writing-gateway-200</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>Every write through the gateway came back 200. The dashboards were still empty. So I stopped trusting status codes and audited the data itself.</summary>
+  </entry>
+  <entry>
+    <title>Evaluating RAG end to end without fooling yourself</title>
+    <link href="https://saadaltamari.com/writing-rag-eval"/>
+    <id>https://saadaltamari.com/writing-rag-eval</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>One accuracy number blends six different failures. Here is how to measure each layer, tie it to the end-to-end result, and report intervals that hold up.</summary>
+  </entry>
+  <entry>
+    <title>RAG past the tutorial: where retrieval quietly breaks</title>
+    <link href="https://saadaltamari.com/writing-rag-retrieval"/>
+    <id>https://saadaltamari.com/writing-rag-retrieval</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.</summary>
+  </entry>
+  <entry>
+    <title>28 apps, 756 connections: why the database is the contract</title>
+    <link href="https://saadaltamari.com/writing-schema-contract"/>
+    <id>https://saadaltamari.com/writing-schema-contract</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>Decasonic had 300+ agents spread across 10 to 15 products, each with its own database and no shared memory. I replaced the mesh with one rule: every app…</summary>
+  </entry>
+  <entry>
+    <title>Skills that get better by losing</title>
+    <link href="https://saadaltamari.com/writing-skills-loop"/>
+    <id>https://saadaltamari.com/writing-skills-loop</id>
+    <published>2026-10-25T00:00:00Z</published>
+    <updated>2026-10-25T00:00:00Z</updated>
+    <summary>A skill is a block of instructions an agent loads at runtime. Most teams write them once and hope. We tested them against real agents, and let the losers be…</summary>
+  </entry>
+</feed>

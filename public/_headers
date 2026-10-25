@@ -28,3 +28,13 @@
 
 /llms-full.txt
   Content-Type: text/plain; charset=utf-8
+
+/feed.xml
+  Content-Type: application/atom+xml; charset=utf-8
+  Cache-Control: public, max-age=3600
+
+/sitemap.xml
+  Cache-Control: public, max-age=3600
+
+/assets/og/*
+  Cache-Control: public, max-age=604800

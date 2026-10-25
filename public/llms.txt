@@ -63,5 +63,6 @@
 ## Optional
 
 - [Full text of every page](https://saadaltamari.com/llms-full.txt): all pages as plain Markdown
+- [Writing feed (Atom)](https://saadaltamari.com/feed.xml)
 - [CV, AI Specialist (PDF)](https://saadaltamari.com/cv/Saad-Al-Tamari-CV-AI-Specialist.pdf)
 - [CV, AI Trainer (PDF)](https://saadaltamari.com/cv/Saad-Al-Tamari-CV-AI-Trainer.pdf)

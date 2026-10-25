@@ -64,9 +64,7 @@ body { margin: 0; background: #EFEDE7; }
 .spot { background: radial-gradient(680px circle at var(--mx, 75%) var(--my, -10%), color-mix(in srgb, var(--sig) 11%, transparent), transparent 62%), var(--inv); }
 
 /* ---------- progress + island nav ---------- */
-.prog { position: fixed; top: 0; left: 0; right: 0; height: 3px; background: var(--sig); transform-origin: 0 50%; transform: scaleX(0); z-index: 90; pointer-events: none; }
-@supports (animation-timeline: scroll()) { .prog { animation: prog linear both; animation-timeline: scroll(root); } }
-@keyframes prog { to { transform: scaleX(1); } }
+.prog { display: none; }
 
 .island { position: sticky; top: 14px; z-index: 80; height: 0; display: flex; justify-content: center; align-items: flex-start; pointer-events: none; }
 .isl {
