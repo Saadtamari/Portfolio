@@ -58,7 +58,13 @@ If you add a new image in the design canvas, add its `/_blob/<id>` and local pat
 
 ## Hosting
 
-The site is hosted on Cloudflare Workers (worker `saadaltamari`), connected to this repo with Workers Builds. The settings are: deploy command `npx wrangler deploy`, no build command. The custom domain `saadaltamari.com` is set in `wrangler.jsonc`, and `www` redirects to the root domain.
+The site is hosted on Cloudflare Workers (worker `saadaltamari`), connected to this repo with Workers Builds. The settings are: deploy command `npx wrangler deploy`, no build command. The custom domain `saadaltamari.com` is set in `wrangler.jsonc`.
+
+Cloudflare zone settings that go with it:
+
+- `www`: a proxied A record (`192.0.2.1`) plus the redirect rule "Redirect from WWW to root" (301, keeps the path and query).
+- Always Use HTTPS and Crawler Hints are on.
+- Email anti-spoofing: `v=spf1 -all` on the root and `v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s` on `_dmarc`. Change both if you start sending email from this domain.
 
 To run it by hand instead:
 
