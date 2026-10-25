@@ -1,0 +1,6345 @@
+# Saad Tamari: full site text
+
+Source: https://saadaltamari.com/ · Summary: https://saadaltamari.com/llms.txt
+
+
+---
+
+# Saad Tamari · Full-Stack AI Engineer in Amman, Jordan
+
+URL: https://saadaltamari.com/
+
+Hi, I'm Saad Tamari
+
+## AI Engineer
+
+I design and ship AI products end to end: the agents, the data underneath, and the app people actually use.
+
+Full-stack · Python & TypeScript · Amman
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Hiring? Get my CV
+
+Open to
+
+Full-time roles
+
+Freelance & contract
+
+Team workshops
+
+Status board: open to work, focused on agent systems, shipping Dubljly and the Agent Control Panel
+
+20+ production projects
+
+15+ competition wins
+
+Local time · 22:31 GMT+3
+
+Decasonic
+
+SKAI Group
+
+Yarmouk University
+
+AIESEC
+
+42 Amman
+
+Bader Wa Sahem
+
+NASA Space Apps Challenge
+
+Next Step
+
+IEEE NETC
+
+SHAI For AI
+
+Orange Coding Academy
+
+Ahli Fintech Incubator
+
+ZINC
+
+Elite Excellence Academy
+
+Qafza
+
+Envisionsai
+
+mySTARTUP
+
+Al-Ahliyya Amman University
+
+CodeLine
+
+01 / Proof
+
+### Numbers I can defend.
+
+20+
+
+production projects shipped since 2023. 11 of them are live right now.
+
+15+
+
+competition wins, including 1st place in the Arab World.
+
+350+
+
+agents registered in one control plane, each with a live health score.
+
+11 times
+
+signal throughput after I audited the data writes of 9 connected apps.
+
+87
+
+tables in the schema every app shares. 73 enums, shipped as one 1,571-line migration.
+
+300
+
+founders, VCs and LPs ran on my event platform, live at Willis Tower, Chicago.
+
+02 / What I can do for you
+
+### Pick the door that fits.
+
+01
+
+Full-time · part-time · contract
+
+For teams hiring
+
+An AI engineer on your team
+
+Full-time, part-time or as a contractor, remote or in Amman. I build the agents, the data layer and the product around them, and help the team adopt AI properly.
+
+Get my CV
+
+02
+
+Freelance · SKAI Group
+
+For founders and companies
+
+Your AI product, built properly
+
+Agents, RAG, web and mobile, from idea to launch. Scope fits the budget; quality doesn’t bend.
+
+Book a call
+
+03
+
+Audits · fixes
+
+For teams already running AI
+
+Fix the agents you already have
+
+Audits and builds for what breaks first: observability, gateways, context and data quality.
+
+See use cases
+
+04
+
+Workshops
+
+For teams learning
+
+Claude Code, agents and MCP
+
+Hands-on half or full days in Arabic or English. Your team leaves with a working setup.
+
+Book a workshop
+
+03 / Shipped
+
+### Shipped, not slides.
+
+Flora AI
+
+Founder · 2024
+
+An Arabic AI nutritionist.
+
+Case study
+
+Agent Control Panel
+
+Live
+
+Mission control for 350+ agents.
+
+Case study
+
+Dubljly
+
+Live · 2026
+
+English lectures, dubbed into Arabic.
+
+Case study
+
+JoFotara POS
+
+Zero dependencies
+
+Tax-ready invoices for Jordan.
+
+Case study
+
+MCP Hub
+
+Live
+
+Every app. One gateway.
+
+Case study
+
+Investor Day
+
+Live · Chicago
+
+300 people, matched live.
+
+Case study
+
+Context Engine
+
+Live
+
+What should the agent see?
+
+Case study
+
+Skills OS
+
+Live
+
+Skills that improve by losing.
+
+Case study
+
+Masraf
+
+SalamHack 2026
+
+A voice co-pilot for freelancers’ money.
+
+Case study
+
+AI Product Enhancer
+
+Live
+
+From demo video to build prompt.
+
+Case study
+
+Hemolock
+
+Hardware · 2026
+
+One switch. GPS and a call.
+
+Case study
+
+Browse all 38 projects
+
+[Want one of these? Book a call](https://cal.com/saad-altamari-y0upir/30min)
+
+04 / About
+
+### Full-stack AI engineer. Thinks like a founder.
+
+Agent orchestration
+
+MCP & gateways
+
+RAG & context engineering
+
+Founder · SKAI Group
+
+I build AI products end to end: the app people use, the agents behind it, and the data and infrastructure that keep both honest. I founded a startup and co-founded a studio, so I build for what ships, what it costs and who pays for it. Then I teach teams to work the same way.
+
+Python & TypeScript
+
+LLM & ML engineering
+
+Claude Code & skills
+
+Product & business sense
+
+Amman, Jordan
+
+BSc Data Science & AI · Yarmouk University '25
+
+42 Amman
+
+Arabic & English
+
+05 / Path
+
+### Where I've built.
+
+Jan 2025 → Now
+
+Current
+
+SKAI Group
+
+#### SKAI Group
+
+Co-founder & Software Engineer
+
+AI-native software studio · Amman
+
+- "We scale the scope to your budget. Never the quality." AI systems, web, mobile and SaaS for startups and SMEs.
+
+- Met 30+ leads in person and closed 4 clients in 2 weeks.
+
+- Took the Agent Control Panel to product: accepted into mySTARTUP in 2026.
+
+Dec 2025 → Sep 2026
+
+Decasonic
+
+#### Decasonic
+
+AI Operations Manager · contract
+
+US AI-native venture firm · Remote
+
+- Architected the firm's AI platform from scratch: the shared schema, the MCP Hub gateway and the Agent Control Panel.
+
+- Put 350+ agents and 35+ apps on one memory, logging and feedback layer, and built 15 core products myself.
+
+- Audited data writes across 9 apps, fixed 5 failure classes and lifted signal throughput 11×.
+
+Feb 2025 → Jan 2026
+
+Bader Wa Sahem
+
+#### Bader Wa Sahem
+
+Head of IT
+
+Social-impact nonprofit · Amman
+
+- Built a 2-team, 18-person IT department from the ground up.
+
+- Designed the AI and technology transformation roadmap for Bader and its 4 sub-organizations.
+
+Every role and win
+
+06 / Recognition
+
+### 15+ wins. 20+ hackathons.
+
+1st
+
+Arab World · 7 countries
+
+#### Artificial Intelligence Olympiad
+
+Math & Algorithms track · 2023
+
+2nd
+
+Arab World · and 1st in Jordan
+
+#### Datadrip Hackathon
+
+Power BI over 1GB+ of banking data. Featured on Jordan TV · 2025
+
+1st
+
+Jordan
+
+#### HAAC · Hakeem Competition
+
+National competition · 2025
+
+All 15+ wins and hackathons
+
+> “deep AI infrastructure capabilities”
+
+Paul Hsu · Founder & CEO, Decasonic · on LinkedIn
+
+07 / Writing
+
+### How I think.
+
+Field guide
+
+12 min read
+
+1.15×
+
+rank 1 vs rank 10 under RRF at k = 60
+
+#### RAG past the tutorial: where retrieval quietly breaks
+
+Field guide
+
+10 min read
+
+1.7% vs 60%
+
+same pass@1, very different pass^8
+
+#### Agent orchestration, the hard parts
+
+Field guide
+
+8 min read
+
+62.7 vs 99.9
+
+same model, two harnesses, ARC-AGI-3
+
+#### An AGI benchmark score is not a coding score
+
+All writing
+
+08 / Contact
+
+### Let's build
+
+Need an AI engineer on your team, a product built from idea to launch, or your people trained to build with AI? I'm open to full-time roles, contracts and SKAI Group projects.
+
+Book a 30-min call
+
+Download CV
+
+Email
+
+saadaltamari@gmail.com
+
+Based in
+
+Amman, Jordan · GMT+3
+
+Local time
+
+22:31
+
+Elsewhere
+
+LinkedIn · GitHub · Upwork · SKAI
+
+© 2026 Saad Tamari
+
+Designed and engineered in Amman · 22:31
+
+Back to top ↑
+
+
+---
+
+# Work · 11 AI case studies by Saad Tamari
+
+URL: https://saadaltamari.com/work
+
+Home
+
+/
+
+Work
+
+## Work
+
+Everything I've built, from an 87-table agent platform to an emergency kit with a GPS chip.
+
+38
+
+projects on this page, 2023 to now
+
+15
+
+apps I built at Decasonic
+
+11
+
+case studies
+
+7
+
+kinds of work, from infra to hardware
+
+11 case studies
+
+Case 01
+
+Agent Control Panel
+
+350+ agents, one control plane
+
+Case 02
+
+MCP Hub
+
+One gateway for 35+ apps
+
+Case 03
+
+Context Engine
+
+What each agent should see
+
+Case 04
+
+Investor Day
+
+300 people, matched live
+
+Case 05
+
+Dubljly
+
+English lectures, dubbed into Arabic
+
+Case 06
+
+Agent Skills OS
+
+Skills that improve by losing
+
+Case 07
+
+AI Product Enhancer
+
+From demo video to fix prompt
+
+Case 08
+
+Flora AI
+
+An Arabic AI nutritionist
+
+Case 09
+
+JoFotara POS
+
+Tax-ready invoices, zero dependencies
+
+Case 10
+
+Masraf · مصرف
+
+A voice co-pilot for freelancers
+
+Case 11
+
+Hemolock
+
+One switch, GPS and a call
+
+Or pick a folder
+
+### Everything · 38
+
+Dark cards open a full case study. The rest open build notes right here.
+
+01 · Agent infrastructure
+
+Live
+
+Agent Control Panel
+
+Mission control for 350+ agents across 35+ apps.
+
+Express 5
+
+React
+
+Postgres
+
+Read the case study →
+
+02 · Agent infrastructure
+
+Live
+
+MCP Hub
+
+One gateway between 35+ apps and the database. No app holds a credential.
+
+Next.js 14
+
+Supabase
+
+SSE
+
+Read the case study →
+
+03 · Agent infrastructure
+
+Live
+
+Context Engine
+
+A context compiler that decides what each agent sees, and proves why.
+
+Node 24
+
+TypeScript
+
+Zod
+
+Read the case study →
+
+06 · Agent infrastructure
+
+Live
+
+Agent Skills OS
+
+A CMS and test lab for the skills agents load at runtime.
+
+TypeScript
+
+OpenRouter
+
+Zod
+
+Read the case study →
+
+08 · AI products
+
+Live
+
+Investor Day App
+
+Mobile app, admin console and API for a 300-person investor event. Built solo.
+
+Expo
+
+React 19
+
+Express 5
+
+Read the case study →
+
+10 · AI products
+
+Live
+
+AI Product Enhancer
+
+Reviews an AI product end to end, then writes the prompt to fix it.
+
+Gemini
+
+OpenRouter
+
+React
+
+Read the case study →
+
+16 · Startups & studio
+
+Live
+
+Dubljly · دبلجلي
+
+English lectures, dubbed into Arabic, with a study pack and a tutor.
+
+FastAPI
+
+React 18
+
+Whisper
+
+Read the case study →
+
+17 · Startups & studio
+
+Shipped
+
+Flora AI
+
+An Arabic AI nutritionist, and my first startup.
+
+Python
+
+LangChain
+
+RAG
+
+Read the case study →
+
+18 · Startups & studio
+
+Shipped
+
+JoFotara POS
+
+A point of sale for Jordan’s UBL 2.1 e-invoicing, with zero dependencies.
+
+Node.js
+
+SQLite
+
+UBL 2.1
+
+Read the case study →
+
+29 · Hackathons
+
+Prototype
+
+Masraf · مصرف
+
+An Arabic-first voice co-pilot for freelancers’ money.
+
+Next.js 14
+
+Groq
+
+Supabase
+
+Read the case study →
+
+37 · Hardware
+
+Prototype
+
+Hemolock
+
+One switch. GPS location to your contacts, and a phone call, in seconds.
+
+ESP32
+
+NEO-6M GPS
+
+Twilio
+
+Read the case study →
+
+How the Decasonic platform fits together
+
+### One database. Every app. Every agent.
+
+01
+
+AI Sourcing
+
+Deal flow
+
+One of 35+ apps. It writes signals and companies through the Hub and holds no database key.
+
+02
+
+AI Coach
+
+Team guidance
+
+Read-heavy: it pulls what it needs from the shared schema.
+
+03
+
+Action Portal
+
+Briefings, actions
+
+Reads Supabase directly with a read-only key, because analytics need joins the Hub doesn't do.
+
+04
+
+Investor Day
+
+Event platform
+
+300 attendees, live in Chicago.
+
+05
+
+Meeting OS
+
+Recording to actions
+
+10-stage pipeline: transcript to decisions, actions and follow-ups.
+
++30
+
+More apps
+
+35+ in total
+
+Each new app is onboarded in minutes with a generated integration client.
+
+GW
+
+MCP Hub
+
+Gateway · table and column permissions · logs
+
+Every write passes here. Keys are validated, permissions enforced, errors translated.
+
+DB
+
+DDS v3 · Supabase
+
+87 tables · 73 enums · 1 migration
+
+The contract between all apps. 35 entities, 41 junction tables, 9 structural decisions.
+
+CP
+
+Agent Control Panel
+
+350+ agents observed
+
+Heartbeats, health scores, remote control, prompt versioning.
+
+CE
+
+Context Engine
+
+What each agent sees
+
+Composes right-sized, replayable context inside a token budget.
+
+SK
+
+Skills OS
+
+206 agents synced
+
+Skills are A/B tested against real agents and injected at runtime.
+
+DS
+
+Data Sync
+
+CRM, Notion, transcripts
+
+Bulk writes go direct, with an audit log, because routing them through the Hub would be 395+ round trips.
+
+Apps write → Hub → one schema → platform services read
+
+Hover a node for the reasoning
+
+Want one of these for your team? Book 30 minutes and tell me what you're building. Hiring instead? My CV is one click away.
+
+[Book a call](https://cal.com/saad-altamari-y0upir/30min)
+
+Get my CV
+
+Contact
+
+### Let's build
+
+Want one of these for your team, or the person who built them? I'm open to full-time roles, contracts and SKAI Group projects.
+
+Book a 30-min call
+
+See use cases
+
+Download CV
+
+© 2026 Saad Tamari
+
+Amman · 22:31 GMT+3
+
+Back to top ↑
+
+
+---
+
+# Hire an AI Engineer · Services by Saad Tamari
+
+URL: https://saadaltamari.com/services
+
+Home
+
+/
+
+Services
+
+## Use cases
+
+The problems I get called for, what I build for each one, and the proof that I've built it before.
+
+Work as
+
+Full-time · contract · studio · workshops
+
+Core
+
+AI products, agents & enablement
+
+Languages
+
+Arabic & English
+
+Based in
+
+Amman, Jordan · GMT+3
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Hiring? Get my CV
+
+01 / If this sounds familiar
+
+### Five problems I solve.
+
+Use case 01
+
+#### Invisible agents
+
+"We have agents in production and nobody can tell which ones are working, what they cost, or why one broke."
+
+What I build
+
+A control plane: heartbeats and health scores for every agent, cost per agent and per app, remote pause, model swap and prompt push, versioned prompts with rollback.
+
+Proof
+
+Agent Control Panel · 350+ agents across 35+ apps
+
+Read the case study
+
+Use case 02
+
+#### Keys everywhere
+
+"Every app holds its own database credentials, schema changes break things silently, and onboarding an app takes days."
+
+What I build
+
+One gateway with table- and column-level permissions, request logs, friendly errors and rate limits, plus AI-generated integration clients for each new app.
+
+Proof
+
+MCP Hub · onboarding went from days to minutes
+
+Read the case study
+
+Use case 03
+
+#### Wrong context
+
+"Our agents see too much, too little or the wrong thing, and we can't explain why an answer came out the way it did."
+
+What I build
+
+A context layer that ranks sources by value per token, keeps untrusted text out of instructions, and records every decision so it can be replayed and audited.
+
+Proof
+
+Context Engine · 9-stage pipeline, byte-for-byte replay
+
+Read the case study
+
+Use case 04
+
+#### AI-curious team
+
+"Our engineers want to use Claude Code, skills and MCP properly, not just paste into a chat window."
+
+What I do
+
+Hands-on workshops and setup sprints: Claude Code, writing skills, wiring MCP, building agents your team can trust, in Arabic or English.
+
+Proof
+
+190+ people across four workshops, plus five diploma cohorts
+
+Book a workshop
+
+Use case 05
+
+#### An MVP that holds
+
+"We need a product built, our budget is real but small, and we can't afford something that falls over."
+
+What we build
+
+With SKAI Group, the studio I co-founded: AI systems, web, mobile and SaaS. We scale the scope to your budget. Never the quality.
+
+Proof
+
+4 clients closed in 2 weeks · Al Delma ISO training platform
+
+Visit SKAI Group
+
+02 / How a project runs
+
+### Four steps. No mystery.
+
+Step 1 of 4
+
+#### Map
+
+Before I suggest anything, I measure what exists: a snapshot query of your data, a list of every app and agent, and where they actually break. Arguments start from numbers, not adjectives.
+
+You keep
+
+A written picture of your system, with counts
+
+Failure classes ranked by impact
+
+A short list of what not to touch
+
+03 / The Claude ecosystem
+
+### Taught by someone who ships with it.
+
+Claude Code is my daily driver. I've built an MCP gateway, a skills CMS that A/B tests skills against real agents, and a control plane for 350+ agents.
+
+That's the difference between a workshop that demos features and one that leaves your team with a working setup.
+
+Claude Code
+
+Skills
+
+MCP
+
+Agents
+
+Cowork
+
+Claude Design
+
+04 / Workshops
+
+### Admit one team.
+
+Hands-on workshop · team admission
+
+Claude Code Ecosystem
+
+Format
+
+Half day or full day
+
+Seats
+
+Your team
+
+Language
+
+Arabic or English
+
+Where
+
+On-site, Amman
+
+Also available: Build Your Own AI Agent, Build Your Own AI Chatbot, and AI for Business.
+
+Stub · keep this
+
+Book it
+
+Full-time
+
+AI engineering roles across the stack: agents, RAG and data, and the product around them.
+
+Open now
+
+Contract
+
+Scoped builds and audits: a gateway, a control plane, a context layer, or a database health check.
+
+Hourly or per project
+
+Studio
+
+Products and MVPs through SKAI Group, the AI-native studio I co-founded in Amman.
+
+Scope scaled to budget
+
+Workshops
+
+Training for engineering teams and companies adopting the Claude toolkit.
+
+Half or full day
+
+Not sure which one fits? Book 30 minutes. We'll work out what you need, and I'll tell you honestly if I'm not the right person for it.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+05 / Questions people ask
+
+01
+
+Do you only work with Claude?
+
+No. My production systems run Claude, OpenAI, Gemini, Grok, Groq and OpenRouter behind one gateway with fallback chains. Claude is where I go deepest, and the toolkit I teach.
+
+02
+
+Can you work inside our existing stack?
+
+Yes. My default is TypeScript, Node, PostgreSQL or Supabase and React, with Python for ML. Either way, I start by mapping what already exists before I suggest changing anything.
+
+03
+
+What does an audit actually look like?
+
+A snapshot query of what's really in your database, then failure classes with counts and a fix plan for each. The last one I ran found 5 failure classes across 9 apps and took signal throughput from 78 to 864.
+
+04
+
+Can you show us code?
+
+Systems I built for employers belong to them, so for those I walk you through architecture and decisions. My own projects I can show directly.
+
+05
+
+Arabic or English?
+
+Both. I write, teach and present in either.
+
+Contact
+
+### Let's build
+
+Tell me which use case is yours. One email is enough to start.
+
+Book a 30-min call
+
+[Hire on Upwork](https://www.upwork.com/freelancers/saadaltamari)
+
+Download CV
+
+Trainer CV
+
+© 2026 Saad Tamari
+
+Amman · 22:31 GMT+3
+
+Back to top ↑
+
+
+---
+
+# About Saad Tamari · AI Engineer and SKAI Group co-founder
+
+URL: https://saadaltamari.com/about
+
+Home
+
+/
+
+About
+
+## About
+
+From Yarmouk in 2021 to an AI platform for 350+ agents in 2026. I'm Saad, a full-stack AI engineer and co-founder from Amman. I build AI products end to end, and the load-bearing parts underneath them.
+
+Open to
+
+Full-time · freelance · workshops
+
+Role
+
+Full-stack AI Engineer
+
+Based in
+
+Amman, Jordan · remote-friendly
+
+Studied
+
+BSc Data Science & AI · Yarmouk '25 · 42 Amman
+
+01 / The story so far
+
+### Six years, one direction.
+
+2021
+
+#### Started Data Science & AI at Yarmouk University.
+
+Four years of data science, machine learning and AI in Irbid. Graduated in 2025 with a GPA of 85, Excellent.
+
+2022
+
+#### Joined the technical team at GDSC Yarmouk.
+
+My first workshop as a speaker, on data science, and my first time reviewing a course before it went out to students.
+
+2023
+
+#### Started competing, and winning.
+
+1st place in the Arab World at the AI Olympiad, across 7 countries. Top 10 of 300+ at a national fintech hackathon, and an incubation offer from Ahli Fintech. I started teaching ML at ZINC, grew a 300+ student community at the university, and coordinated the launch of the Hayat Business Incubator.
+
+AI Olympiad
+
+Ahli Fintech
+
+ZINC YU
+
+SHAI For AI
+
+Hayat BI
+
+2024
+
+#### Founded a startup and ran IT for real events.
+
+Flora AI, an Arabic AI nutritionist: 100+ leads in 3 days with no ad budget. IT Lead at Next Step, where automation cut manual work by 85% at events of 1,200+ people. Mentoring 35+ trainees at SHAI For AI, and VP at AIESEC in Jordan. NASA Space Apps, GazaThon and Orange Coding Academy along the way.
+
+Flora AI
+
+Next Step JO
+
+NASA Space Apps
+
+AIESEC
+
+2025
+
+#### Co-founded a studio, built a department, graduated.
+
+Co-founded SKAI Group in January. Built an 18-person IT department from scratch as Head of IT at Bader Wa Sahem. 2nd in the Arab World and 1st in Jordan at Datadrip, 1st in Jordan at HAAC. Computer vision at Envisionsai. Graduated in August, taught two diplomas at Elite Excellence Academy, and joined Decasonic in December.
+
+SKAI Group
+
+Bader Wa Sahem
+
+Datadrip
+
+Decasonic
+
+2026
+
+#### Built an AI platform from nothing, then took it further.
+
+At Decasonic I architected the shared schema, the MCP Hub and the Agent Control Panel, and built 15 core products: 350+ agents and 35+ apps on one layer. The Investor Day app ran live for 300 people in Chicago. Then Masraf at SalamHack, Hemolock, Dubljly at the Amman AI Hackathon, and the Agent Control Panel accepted into mySTARTUP as a SKAI Group product.
+
+350+ agents
+
+Investor Day
+
+SalamHack
+
+mySTARTUP
+
+02 / Every role
+
+### Every role, newest first.
+
+SKAI Group
+
+Co-founder & Software Engineer
+
+Jan 2025 → Now Amman
+
+AI-native studio: AI systems, web, mobile and SaaS. 4 clients in 2 weeks; took the Agent Control Panel into mySTARTUP.
+
+Decasonic
+
+AI Operations Manager · contract
+
+Dec 2025 → Sep 2026 Remote · US
+
+Architected the AI platform from scratch: shared schema, MCP Hub, Agent Control Panel. 350+ agents, 35+ apps, 15 apps built myself.
+
+Elite Excellence Academy
+
+Data Science & AI Instructor
+
+Sep → Dec 2025 Amman
+
+Designed and taught diplomas in AI & Data Science and in BI & Data Analysis, five cohorts and 25+ students in all.
+
+Bader Wa Sahem
+
+Head of IT
+
+Feb 2025 → Jan 2026 Amman
+
+Built an 18-person IT department in two teams, and the AI and technology roadmap for Bader and its 4 sub-organizations.
+
+Envisionsai
+
+Computer Vision Engineer · part-time
+
+Dec 2024 → Feb 2025 Irbid
+
+Computer vision models that find faults in solar panels, from building the dataset to training.
+
+Next Step
+
+IT Lead
+
+Apr 2024 → Feb 2025 Amman
+
+One of Bader Wa Sahem’s organizations. Event automation that cut manual work by 85% at events of 1,200+ people, and AI LinkedIn Clinics run live.
+
+AIESEC
+
+AIESEC in Jordan
+
+VP of Outgoing Exchange · OD Team Leader
+
+Feb → Oct 2024 Irbid
+
+Into the top 3 chapters globally within a month as VP. 350+ sign-ups in under 30 days, a team of 20+ across 3 universities.
+
+Flora AI
+
+Founder & AI Developer
+
+Jan 2024 → Jan 2025 Jordan
+
+An Arabic AI nutritionist, incubated by INJAZ. 100+ leads in 3 days with $0 in ads; 3rd at IEEE NETC, Top 7 at JEC.
+
+SHAI For AI
+
+Data Science & AI Mentor
+
+Feb → Dec 2024 Remote
+
+Mentored 35+ trainees through end-to-end AI projects, from EDA to ML to deployment, and reviewed their capstone projects.
+
+Hayat Fund
+
+Lead Project Coordinator
+
+Oct 2023 → Feb 2024 Amman
+
+Ran the launch of the Hayat Business Incubator: picked and trained 16 students and designed a four-sector supply-chain challenge.
+
+ZINC
+
+ZINC YU
+
+Machine Learning Instructor
+
+Jul 2023 → Jan 2024 Irbid
+
+Taught ML from zero, including to students with no programming background. Grew a 300+ student community.
+
+Ahli Fintech Incubator
+
+Ahli Fintech
+
+Incubated founder
+
+Feb → Oct 2023 Amman
+
+Top 10 of 300+ at the Fintech Hackathon, then incubation: product, UX, pitching and investment readiness.
+
+Google Developer Student Club, Yarmouk University
+
+GDSC Yarmouk
+
+Technical Team Member
+
+Oct 2022 → Aug 2023 Irbid
+
+Gave a data science workshop and reviewed a data analysis course before it launched.
+
+03 / Reach
+
+### Built in Amman. Used further away.
+
+AmmanHome · SKAI Group
+
+ChicagoInvestor Day · 300 people
+
+Saudi ArabiaGlobal finals · 2025
+
+7
+
+countries in the AI Olympiad I won
+
+300
+
+people at Willis Tower using my app
+
+2
+
+languages I build and teach in
+
+04 / Now
+
+### What I'm on this month.
+
+SKAI Group
+
+Building
+
+#### Agent Control Panel, as a product
+
+Accepted into mySTARTUP. Turning an internal control plane into something any team running agents can use.
+
+Startup
+
+Live
+
+#### Dubljly · دبلجلي
+
+Live after the Amman AI Hackathon, and applying to the Founding MENA × Replit Hackathon to grow it. Read the case study.
+
+Research
+
+In progress
+
+#### Microwave stroke detection
+
+Validating the multilayer physics with a 1D FDTD solver before generating training data.
+
+Career
+
+Open
+
+#### Looking for the next team
+
+AI engineering and AI infrastructure roles, plus contracts and workshops. See how I work.
+
+05 / How I build
+
+### Rules that show up in everything.
+
+01
+
+#### Deterministic where it matters. AI where it helps.
+
+In practice
+
+The matcher picks pairs with pure, tested code. The LLM only writes the reason.
+
+02
+
+#### One gateway for every model call.
+
+In practice
+
+Fallback chains live in one place, and the UI says so when the primary model didn't answer.
+
+03
+
+#### Degrade gracefully. Never fail hard.
+
+In practice
+
+LLM summary, then deterministic extract, then static fallback. Compose never returns a 500.
+
+04
+
+#### If the database doesn't enforce it, it's a convention.
+
+In practice
+
+Trust tiers as CHECK constraints. Permissions at table and column level.
+
+05
+
+#### Let the system find it. Let a human ship it.
+
+In practice
+
+Improvements are proposed with evidence, approved by a person, and reverted in one click.
+
+06
+
+#### Argue with a query, not an adjective.
+
+In practice
+
+Zero cost data across 51,378 execution logs made the case faster than any slide.
+
+06 / Toolbox
+
+### The periodic table of my stack.
+
+Languages
+
+Interface
+
+Server & data
+
+Models
+
+Claude ecosystem
+
+where-used
+
+saad@amman ~ $ where --help
+
+??
+
+Press any element to see where I used it.
+
+07 / Beyond the browser
+
+### Range, on purpose.
+
+Hardware · 2026
+
+Hemolock
+
+A medical-device team lost their emergency-kit prototype. I rebuilt the electronics and firmware: flip one switch, and after a 5-second cancellable countdown it sends your GPS location over Telegram in Arabic and English, then places automated calls.
+
+Countdown · cancel anytime
+
+Research · in progress
+
+Stroke, by microwave
+
+Replicating a 2025 paper that detects brain hemorrhage from an antenna's reflection, without the commercial solvers it relied on. A semi-analytical model generates data, and custom FDTD solvers check the physics.
+
+Antenna reflection, three resonances
+
+Dashed: with a lesion · schematic
+
+08 / Teaching & community
+
+### Pass it on.
+
+I teach ML at Al-Ahliyya Amman University's AI & Data Science Club, run workshops with CodeLine, and run a summer program that introduces school students to AI and web design.
+
+With SKAI Community we help teams in Jordan find hackathons, form teams, practice pitching and turn ideas into startups.
+
+Arabic
+
+English · fluent
+
+190+
+
+people across four workshops
+
+5
+
+diploma cohorts taught
+
+300+
+
+students in the ML community I grew
+
+35+
+
+trainees mentored at SHAI For AI
+
+09 / Wins
+
+### 15+ wins. 20+ hackathons.
+
+1st
+
+Arab World · 7 countries
+
+#### Artificial Intelligence Olympiad
+
+Math & Algorithms track · 2023
+
+2nd
+
+Arab World · and 1st in Jordan
+
+#### Datadrip Hackathon
+
+Power BI over 1GB+ of banking data. Featured on Jordan TV · 2025
+
+1st
+
+Jordan
+
+#### HAAC · Hakeem Competition
+
+National competition · 2025
+
+2nd place
+
+42 Amman Hackathon
+
+Campus chatbot on a fine-tuned DistilGPT-2.
+
+2025
+
+Top 7% worldwide
+
+Global Student Research Hackathon
+
+Cold-chain recommender. Global finals in Saudi Arabia.
+
+2025
+
+Best strategy
+
+NASA Space Apps Amman
+
+ARD: climate prediction and resource planning for farmers.
+
+2024
+
+Best sustainable
+
+GazaThon · HTU
+
+Medication stock sharing between Gaza hospitals and donors.
+
+2024
+
+1st place
+
+Orange Coding Academy
+
+Built the team’s AI bot on an open-source model.
+
+2024
+
+Top 7
+
+Jordan Entrepreneurship Competition
+
+Flora AI.
+
+2024
+
+Top 10
+
+ZINC AI Hackathon
+
+EEG seizure detection at 95% accuracy.
+
+2024
+
+3rd in Jordan
+
+Generative AI Hackathon
+
+Arabic legal assistant trained on Jordanian law.
+
+2024
+
+3rd in Jordan
+
+IEEE NETC
+
+Flora AI. Qualified for the regional semi-finals.
+
+2024
+
+4th of 25
+
+Environmental Innovation Hackathon
+
+EU, Greater Irbid Municipality and Yarmouk University.
+
+2023
+
+National top 12
+
+University Students Entrepreneurship Competition
+
+Queen Rania Center and ZINC. Top 2 at university level.
+
+2023
+
+Top 3 of 25
+
+Future Founder · ZINC
+
+University-level entrepreneurship programme.
+
+2023
+
+Top 10
+
+Mathematics & Algorithm Hackathon
+
+Yarmouk University.
+
+2023
+
+Top 10 of 300+
+
+Fintech Hackathon
+
+AI mentor for new online sellers. Incubated by Ahli Fintech.
+
+2023
+
+Contact
+
+### Say hello
+
+Whether it's a role, a project or a hackathon team, I'd like to hear about it.
+
+Book a 30-min call
+
+[LinkedIn](https://www.linkedin.com/in/saad-altamari/)
+
+[GitHub](https://github.com/Saadtamari)
+
+Download CV
+
+© 2026 Saad Tamari
+
+Amman · 22:31 GMT+3
+
+Back to top ↑
+
+
+---
+
+# Writing on RAG, agents and AI evaluation · Saad Tamari
+
+URL: https://saadaltamari.com/writing
+
+Home
+
+/
+
+Writing
+
+## Writing
+
+Field guides and build notes on AI that has to work in production: retrieval, orchestration, evaluation, and the systems underneath.
+
+4 field guides · 8 build notes
+
+Field guide
+
+12 min read
+
+1.15×
+
+rank 1 vs rank 10 under RRF at k = 60
+
+### RAG past the tutorial: where retrieval quietly breaks
+
+Field guide
+
+10 min read
+
+1.7% vs 60%
+
+same pass@1, very different pass^8
+
+### Agent orchestration, the hard parts
+
+Field guide
+
+8 min read
+
+200 → 54
+
+effective questions when they share documents
+
+### Evaluating RAG end to end without fooling yourself
+
+Field guide
+
+8 min read
+
+62.7 vs 99.9
+
+same model, two harnesses, ARC-AGI-3
+
+### An AGI benchmark score is not a coding score
+
+Build note
+
+3 min read
+
+350+
+
+agents, one control plane
+
+### Mission control for 350 agents
+
+Build note
+
+3 min read
+
+78 → 864
+
+signals after the audit
+
+### A 200 doesn’t mean your data is useful
+
+Build note
+
+2 min read
+
+756 → 28
+
+connections at 28 apps
+
+### 28 apps, 756 connections: why the database is the contract
+
+Build note
+
+2 min read
+
+9 stages
+
+from task to context
+
+### Why my context engine leaves budget unspent
+
+Build note
+
+2 min read
+
+300
+
+people matched, live
+
+### Let the code decide, let the model explain
+
+Build note
+
+2 min read
+
+395+
+
+round trips avoided
+
+### When not to use your own gateway
+
+Build note
+
+2 min read
+
+206
+
+live agents synced
+
+### Skills that get better by losing
+
+Build note
+
+2 min read
+
+7 steps
+
+link to Arabic lecture
+
+### Dubbing Arabic without drifting off the speaker
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Context Engine · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-context-engine
+
+Home
+
+/
+
+Work
+
+/
+
+Case 03
+
+## Context Engine
+
+A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and why?
+
+Role
+
+Wrote the memo, built the engine
+
+When
+
+Jun–Aug 2026 · Decasonic
+
+Stack
+
+Node 24 · TypeScript 5.9 · Express 5
+
+Console
+
+React · Vite · TanStack Query
+
+9
+
+stages per compose
+
+2s
+
+hard budget, then a deterministic fallback
+
+0
+
+500 errors, by design
+
+22
+
+assertions in the verification suite
+
+01 / The problem
+
+### Three ways context goes wrong.
+
+An agent asks: I'm agent X, my task is Y, it's about company Z, and I have about 6,000 tokens. What should I actually be looking at?
+
+Most systems answer with "the top results from a vector search". That fails in three ways, and each one needed its own fix.
+
+Too much: cost, latency and diluted signal.
+
+Wrong: stale, cross-tenant, personal, or web text carrying an injection.
+
+Unexplainable: nobody can say why the agent saw what it saw.
+
+Rank by value per token, gate before ranking, and make every answer replayable.
+
+02 / How a compose works
+
+### Safety first. Then value.
+
+Four ideas carry the nine stages.
+
+Idea 01 · Gate before value
+
+#### Reject first, with a reason.
+
+Before anything is ranked, sources are filtered: inactive ones, human exclusions, untrusted sources for agents that can write, tenancy mismatches, personal data, workflow restrictions. Every rejection is written down with its reason.
+
+Idea 02 · Value per token
+
+#### Stop when the next slice isn't worth it.
+
+Pinned sources go in first. The rest are sorted by value per token, penalized for redundancy, and packed until the marginal utility falls below a floor. Allocation stops there, even with budget left.
+
+Idea 03 · Band the prompt
+
+#### Untrusted text never gives orders.
+
+The prompt is built as directive, task, evidence and a tail restatement. The lowest trust tier can never reach the directive band, enforced in code and by a database CHECK constraint. Low-trust text is wrapped as data to analyse.
+
+Idea 04 · Learn with a human gate
+
+#### It can find improvements. It can't ship them.
+
+Shadow A/B runs, ablations and inclusion trials measure what each source is worth. The proposer drafts a change only with enough evidence, and a person approves it. Revert is one click.
+
+Composed inside the 2,000 ms budget · open the trace
+
+- Classify: the objective sorted into one of eight task types, or "general" when unsure.
+
+- Load: the profile for this agent and task, the source catalog, measured utility and today's spend.
+
+- Gate: rejections written down with reasons.
+
+- Value: each source scored on task fit, entity match, trust and freshness.
+
+- Allocate: packed by value per token until the floor.
+
+- Assemble: fetched through the gateway, injection-scanned, tokens counted for real, near-duplicates removed.
+
+- Band: directive, task, evidence, tail.
+
+- Probe: an advisory check that the context is sufficient.
+
+- Emit: a content-addressed object that replays byte for byte.
+
+03 / The contract
+
+### Ask once. Replay forever.
+
+What an agent sends, and what it gets back.
+
+Request
+
+POST /api/dce/context/compose
+
+{
+
+"agent": "screener",
+
+"objective": "Screen this inbound deck",
+
+"entity": "company:…",
+
+"budget_tokens": 6000
+
+}
+
+Response
+
+a context object
+
+{
+
+"hash": "sha256:…",
+
+"bands": ["directive", "task", "evidence", "tail"],
+
+"slices": [ … ],
+
+"excluded": [ { "reason": … } ],
+
+"fallback_used": false
+
+}
+
+#### The judge is judged too.
+
+An LLM scores outputs criterion by criterion, but the overall score is recomputed in code from fixed weights. The model's own total is never trusted. Rubrics are immutable: a change is a new version.
+
+Humans label a golden set, and the system measures rank correlation, mean error and bias between its judge and the humans, so it knows how much to trust itself.
+
+#### Six operator screens.
+
+Compose inspector, with "replay from snapshots".
+
+"Why this context", a printable decision record.
+
+Frontier: quality against input tokens.
+
+Utility, proposals and the golden set.
+
+04 / Decisions worth explaining
+
+01
+
+Why stop with budget left?
+
+Because the last few slices usually cost more attention than they add. Past the marginal-utility floor, more context dilutes the signal and raises cost and latency.
+
+02
+
+How does it never return a 500?
+
+A 2-second timeout races the whole pipeline. A timeout, an exception or a rate-limit breach all return a deterministic static prompt with fallback_used set to true. Summaries degrade to deterministic extracts under 2.5 seconds, and embedding dedupe falls back to shingle overlap.
+
+03
+
+Where does it stop and another system start?
+
+A clean boundary with the firm's context graph: the graph owns the directive band, meaning truth and routing. The engine owns the evidence band: fetch, budget, order and format. The graph never retrieves, and the engine never judges truth.
+
+04
+
+How do you know it works?
+
+A 22-assertion verification suite runs against a live server and checks determinism, replay identity, trust-tier protection, tenancy isolation, fail-open behaviour and token accounting. The spec is executable.
+
+Node 24
+
+TypeScript 5.9
+
+Express 5
+
+Zod
+
+Pino
+
+gpt-tokenizer
+
+Supabase
+
+Claude · OpenAI · Gemini · xAI
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 04
+
+Investor Day
+
+Contact
+
+### Let's build
+
+Agents giving answers nobody can explain? Let's look at what they're seeing.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Agent Control Panel · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-control-panel
+
+Home
+
+/
+
+Work
+
+/
+
+Case 01
+
+## Agent Control Panel
+
+Mission control for 350+ agents across 35+ apps. One login, and every agent is observable, measurable and remotely controllable.
+
+Role
+
+Architect & builder
+
+When
+
+Feb–Aug 2026 · Decasonic, now SKAI Group
+
+Stack
+
+Express 5 · React 18 · Postgres · Drizzle
+
+Now
+
+A SKAI Group product · mySTARTUP
+
+350+
+
+agents registered
+
+35+
+
+apps reporting in
+
+6
+
+model providers, one fallback chain
+
+~60
+
+API endpoints on 9 tables
+
+01 / The problem
+
+### Hundreds of agents. Zero visibility.
+
+The firm had agents spread across dozens of apps, each built separately. When one went quiet, nobody knew. When a prompt needed changing, someone redeployed an app. Nobody could say what an agent cost per day.
+
+Four people needed four different things: operators wanted outages and runaway spend, prompt engineers wanted to edit without a deploy, finance wanted real token cost, and developers wanted a fast way to wire a new app in.
+
+An agent fails silently and nobody notices for days.
+
+Changing a prompt means redeploying the app it lives in.
+
+There is no cost per agent, per app or per day.
+
+The platform's own AI features are invisible too.
+
+One control plane that fixes all four.
+
+02 / How it works
+
+### Four jobs. One screen.
+
+What an operator sees, in the order they'd use it.
+
+Step 01 · Observe
+
+#### Every app reports in.
+
+Registered apps push heartbeats and run reports. Each agent's status becomes running, idle, paused, stopped or error, and a rolling health score recalculates on every run. Agents can have parents, so hierarchies show up as hierarchies.
+
+Step 02 · Control
+
+#### Change a live agent without a deploy.
+
+Pause, resume, stop, restart, swap the model or push a new system prompt. Each command is an HMAC-signed webhook to the live app, retried with backoff and tracked from pending to acknowledged.
+
+Step 03 · Version
+
+#### Prompts become assets.
+
+Every prompt keeps its full history with one-click rollback. Feedback folds straight in with tags, and an AI reviewer scores answers from 0 to 100 with a written reason.
+
+Step 04 · Watch itself
+
+#### The platform is its own customer.
+
+Its 8 internal AI features run as real tracked agents, from the integration analyzer to the error solver, so platform spend is measured with the same meters as everything else.
+
+03 / What it feels like
+
+### A feed you can actually read.
+
+Every heartbeat, report and command lands in one stream. Fallbacks get an amber badge, so an operator is never told the primary model answered when it didn't.
+
+The feed on the right is a live sketch. It is generated in your browser, not pulled from real data.
+
+Before
+
+the prompt lives in the app
+
+const SYSTEM = "You are a deal screener…";
+
+// changing this means a redeploy
+
+const res = await openai.chat(SYSTEM, input);
+
+// cost? errors? nobody knows
+
+After
+
+the Control Panel owns it
+
+const { prompt, model } = await cp.prompt(AGENT_ID);
+
+// GET /api/prompts/:agentId
+
+const res = await llm(model, prompt, input);
+
+await cp.report({ agentId, tokens, ok });
+
+// POST /api/report → health, cost, feed
+
+04 / Decisions worth explaining
+
+01
+
+Why a modular monolith, not microservices?
+
+One Node process serves the JSON API and the compiled React app, split by module rather than by process. No broker, no worker fleet. A tool that watches moving parts should have as few of its own as possible.
+
+02
+
+How do you keep price discovery from costing money?
+
+Ask a free, deterministic public price API first. Only if that fails do two AI searchers research in parallel. If they disagree, each sees the other's answer and re-checks; if they still disagree, a third model judges. Everything goes to an audit log, with per-model cooldowns and a global concurrency cap.
+
+03
+
+Why can't a heartbeat un-pause an agent?
+
+Because a stopped agent has to stay stopped, even if its app keeps reporting in. Token counts are upserted atomically too, so two concurrent heartbeats can't lose a count.
+
+04
+
+What was the strangest production bug?
+
+A production firewall read legitimate prompt text as an attack and blocked saves. Base64-encoding the prompt and feedback write paths got past it without weakening the firewall.
+
+Express 5
+
+React 18
+
+PostgreSQL
+
+Drizzle ORM
+
+HMAC webhooks
+
+OpenRouter
+
+6 LLM providers
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 02
+
+MCP Hub
+
+Contact
+
+### Let's build
+
+Running agents nobody can see? This is the problem I like most.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Dubljly · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-dubljly
+
+Home
+
+/
+
+Work
+
+/
+
+Case 05
+
+## Dubljly دبلجلي
+
+Paste an English lecture. Get it back in Arabic: a synced voice-over, subtitles, a study pack, and a tutor that knows the lecture.
+
+Role
+
+Founder · solo build
+
+When
+
+2026 · live since the Amman AI Hackathon
+
+Stack
+
+FastAPI · React 18 · Postgres
+
+Models
+
+Groq · Gemini · Cerebras · Azure TTS
+
+~25K
+
+lines of hand-written code, plus 3,800 of tests
+
+97
+
+API route handlers in one FastAPI service
+
+7
+
+pipeline steps, run by a single worker
+
+~30s
+
+to the study pack, target for a 10-minute lecture
+
+01 / The problem
+
+### The best lectures are in English.
+
+An Arabic-speaking student has two options: read subtitles while trying to follow the content, or wait for a human dubbing studio that will never get to that video.
+
+Dubljly answers one question for that student: can I learn from this lecture in my own language, without waiting? It started as my graduation project and I rebuilt it from scratch for the Amman AI Hackathon.
+
+Subtitles split attention between reading and watching.
+
+Human dubbing costs too much for one lecture.
+
+Arabic runs longer than English, so naive dubbing drifts off the speaker.
+
+No way to ask a question about what was just said.
+
+A timed Arabic voice-over, a study pack first, and a tutor for that lecture.
+
+02 / One lecture, start to finish
+
+### Paste a link.
+
+A YouTube link or an upload goes into a seven-step pipeline. Here is what the student sees.
+
+Step 01 · Fetch and transcribe
+
+#### Get the words, with their timing.
+
+yt-dlp fetches the video, Whisper transcribes it, and the transcript is cut into timed segments. Long work never runs inside a request: one worker thread pulls jobs from a queue table, and the student watches a six-stage progress bar.
+
+Step 02 · Study pack first
+
+#### Start learning in about half a minute.
+
+The learning pack (summary, key terms and their Arabic meanings) is built before the dub, so it appears in about 30 to 40 seconds. The full dub follows in about 2 to 3 minutes. Both are spec targets, not measured figures.
+
+Step 03 · Translate, voice, mix
+
+#### The voice stays with the speaker.
+
+Each segment is translated and voiced on its own, then placed at its original start time, never joined end to end. A fit ladder shortens or speeds up any clip that overruns its slot. The voice-over is mixed with the original audio and exported as MP4, with Arabic and English subtitles.
+
+Step 04 · Ask the tutor
+
+#### A tutor that knows the lecture.
+
+The student can ask about what they just watched, in Arabic. The whole app is Arabic and right-to-left by default, with an English toggle, real RTL layout rules and fonts chosen for Arabic.
+
+03 / Under the hood
+
+### One service. No extras.
+
+One FastAPI service serves both the API and the React app. No Redis, no Celery, no Docker. Code simplified from the real pipeline.
+
+Adapters
+
+no vendor SDK in the pipeline
+
+text = stt.transcribe(audio) # Whisper today
+
+pack = llm.run("study_pack", text) # router picks a provider
+
+clip = tts.speak(seg.arabic, voice) # Azure or edge-tts
+
+place(clip, at=seg.start) # never end to end
+
+Validation
+
+Pydantic, one retry, then fall back
+
+out = llm.json(task, schema=StudyPack)
+
+# invalid? retry once with the error attached
+
+# still invalid? next provider in the router
+
+pack = StudyPack.model_validate(out)
+
+97 handlers: 49 GET · 38 POST · 8 PUT · 1 PATCH · 1 DELETE
+
+24 tables
+
+7 data-safe migrations
+
+CI guardrails on every push
+
+Credits, promo codes, admin console
+
+04 / Decisions worth explaining
+
+01
+
+Why no Redis, Celery or Docker?
+
+So the whole product stays one deployable service. A single background worker pulls jobs from a queue table in Postgres, and no long job ever runs inside a request handler, so the API stays responsive while lectures process.
+
+02
+
+Why place each clip on the timeline instead of joining them?
+
+Arabic often runs longer than English. Joined end to end, every sentence pushes the voice further from the speaker. Placing each clip at its segment’s original start, and fitting any overrun, keeps the voice with the face.
+
+03
+
+What happens when a model returns broken JSON?
+
+Structured calls ask for JSON and validate it with Pydantic. Invalid output gets one retry with the validation error attached, then the router falls back to the next provider. The stack mixes Groq, Gemini and Cerebras for language and Azure or edge-tts for voice, all swappable without touching the pipeline.
+
+04
+
+How does the UI stay true to the design?
+
+The mockups are the spec. The React screens are rebuilt from them and checked against the design files with a hash check, and the frontend types mirror the documented API contract, enforced by guardrail scripts in CI.
+
+05
+
+What is measured, and what is a target?
+
+The 30 to 40 second study pack and the 2 to 3 minute dub for a 10-minute lecture are spec targets, not measured figures. There are no user or revenue numbers yet, so none are claimed here.
+
+Python 3.12
+
+FastAPI
+
+SQLModel
+
+Alembic
+
+Pydantic
+
+Groq Whisper
+
+Gemini
+
+Cerebras
+
+Azure Speech
+
+yt-dlp
+
+ffmpeg
+
+React 18
+
+Tailwind 4
+
+TanStack Query
+
+Clerk
+
+Postgres
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 06
+
+Agent Skills OS
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Flora AI · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-flora
+
+Home
+
+/
+
+Work
+
+/
+
+Case 08
+
+## Flora AI
+
+An Arabic AI nutritionist that builds meal plans from your profile, and the first startup I founded.
+
+Role
+
+Founder & AI developer
+
+When
+
+Jan 2024 – Jan 2025 · Jordan
+
+Stack
+
+Python · LangChain · LangGraph · RAG
+
+Backed by
+
+Incubated by INJAZ
+
+100+
+
+leads in 3 days
+
+$0
+
+spent on ads
+
+1.7K+
+
+video views
+
+1.1K+
+
+landing-page visitors
+
+01 / The problem
+
+### Generic advice, in the wrong language.
+
+Most nutrition apps give the same plan to everyone, and few are built for Arabic speakers. Personal guidance from a nutritionist exists, but it costs money and time most people won’t spend.
+
+And an AI that invents a meal plan is worse than no plan at all. Accuracy had to come before fluency.
+
+02 / How it works
+
+### Grounded plans that follow up.
+
+Profile
+
+goals, body, habits
+
+Retrieve
+
+nutrition knowledge
+
+Plan
+
+grounded, specific meals
+
+Check in
+
+adaptive follow-ups
+
+Track
+
+assessment and visuals
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### Retrieval over raw generation
+
+Meal plans are built on retrieved nutrition knowledge, not generated from the model’s memory, because a hallucinated meal plan is worse than none.
+
+02
+
+#### Prompts tuned for specifics
+
+The prompt system was tuned for nutritionally accurate, specific output: quantities and real foods, not vague advice.
+
+03
+
+#### Follow up, don’t answer once
+
+Adaptive check-ins ask how the plan is going and adjust, instead of ending the conversation after one answer.
+
+04
+
+#### Launch with content, not ads
+
+Every lead came from organic video content. It proved people wanted it before any money went into marketing.
+
+04 / What came out of it
+
+### Proof that people wanted it.
+
+- 1.7K+ video views, 1.1K+ landing-page visitors and 100+ leads in three days, with no ad budget.
+
+- 3rd place in Jordan at IEEE NETC, qualifying for the Region 8 semi-finals.
+
+- Top 7 at the Jordan Entrepreneurship Competition, and incubation with INJAZ.
+
+- The lesson I still use: validate demand with real people before scaling the build.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 09
+
+JoFotara POS
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Hemolock · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-hemolock
+
+Home
+
+/
+
+Work
+
+/
+
+Case 11
+
+## Hemolock
+
+An emergency kit for a medical-device team. Flip one switch, and it sends your GPS location and places a phone call.
+
+Role
+
+Rebuilt the electronics & firmware
+
+When
+
+2026
+
+Stack
+
+ESP32 · NEO-6M GPS · Twilio
+
+Status
+
+Working prototype
+
+1
+
+switch to trigger
+
+5s
+
+cancellable countdown
+
+2
+
+languages in every alert
+
+3.7→5V
+
+stable power from a LiPo
+
+01 / The problem
+
+### A lost prototype and a deadline.
+
+A medical-device team lost their emergency-kit prototype and needed it working again. The idea was simple: in an emergency, one action should tell the right people where you are.
+
+The hard parts were all physical: unstable power, firmware crashes and the real-world rules for placing automated calls in Jordan.
+
+02 / How it works
+
+### One switch, three things happen.
+
+Switch
+
+flip to arm
+
+Countdown
+
+5 seconds, cancellable
+
+Locate
+
+GPS fix
+
+Alert
+
+Telegram, Arabic and English
+
+Call
+
+automated via Twilio
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### A countdown you can cancel
+
+An LED and buzzer start a 5-second countdown, so an accidental flip never sends a false alarm.
+
+02
+
+#### Bilingual by default
+
+Every alert goes out in Arabic and English, with a Google Maps link to the exact location.
+
+03
+
+#### Stable power first
+
+A 3.7V LiPo boosted to a stable 5V, because GPS and WiFi fail in strange ways on a sagging supply.
+
+04
+
+#### No blocking code
+
+Watchdog crashes came from blocking buzzer tones. Rewriting them as non-blocking fixed the resets.
+
+04 / What made it work
+
+### Hardware is honest.
+
+- A working kit: switch, countdown, GPS fix, bilingual Telegram alert and automated calls.
+
+- Power and watchdog issues found and fixed at the root, not worked around.
+
+- Jordan’s high-risk call permissions handled, so automated calls actually connect.
+
+- Proof that I can take a system from firmware to the phone in someone’s pocket.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 01
+
+Agent Control Panel
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Investor Day App · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-investor-day
+
+Home
+
+/
+
+Work
+
+/
+
+Case 04
+
+## Investor Day App
+
+An invite-only networking engine for 300 founders, VCs and LPs at Willis Tower, Chicago. One question per person: who should I talk to right now?
+
+Role
+
+Architect & builder
+
+When
+
+Apr–Jul 2026 · Decasonic
+
+Stack
+
+Expo · React 19 · Express 5 · Postgres
+
+Shipped as
+
+iOS, Android, PWA + admin
+
+300
+
+attendees, live, in one day
+
+~60K
+
+lines of hand-written TypeScript
+
+124
+
+API operations from one OpenAPI spec
+
+188
+
+unit tests on the parts that decide
+
+01 / The problem
+
+### Not a conference app. A room-reader.
+
+About 300 people, eight hours, and a theme: investing in adoption. Every attendee wants the same thing from a day like that: the handful of people in the room worth meeting, and something to say when they get there.
+
+The agenda alone was 21 sessions and 47 speakers, but the hard part wasn't the agenda. It was being fair to everyone, protecting the people who asked to stay private, and moving real people around a lunch hall on time.
+
+An LLM picking matches is untestable and unfair.
+
+Big funds crowd out everyone else.
+
+Private attendees leak through generated text.
+
+Imports the night before break printed QR codes.
+
+Deterministic matching, privacy in the architecture, imports you can trust.
+
+02 / How the day runs
+
+### Match. Explain. Move. Protect.
+
+The four systems that ran the room.
+
+Step 01 · Match
+
+#### Pure code decides who meets.
+
+scorePair is a pure, tested function with no LLM in it. On top sit fairness rules: colleagues never match, small boosts for people with no matches yet, caps per company, and a floor so nobody ends with zero.
+
+Step 02 · Explain
+
+#### Emma tells you why.
+
+The AI concierge gets a context assembled per request: the people most relevant to you, the speakers, the live agenda and the venue. Claude answers, with OpenAI as fallback through one gateway.
+
+Step 03 · Move
+
+#### Software that moves people.
+
+Nine portfolio companies at numbered tables, nine timed rounds, and every attendee routed so they meet every company. A draft, published, locked state machine keeps a live rotation from being corrupted mid-lunch.
+
+Step 04 · Protect
+
+#### Privacy in the architecture.
+
+Hidden attendees are masked on the server, on every surface, including inside LLM prompts. Emails never enter a prompt. Responses are shaped so that "not published" and "not grouped" look identical.
+
+03 / The tempting version
+
+### Why the LLM doesn't match.
+
+Left: what most people would ship. Right: what ran in Chicago.
+
+Tempting
+
+ask the model to pick
+
+const picks = await llm(
+
+`Here are 300 attendees. Who should ${me} meet?`
+
+);
+
+// untestable, unfair, and private people
+
+// are now inside a prompt
+
+Shipped
+
+code decides, the model explains
+
+function scorePair(a, b) {
+
+if (sameCompany(a, b)) return -Infinity;
+
+let s = fit(a, b) + fit(b, a);
+
+s += fairness(b); // +8 at zero, −4 at 10+
+
+return s;
+
+}
+
+// caps, a starvation floor, then one line of "why"
+
+04 / Decisions worth explaining
+
+01
+
+How do you import data the night before without breaking anything?
+
+Upload a spreadsheet, stage the rows, let the server recompute the diff, preview it, then publish in one transaction guarded by a staged-status check. Two admins publishing at once get a 409. Session IDs survive re-imports, so printed QR codes never break, and ambiguous rows go to a human.
+
+02
+
+What stops someone scanning a QR and pretending to be you?
+
+A QR code only names a target. Who you are always comes from your session token. Check-ins are idempotent, so scanning twice can't double-count.
+
+03
+
+Why is it invite-only?
+
+Attendee records are created on the first authenticated request, only for invited people. Signing up on your own grants nothing.
+
+04
+
+What happens on a fresh production database?
+
+It boots lunch-ready. Startup reconcilers seed the invitation template, the nine rounds and nine tables, idempotently, without overwriting anything an admin changed. One switch, event mode, moves the whole app through before, live and after.
+
+Expo SDK 54
+
+React 19 + Vite 7
+
+Express 5
+
+PostgreSQL + Drizzle
+
+OpenAPI 3 → Orval
+
+Clerk
+
+Vitest
+
+Claude → OpenAI
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 05
+
+Dubljly
+
+Contact
+
+### Let's build
+
+Running an event, a community or a marketplace that needs fair matching? I've done it live.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# JoFotara POS · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-jo-fotara
+
+Home
+
+/
+
+Work
+
+/
+
+Case 09
+
+## JoFotara POS
+
+A multi-tenant point of sale built to Jordan’s UBL 2.1 e-invoicing standard, with zero third-party packages.
+
+Role
+
+Solo builder
+
+Where
+
+Jordan
+
+Stack
+
+Node.js · SQLite · UBL 2.1
+
+Model
+
+Setup fee + monthly per branch
+
+0
+
+npm dependencies
+
+UBL 2.1
+
+government e-invoice schema
+
+13
+
+automated tests
+
+2
+
+delivery channels: WhatsApp and SMS
+
+01 / The problem
+
+### Tax documents can’t depend on luck.
+
+Jordan’s e-invoicing system requires every invoice in a strict XML format, submitted to a government platform. Small shops need that without hiring a developer.
+
+Software that produces tax documents also carries a quieter risk: every third-party package is a dependency that can break, change or be compromised years later.
+
+02 / How it works
+
+### From sale to submitted invoice.
+
+Sale
+
+at the counter
+
+UBL 2.1 XML
+
+hand-built, validated
+
+Submit
+
+with an idempotency key
+
+Deliver
+
+WhatsApp or SMS
+
+Analyse
+
+AI insights for owners
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### Zero dependencies
+
+XML namespaces, the HTTP client, encoding and validation are all hand-built to the government schema. No supply-chain surface, no dependency drift, and it still builds years from now.
+
+02
+
+#### Idempotent submission
+
+A retry can never submit the same invoice twice. A double-submitted invoice is a compliance problem, not just a bug.
+
+03
+
+#### Multi-tenant from day one
+
+Branches and businesses share one system with clean separation, which is what makes per-branch pricing possible.
+
+04
+
+#### Insights, not just records
+
+An admin layer turns raw transactions into answers for owners on demand, using AI analytics.
+
+04 / What it proves
+
+### Compliance without a single package.
+
+- A complete point of sale that speaks the government’s invoice format natively.
+
+- A 13-test suite around the parts that matter most: XML generation, validation and retry.
+
+- A business model built in: a setup fee plus a monthly fee per branch.
+
+- A constraint that became the feature: nothing to audit, nothing to update, nothing to break.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 10
+
+Masraf · مصرف
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Masraf · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-masraf
+
+Home
+
+/
+
+Work
+
+/
+
+Case 10
+
+## Masraf مصرف
+
+An Arabic-first voice co-pilot for freelancers’ money. Speak a command, and the app answers while it moves the screen with you.
+
+Team
+
+Four people · SalamHack 2026
+
+Track
+
+Financial tools for freelancers
+
+Stack
+
+Next.js 14 · Supabase · Groq · Cerebras
+
+Status
+
+Hackathon prototype
+
+16
+
+voice intents mapped to UI actions
+
+12
+
+database tables, fully specified
+
+19
+
+API endpoints
+
+8
+
+app pages, all in Arabic
+
+01 / The problem
+
+### Finance apps don’t speak to Arab freelancers.
+
+Freelancers across the Arab world juggle invoices, clients, expenses and Zakat in tools built for someone else, in English, with terms that don’t fit Islamic finance.
+
+We wanted an app you could simply talk to, in Arabic, that did the work on screen while it answered.
+
+02 / How it works
+
+### Say it, and watch the app do it.
+
+Speak
+
+an Arabic command
+
+Transcribe
+
+Whisper on Groq
+
+Understand
+
+intent and entities
+
+Act
+
+navigate and update the UI
+
+Reply
+
+in a Saudi Arabic voice
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### Voice and UI, together
+
+Every voice intent maps to a page and a UI action, so the screen changes as the app speaks. You can also use it like a normal app.
+
+02
+
+#### Islamic finance as a foundation
+
+A Zakat page, a purification ledger and the right words everywhere: “ربح” for profit, never “interest”.
+
+03
+
+#### Spec before code
+
+A full requirements spec first: 12 tables with SQL, 4 storage buckets with access policies, 19 endpoints and 16 voice intents.
+
+04
+
+#### Fast enough to feel live
+
+Speech-to-text on Groq and a fast hosted model for reasoning keep the loop short enough to feel like a conversation.
+
+04 / What we shipped
+
+### A prototype that talks back.
+
+- Eight pages with Arabic names: documents, dashboard, invoices, clients, expenses, contracts, Zakat and reports.
+
+- Mobile and desktop interfaces, reviewed and fixed for currency consistency and voice-driven navigation.
+
+- Built by a team of four for SalamHack 2026.
+
+- A direction I still believe in: Arabic-first means the logic and the language, not a translated label.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 11
+
+Hemolock
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# MCP Hub · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-mcp-hub
+
+Home
+
+/
+
+Work
+
+/
+
+Case 02
+
+## MCP Hub
+
+An air-traffic controller for data. Every app talks to the Hub, the Hub talks to the database, and no app holds a credential.
+
+Role
+
+Architect & builder
+
+When
+
+Feb–Aug 2026 · Decasonic
+
+Stack
+
+Next.js 14 · Supabase · SSE
+
+Models
+
+Anthropic → OpenAI → xAI
+
+35+
+
+codebases that no longer hold DB keys
+
+87
+
+tables behind one gateway
+
+11×
+
+signal throughput after the audit
+
+Min
+
+to onboard an app, down from days
+
+01 / The problem
+
+### Every app had the keys to everything.
+
+Before the Hub, database credentials sat in 35+ codebases. There was no central visibility, no least privilege, and a schema change could break an app without anyone hearing about it. Onboarding a new app was a manual, multi-day job.
+
+I had already designed the shared 87-table schema. The Hub is what made it safe to share.
+
+Credentials copied into every codebase.
+
+No record of who wrote what, or when.
+
+Schema changes break apps silently.
+
+New integrations take days by hand.
+
+One gateway, strict per-app rules, and generated clients.
+
+02 / One request, start to finish
+
+### Follow a single write.
+
+POST /api/gateway with an API key and a payload. Here is what happens to it.
+
+Step 01 · Authenticate
+
+#### Who is asking?
+
+The key is validated and the app's status checked. Apps move from pending to configured to active, and promote themselves on their first successful request.
+
+Step 02 · Authorize
+
+#### What are they allowed to touch?
+
+Rate limits and timeouts first, then permissions at the level of the table and the column. An app can be allowed to read a table and still be blocked from one field in it.
+
+Step 03 · Execute and log
+
+#### Do it, and write it down.
+
+The query runs against Supabase, the request is logged with sensitive values stripped, and raw database errors come back as friendly 400 and 409 messages.
+
+Step 04 · Onboard the next app
+
+#### An AI handshake between apps.
+
+Paste a new app's discovery file. The model recommends permissions, you review them, and the Hub generates a complete integration client in JS, TS or Python, plus a prompt to paste back into the app's builder.
+
+03 / Before and after
+
+### Drag the line.
+
+A database health audit across the connected apps. Left: what I found. Right: after the fixes.
+
+Before the audit
+
+Signals flowing
+
+78
+
+Signals linked to their source run
+
+0
+
+Agent runs recorded
+
+0
+
+Apps fixed
+
+0
+
+~400 CHECK failures from 'prod' vs 'PROD'. Zero rows in every junction table. '[object Object]' saved as a UUID.
+
+After the fixes
+
+Signals flowing
+
+864
+
+Signals linked to their source run
+
+777
+
+Agent runs recorded
+
+72
+
+Apps fixed
+
+9
+
+Five failure classes, a four-section fix-prompt template, and permission gaps closed in four apps.
+
+Two lessons I carry everywhere: a gateway 200 doesn't mean the data is useful, and regressions happen during redeploys.
+
+Before
+
+every app holds every key
+
+const db = createClient(URL, SERVICE_ROLE_KEY);
+
+await db.from('signals').insert(row);
+
+// no permissions, no log, no warning
+
+After
+
+one gateway, least privilege
+
+await fetch(HUB + '/api/gateway', {
+
+method: 'POST',
+
+headers: { 'x-api-key': process.env.HUB_KEY },
+
+body: JSON.stringify({ operation: 'insert', table: 'signals', data: row })
+
+});
+
+// checked, rate limited, permitted, logged
+
+04 / Decisions worth explaining
+
+01
+
+When do you go around your own gateway?
+
+Twice, on purpose. Bulk sync writes directly: without upsert, a 150-record sync would take 395+ round trips and hit the rate limit, so it writes straight to the database and still logs to the audit table. Analytics reads go direct with a read-only key, because a dashboard needs joins and window functions the gateway doesn't do.
+
+02
+
+What did the first integration teach you?
+
+It hit foreign-key violations, because the generator wasn't passing relationship information into the prompt. I fixed it in the generator, once, and every later integration inherited the fix.
+
+03
+
+Why write meanings into the schema?
+
+Human-written table and column descriptions feed the code generator. That's the difference between knowing a status column is a varchar and knowing it's a deal pipeline stage.
+
+04
+
+What if a model fails halfway through generating a client?
+
+Generation streams over server-sent events with automatic fallback from Anthropic to OpenAI to xAI if a provider fails or truncates.
+
+Next.js 14
+
+Supabase Auth
+
+PostgreSQL
+
+Server-sent events
+
+Schema introspection
+
+3 LLM providers
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 03
+
+Context Engine
+
+Contact
+
+### Let's build
+
+Credentials in every repo? I can map it, gate it and audit it.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# AI Product Enhancer · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-product-enhancer
+
+Home
+
+/
+
+Work
+
+/
+
+Case 07
+
+## AI Product Enhancer
+
+Reviews an AI product end to end from its demo video, its memo and its architecture, then writes the prompt that fixes it.
+
+Role
+
+Architect & builder
+
+When
+
+Mar–Aug 2026 · Decasonic
+
+Stack
+
+Gemini · OpenRouter · React
+
+Status
+
+Live
+
+3
+
+inputs: video, memo, architecture
+
+0–100
+
+score with a verdict
+
+7
+
+scored sections
+
+1
+
+ready-to-paste fix prompt
+
+01 / The problem
+
+### Reviews that end in a to-do list.
+
+Product reviews usually produce opinions. Someone still has to turn them into changes, and in an AI-built product the person making the change is often another AI builder.
+
+The firm also had no repository access to many of its own AI apps, so a normal code review was not possible.
+
+02 / How it works
+
+### Watch it, read it, then write the fix.
+
+Demo video
+
+watched by a multimodal model
+
+Product memo
+
+parsed into value, audience, pricing
+
+Architecture
+
+via the prompt-copy method
+
+Score
+
+0–100, seven sections
+
+Suggestions
+
+ranked by severity
+
+Fix prompt
+
+paste into your AI builder
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### A model that actually watches the demo
+
+The demo video goes to Gemini for real multimodal analysis, compressed in the browser with retry and resume for large uploads.
+
+02
+
+#### The prompt-copy method
+
+With no repo access, the app hands you a prompt to run inside your own AI builder and you paste the answer back. It became the most reused trick in the product.
+
+03
+
+#### A worldview you can edit
+
+A knowledge base of the firm’s thesis, standards and design principles is injected into every evaluation, so scores reflect how the firm thinks, not generic taste.
+
+04
+
+#### Critique to fix in one tool
+
+Pick the suggestions you want and it writes an implementation prompt with real code, ready for Replit, Lovable, Cursor or Bolt.
+
+04 / What it produces
+
+### One score, seven sections, one prompt.
+
+- A score out of 100 with a ring gauge and a bullish or bearish verdict, plus an executive summary.
+
+- Seven sections: video analysis, value proposition, features, architecture, UX, integration and data flow, and alignment with the firm.
+
+- Ranked suggestions, each with severity, category, reasoning and an action.
+
+- An async job pipeline with progress polling, so long videos never block the UI.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 08
+
+Flora AI
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Agent Skills OS · AI case study by Saad Tamari
+
+URL: https://saadaltamari.com/case-skills-os
+
+Home
+
+/
+
+Work
+
+/
+
+Case 06
+
+## Agent Skills OS
+
+A content system and test lab for the skills AI agents load at runtime. Skills are A/B tested against real agents, and the losers get rewritten.
+
+Role
+
+Architect & builder
+
+When
+
+May–Aug 2026 · Decasonic
+
+Stack
+
+TypeScript · OpenRouter · Zod
+
+Status
+
+Live
+
+206
+
+live agents synced
+
+6
+
+steps in the skill loop
+
+2
+
+runs per test, with and without
+
+0
+
+agents broken when it goes down
+
+01 / The problem
+
+### Skills written once, and never tested.
+
+A skill is a block of instructions an agent loads at runtime. Most teams write one, paste it into a prompt and hope it helps. Nobody can say whether a given skill made a given agent better or worse.
+
+With hundreds of agents in production, that guesswork compounds. A bad skill quietly degrades every agent it is assigned to, and nothing flags it.
+
+02 / How it works
+
+### Write, test, judge, improve.
+
+Create
+
+write, upload or generate a SKILL.md
+
+Version
+
+every save is an immutable snapshot
+
+A/B test
+
+same prompt, real agent, twice
+
+Judge
+
+structured verdict
+
+Improve
+
+losers rewritten
+
+Deploy
+
+assign and pin per agent
+
+03 / Decisions worth explaining
+
+### Why it’s built this way.
+
+01
+
+#### Test on the real agent
+
+The lab runs the same prompt through a synced production agent twice, once with its normal system prompt and once with the skill, on that agent’s own model. No simulations.
+
+02
+
+#### Let the loser be rewritten
+
+If a skill loses, a frontier model rewrites it into a new version from both outputs and the judge’s reasoning. Then it gets tested again.
+
+03
+
+#### Fail open
+
+Agents pull skills at prompt-fetch time. If the service is down they fall back to their base prompts instead of breaking. An outage here must never take down the fleet.
+
+04
+
+#### Filter what the model suggests
+
+A suggestions engine proposes new skills from real usage. Any agent or skill ID it hallucinates is dropped by schema validation before it reaches the screen.
+
+04 / What I learned
+
+### The integration was the hard part.
+
+- Wiring it into the Agent Control Panel took three debugging rounds: two path mismatches, then auth, solved with a dedicated inbound key instead of a fake app row that would have polluted the dashboard.
+
+- A 5-minute cache on the control-plane side means skill changes need a cache clear after reassignment. Documented, not hidden.
+
+- My own audit caught a real bug: pinned versions should have overridden the “ready” filter, and didn’t.
+
+- 206 agents synced and pulling skills in production.
+
+Need something like this? I build these end to end, as a full-time engineer, on contract, or with SKAI Group.
+
+[Book a 30-min call](https://cal.com/saad-altamari-y0upir/30min)
+
+Next case · 07
+
+AI Product Enhancer
+
+Contact
+
+### Let's build
+
+Need your content in Arabic, or an AI product built this carefully? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All work
+
+Back to top ↑
+
+
+---
+
+# Agent orchestration, the hard parts · Saad Tamari
+
+URL: https://saadaltamari.com/writing-agent-orchestration
+
+Home
+
+/
+
+Writing
+
+/
+
+Field guide
+
+## Agent orchestration, the hard parts
+
+The loop is ten lines. Everything that makes it survive real traffic lives around it: reliability you can measure, side effects that happen once, a context that stays cheap, and tool output you never trust.
+
+Saad Al-Tamari
+
+Field guide · Agent orchestration
+
+10 min read
+
+Agents
+
+Orchestration
+
+Reliability
+
+Security
+
+An agent framework gives you a loop. Production gives you everything the loop ignores: runs that succeed once and fail the next time, side effects that happen twice, contexts that grow until they cost more than the answer, and tool output that turns into instructions. This note is about those parts.
+
+### Measure reliability as pass^k, not pass@1
+
+Benchmarks usually report pass@1, or pass@k, where a task counts as solved if any of k attempts succeeds [1]. Users don’t experience pass@k. They experience the same agent on the same kind of task, again and again. τ-bench made this explicit with pass^k, the probability that all k trials of a task succeed. In its retail domain, state-of-the-art function-calling agents such as GPT-4o solved fewer than half the tasks, and pass^8 fell below 25% [2].
+
+pass@k = 1 − C(n − c, k) / C(n, k) pass^k = C(c, k) / C(n, k)
+
+Unbiased estimators from n trials of a task with c successes, averaged over tasks
+
+The non-obvious part: pass^k depends on how failures are distributed across tasks, not only on the average.
+
+- System A | System B
+
+- How it fails | Every task succeeds 60% of the time | 60% of tasks always pass, 40% always fail
+
+- pass@1 | 60% | 60%
+
+- pass^8 | 1.7% | 60%
+
+Computed exactly. The same pass@1, and a 36× difference in pass^8. Reliability lives in the variance, not the mean
+
+System A looks fine on a leaderboard and is unusable in a workflow, because no task is dependable. System B is honest about what it can’t do, and you can route around it. When you improve an agent, check whether pass^k moved, not only pass@1. METR’s time-horizon work makes the same point from another angle: the length of task frontier agents complete at 50% success has doubled roughly every seven months since 2019, and the horizon at higher reliability thresholds is much shorter [3]. “Can do” and “reliably does” are different curves.
+
+p = 0.95
+
+p = 0.80
+
+p = 0.60
+
+x-axis: k, number of trials that must all pass
+
+pass^k when every task has the same per-trial success p. Real systems sit between this curve and System B
+
+### Plan as a graph, execute in parallel
+
+ReAct interleaves reasoning and tool calls in one loop [4]. It is flexible and pays for it: every observation goes back through the model, and every step waits for the one before. ReWOO separates planning from observation: a planner writes the whole plan with placeholders, workers fill them, and a solver composes the answer, which cuts token use substantially [5]. LLMCompiler compiles the plan into a dependency graph of function calls and runs them in parallel as soon as their inputs are ready [6].
+
+ReAct loop
+
+think
+
+tool A
+
+think
+
+tool B
+
+think
+
+tool C
+
+answer
+
+Planned DAG
+
+plan
+
+A ∥ B
+
+C
+
+answer
+
+start
+
+time →
+
+Same three tools. Independent calls run together once the plan exists
+
+Planning up front has a second benefit that matters more than speed. If the plan is fixed before any untrusted data is read, a malicious tool result can’t add steps to it. Plan-then-execute is one of the core patterns in the prompt-injection design work below [7]. Re-planning is still allowed, but it becomes an explicit, logged transition rather than something a web page can trigger.
+
+### Treat the context window as a cache
+
+For long-running agents the prompt is mostly input. Manus reported about 100 input tokens per output token and called KV-cache hit rate the single most important metric for a production agent; with Claude Sonnet at the time, cached input cost $0.30 per million tokens against $3 uncached [8]. Cache hits need byte-identical prefixes, which turns some innocent habits into expensive bugs.
+
+Breaks the cache
+
+A timestamp at the top of the system prompt. Tools added or removed mid-run. JSON serialised with unstable key order. Rewriting earlier turns to tidy the history.
+
+Keeps the cache
+
+A stable system prompt and tool list. Append-only history. Deterministic serialisation. Tools masked at decode time instead of removed.
+
+Prompt-layout choices that decide whether you pay for the prefix once or on every step
+
+Three more Manus lessons are worth stealing. Use the file system as unbounded, restorable memory: drop a page’s content from context but keep its URL or path. Leave failed actions and stack traces in context, because erasing them removes the evidence the model needs to avoid repeating the mistake. And have the agent rewrite its task list near the end of the context, which keeps the global goal where models attend most reliably [8, 9].
+
+### Temperature zero is not reproducibility
+
+The usual explanation for nondeterminism at temperature 0 is floating-point arithmetic under concurrency. Thinking Machines showed the bigger cause in inference servers is a lack of batch invariance: kernels return slightly different numbers depending on batch size, and batch size depends on whoever else is using the server at that moment [10].
+
+1,000
+
+completions at temperature 0
+
+80
+
+distinct outputs
+
+103
+
+first token where runs diverged
+
+1
+
+distinct output with batch-invariant kernels
+
+Qwen3-235B, one prompt, as reported by Thinking Machines
+
+Two consequences for agents. Replay has to use recorded model outputs and tool results, not re-execution, or the debugger will show you a different run. And every eval needs repeated trials per task, which is pass^k again.
+
+### Constrain the interface, not the thinking
+
+Constrained decoding guarantees syntactically valid output by masking tokens that would break a grammar or schema [11]. It fixes parsing, not correctness, and it has a cost: Tam et al. found a significant decline in reasoning under strict format restrictions [12]. Two patterns keep both properties. Let the model reason in free text and emit the structured result in a second, constrained step. Or put a free-text reasoning field before the answer fields in the schema, so generation order follows thought order. Then validate semantically (the ID exists, the amount is in range) and return failures to the model as tool results; one retry with the error attached fixes a large share of bad calls.
+
+### Side effects need idempotency or compensation
+
+Retries are the right response to transient failure and dangerous around side effects. The classic answer is idempotency: key each operation so that doing it again returns the first result [13]. Derive the key from the run and the step, and store the result before acknowledging.
+
+One side-effecting step
+
+sketch
+
+key = f"{run.id}:{step.id}"
+
+if (done := ledger.get(key)): return done # a retry replays, never redoes
+
+args = schema.validate(call.args) # reject bad arguments early
+
+result = tool.run(args, idempotency_key=key)
+
+ledger.put(key, result) # checkpoint before moving on
+
+Some actions can’t be made idempotent, and some multi-step tasks have to be undone halfway. Databases solved this decades ago with sagas: split a long transaction into steps, give each step a compensating action, and on failure run the compensations in reverse [14]. For agents the rule becomes: every tool with a side effect declares either an idempotency key or a compensation, and the planner schedules irreversible steps, such as sending a message or charging a card, as late as possible, after everything that can fail has already succeeded.
+
+Reserve slot
+
+undo: release it
+
+Draft invoice
+
+undo: void it
+
+Charge card
+
+the pivot: irreversible
+
+Send confirmation
+
+retry with a key
+
+A saga for an agent workflow. Everything before the pivot can be undone; everything after it must be safely retryable
+
+### Multi-agent: spend tokens on breadth, keep one writer
+
+Anthropic’s research system, a lead agent delegating to parallel subagents, beat a single agent by 90.2% on their internal research eval. It also used about 15 times the tokens of a chat interaction, and on BrowseComp, token usage alone explained 80% of the variance in performance [15]. Cognition argued the other side in “Don’t Build Multi-Agents”: subagents that can’t see each other’s context make conflicting implicit decisions, so context should be shared in full and actions kept single-threaded [16].
+
+The two positions are consistent once you separate reading from writing. Research is breadth-first reading: independent subtasks, results merged by a lead, no conflicting side effects. Coding and operations are writing: every action carries decisions the next one depends on. Fan out to read; keep a single writer for decisions and side effects.
+
+System design
+
+Disobeying the spec, repeating steps
+
+Failures baked into roles, prompts and stop conditions.
+
+Inter-agent misalignment
+
+Withholding, ignoring, derailing
+
+Agents that don’t share what they know, or ignore what others said.
+
+Task verification
+
+Stopping early, checking badly
+
+No verification, or verification that passes wrong work.
+
+The three categories of MAST, a taxonomy of 14 failure modes built from 1,600+ traces across 7 frameworks, with inter-annotator agreement of κ = 0.88
+
+That taxonomy comes from Cemri et al. [17]. The uncomfortable finding is how many failures are organisational, not model errors: unclear roles, missing verification, information one agent had and never passed on.
+
+### Security: break the lethal trifecta
+
+Simon Willison’s framing is the most useful threat model I know for agents: an agent that has access to private data, is exposed to untrusted content, and can communicate externally can be tricked into exfiltrating that data [18]. Remove any one of the three and that class of attack closes.
+
+01
+
+Private data
+
+Mail, files, databases, credentials the agent can read.
+
+02
+
+Untrusted content
+
+Web pages, inbound email, documents, tool output.
+
+03
+
+A way out
+
+Sending messages, making requests, rendering links or images.
+
+Any agent holding all three at once is one injected instruction away from a leak
+
+When you can’t remove one, design for it. AgentDojo benchmarks agents against realistic injection attacks [19]. CaMeL separates a privileged model that plans from a quarantined model that parses untrusted data, while an interpreter tracks where every value came from and enforces which values may flow into which tools [20]. Beurer-Kellner et al. catalogue patterns with provable properties: action selectors, plan-then-execute, map-reduce over untrusted inputs, dual LLMs, code-then-execute and context minimisation [7]. Each trades flexibility for a guarantee, which is the right trade wherever money, data or reputation is involved.
+
+### Workflows first, still
+
+Anthropic’s guide draws the line between workflows, where code decides the path, and agents, where the model does, and recommends the simplest option that works [21]. Everything above is the cost of moving right on that spectrum.
+
+Single call
+
+one prompt
+
+Chain
+
+fixed steps
+
+Router
+
+model picks a branch
+
+Orchestrator + workers
+
+model splits the work
+
+Autonomous agent
+
+model owns the loop
+
+Left to right: more flexibility, less predictability, more cost
+
+An agent is a distributed system with a probabilistic component. Engineer it like one: measure pass^k, protect the cache, key every side effect, and assume tool output is hostile.
+
+### References
+
+01
+
+Chen et al., 2021. Evaluating Large Language Models Trained on Code. arXiv.
+
+02
+
+Yao et al., 2024. τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains. arXiv.
+
+03
+
+Kwa et al., 2025. Measuring AI Ability to Complete Long Tasks. METR.
+
+04
+
+Yao et al., 2023. ReAct: Synergizing Reasoning and Acting in Language Models. ICLR 2023.
+
+05
+
+Xu et al., 2023. ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models. arXiv.
+
+06
+
+Kim et al., 2024. An LLM Compiler for Parallel Function Calling. ICML 2024.
+
+07
+
+Beurer-Kellner et al., 2025. Design Patterns for Securing LLM Agents against Prompt Injections. arXiv.
+
+08
+
+Ji, 2025. Context Engineering for AI Agents: Lessons from Building Manus. Manus blog.
+
+09
+
+Liu et al., 2024. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024.
+
+10
+
+He & Thinking Machines Lab, 2025. Defeating Nondeterminism in LLM Inference. Connectionism blog.
+
+11
+
+Willard & Louf, 2023. Efficient Guided Generation for Large Language Models. arXiv.
+
+12
+
+Tam et al., 2024. Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models. EMNLP 2024 Industry.
+
+13
+
+Helland, 2012. Idempotence Is Not a Medical Condition. ACM Queue.
+
+14
+
+Garcia-Molina & Salem, 1987. Sagas. SIGMOD 1987.
+
+15
+
+Anthropic, 2025. How We Built Our Multi-Agent Research System. Engineering blog.
+
+16
+
+Yan, 2025. Don’t Build Multi-Agents. Cognition blog.
+
+17
+
+Cemri et al., 2025. Why Do Multi-Agent LLM Systems Fail?. NeurIPS 2025 Datasets and Benchmarks.
+
+18
+
+Willison, 2025. The Lethal Trifecta for AI Agents. simonwillison.net.
+
+19
+
+Debenedetti et al., 2024. AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents. NeurIPS 2024 Datasets and Benchmarks.
+
+20
+
+Debenedetti et al., 2025. Defeating Prompt Injections by Design. arXiv.
+
+21
+
+Anthropic, 2024. Building Effective Agents. Engineering blog.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Field guide
+
+Evaluating RAG end to end without fooling yourself
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# An AGI benchmark score is not a coding score · Saad Tamari
+
+URL: https://saadaltamari.com/writing-agi-benchmarks
+
+Home
+
+/
+
+Writing
+
+/
+
+Field guide
+
+## An AGI benchmark score is not a coding score
+
+GPT-6 Astra hit 99.9% on ARC-AGI-3 and gained about two points on the coding indexes. Here is why both are true, and what it says about reading any benchmark.
+
+Saad Al-Tamari
+
+Field guide · AGI benchmarks and coding
+
+8 min read
+
+Benchmarks
+
+ARC-AGI
+
+Evaluation
+
+Coding agents
+
+In September, GPT-6 Astra posted 99.9% on ARC-AGI-3, the benchmark designed to measure general intelligence. In the same launch, its numbers on the coding agent indexes moved by about two points. Both facts are true. The gap between them is the most useful thing to understand about benchmarks right now.
+
+### What ARC is trying to measure
+
+ARC starts from François Chollet’s definition of intelligence as skill-acquisition efficiency: how quickly a system learns new tasks relative to its priors and experience, not how much it already knows [1]. ARC-AGI-1 tested that with small grid puzzles, each a new rule to infer from a few examples. It held for five years, until a preview of OpenAI’s o3 scored 75.7% on the semi-private set at $26 per task, and 87.5% with about 172 times the compute, at $4,560 per task [2].
+
+ARC-AGI-2 raised the difficulty and calibrated its tasks against a human panel [3]. ARC-AGI-3, launched on 25 March 2026, changed the format entirely: hundreds of turn-based game environments with no instructions, no rules and no stated goals. An agent has to explore, work out how the world behaves, discover what winning means, and carry that knowledge into harder levels. At launch, humans solved 100% of the environments and frontier AI scored 0.51% [4]. Scoring rewards action efficiency against a human baseline: for each level, the median action count of the roughly 500 members of the public who completed it [5].
+
+### Six months from 0.51%
+
+25 Mar · frontier AI at launch
+
+0.51%
+
+24 Jul · Claude Opus 5, high effort
+
+30.2%
+
+3 Sep · GPT-6 Astra, standard harness, max
+
+62.7%
+
+3 Sep · GPT-6 Astra, provider adapter, high
+
+99.9%
+
+ARC-AGI-3 results verified by ARC Prize
+
+Those are ARC Prize’s verified results [6, 7]. On ARC-AGI-2 the frontier is now in the 90s: ARC Prize lists Claude Opus 5 at 90.4% and GPT-6 Astra at 95.0% at maximum reasoning effort. ARC-AGI-2 launched in March 2025. It took about eighteen months to get from hard to nearly saturated.
+
+### The harness is part of the score
+
+The same model at the same maximum effort scored 62.7% under ARC Prize’s standard harness and 98.6% under OpenAI’s provider-adapter harness [5].
+
+- Reasoning effort | Standard | Cost | Provider adapter | Cost
+
+- Max | 62.7% | $26,098 | 98.6% | $17,332
+
+- XHigh | 59.3% | $37,317 | 98.4% | $18,147
+
+- High | 54.8% | $40,705 | 99.9% | $18,817
+
+- Medium | 38.6% | $48,090 | 98.4% | $19,285
+
+- Low | 17.5% | $38,166 | 98.0% | $21,298
+
+- None | 35.2% | $49,791 | 96.7% | $23,457
+
+GPT-6 Astra on ARC-AGI-3 by harness and effort, as verified by ARC Prize. Costs are totals for the run
+
+The difference is memory. The standard harness is provider-neutral and lets the model carry forward notes it chooses to keep. The provider adapter preserves the model’s opaque reasoning state between requests and compacts long conversations. On the 167 game runs both harnesses solved, the adapter was about 3.66 times faster and used 49% fewer tokens. OpenAI’s footnote says its harness changes two settings to better match real-world performance and does not target ARC-AGI-3 specifically [8].
+
+Three details in that table are easy to miss. Under the standard harness, no reasoning (35.2%) beat low reasoning (17.5%): effort is not monotonic once the model has to manage its own memory. The adapter runs were cheaper as well as better, because carrying state forward avoids re-deriving it every turn. And the 36-point gap between harnesses is larger than the gap between Claude Opus 5 and Astra on the standard harness (30.2% against 62.7%). A score belongs to a model, a harness, an effort setting and a budget, together.
+
+ARC Prize’s own position is careful. It reports both harnesses, says it believes a future AGI should be able to solve ARC-AGI-3 under the standard conditions, and states that saturating the benchmark would not be proof of AGI [5].
+
+### Why the reasoning jump didn’t show up in coding
+
+ARC-AGI-3
+
++82.1 pts
+
+Terminal-Bench 4.0
+
++20.6
+
+Artificial Analysis Coding Agent Index v1.4
+
++1.9
+
+DeepSWE v1.1
+
++1.4
+
+Gains from GPT-5.6 Sol to GPT-6 Astra, taken from OpenAI’s own launch table
+
+Those deltas come from OpenAI’s launch table [8]. Independently, Artificial Analysis placed Astra at 67 on its Coding Agent Index when run through Codex: roughly level with Claude Opus 5 and Fable 5, and three points behind Claude Fable 5.1 in Claude Code at 70 [9]. At launch, the coding picture was a tie at the top, not a leap.
+
+That is not a contradiction. ARC-AGI-3 rewards inducing the rules of a small, novel world from scratch, with little state and few actions. Everyday software engineering rewards nearly the opposite: navigating a large existing codebase, following conventions nobody wrote down, keeping long chains of edits consistent, and knowing when a change is actually done. The bottleneck there is context management and engineering judgment inside a huge, specific world, not abstraction from nothing. The largest coding-adjacent gain in OpenAI’s table, Terminal-Bench, is also the task closest to ARC’s interactive explore-and-act format. That last point is my reading of the numbers, not a claim either lab makes.
+
+### Coding benchmarks have their own problems
+
+The coding side is not a clean yardstick either. SWE-bench turned real GitHub issues into tasks [10], and its human-validated Verified subset became the standard score. In February 2026 OpenAI stopped reporting it: auditing 138 problems that o3 did not solve consistently, it found 59.4% had material problems in their tests or descriptions, and every frontier model it tested could reproduce gold patches or verbatim problem details for some tasks [11]. Earlier, Liang et al. showed models could identify the buggy file from the issue text alone up to 76% of the time on SWE-bench repositories, against up to 53% on repositories outside it, a gap consistent with memorisation [12].
+
+Buggy file named from issue text alone: SWE-bench repos
+
+up to 76%
+
+The same test on repos outside SWE-bench
+
+up to 53%
+
+Audited Verified problems with flawed tests or descriptions
+
+59.4%
+
+Two independent signs that a famous coding benchmark stopped measuring what it claimed
+
+Benchmarks can also disagree with people. In METR’s randomised controlled trial, 16 experienced open-source developers took 19% longer on 246 real tasks when allowed to use early-2025 AI tools, after forecasting a 24% speedup and while estimating afterwards that they had been 20% faster [13]. The tools have improved a lot since, so the number shouldn’t be generalised. The method should: self-reported productivity is not a measurement.
+
+Leaderboards built on human votes have their own version of this. The Leaderboard Illusion documented 27 private variants tested by Meta ahead of the Llama 4 release, and estimated that Google and OpenAI received about 19.2% and 20.4% of all arena data, against 29.7% for 83 open-weight models combined [14]. Contamination-resistant designs exist: LiveCodeBench only scores problems published after a model’s training cutoff [15].
+
+### How I read a benchmark claim now
+
+- Which set? Public, semi-private or private. Public sets leak into training data.
+
+- Who ran it? Vendor-reported or independently verified, and under which harness and effort setting.
+
+- What did it cost? Cost per task changes the meaning of a score. 87.5% at $4,560 a task is a research result, not a product.
+
+- How many attempts? pass@1, pass@k or best-of-n, and whether the intervals overlap.
+
+- Saturated or contaminated? Near-ceiling scores and pre-cutoff public data both shrink what a benchmark can tell you.
+
+- Does it look like my work? If not, build a small private eval from my own repositories and tickets, and trust it over any leaderboard.
+
+A benchmark measures a model, a harness and a budget on one kind of task. The skill is reading which of those actually moved.
+
+### References
+
+01
+
+Chollet, 2019. On the Measure of Intelligence. arXiv.
+
+02
+
+ARC Prize, 2024. OpenAI o3 Breakthrough High Score on ARC-AGI-Pub. ARC Prize blog, 20 Dec 2024.
+
+03
+
+Chollet et al., 2025. ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems. arXiv.
+
+04
+
+ARC Prize, 2026. ARC-AGI-3 Launch. ARC Prize blog, 25 Mar 2026.
+
+05
+
+Kamradt, 2026. OpenAI’s GPT-6 Astra on ARC-AGI-3. ARC Prize blog, 3 Sep 2026.
+
+06
+
+ARC Prize, 2026. Claude Opus 5: ARC-AGI Results. ARC Prize verified results, 24 Jul 2026.
+
+07
+
+ARC Prize, 2026. GPT-6 Astra: ARC-AGI Results. ARC Prize verified results.
+
+08
+
+OpenAI, 2026. GPT-6 Astra: A New Generation of Intelligence. OpenAI.
+
+09
+
+AI Weekly, 2026. GPT-6 Astra Lands at 67 on Coding Index, Behind Fable 5.1’s 70 (reporting Artificial Analysis). AI Weekly, 4 Sep 2026.
+
+10
+
+Jimenez et al., 2024. SWE-bench: Can Language Models Resolve Real-World GitHub Issues?. ICLR 2024.
+
+11
+
+OpenAI, 2026. Why SWE-bench Verified No Longer Measures Frontier Coding Capabilities. OpenAI, 23 Feb 2026.
+
+12
+
+Liang et al., 2025. The SWE-Bench Illusion: When State-of-the-Art LLMs Remember Instead of Reason. arXiv.
+
+13
+
+Becker et al., 2025. Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity. METR.
+
+14
+
+Singh et al., 2025. The Leaderboard Illusion. arXiv.
+
+15
+
+Jain et al., 2025. LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code. ICLR 2025.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+Mission control for 350 agents
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Dubbing Arabic without drifting off the speaker · Saad Tamari
+
+URL: https://saadaltamari.com/writing-arabic-dubbing
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## Dubbing Arabic without drifting off the speaker
+
+The obvious way to dub a lecture is to translate it, voice it and join the clips. In Arabic, that slowly pulls the voice away from the face.
+
+Saad Al-Tamari
+
+From the work: Dubljly · 2026
+
+2 min read
+
+Arabic AI
+
+Speech
+
+Product
+
+Dubljly turns an English lecture, from a YouTube link or an upload, into Arabic: a synced voice-over, Arabic and English subtitles, a study pack, and a tutor that knows the lecture. I built it solo, as one FastAPI service with a React front end and no extra infrastructure.
+
+Fetch
+
+yt-dlp
+
+Transcribe
+
+Whisper
+
+Segment
+
+timed chunks
+
+Study pack
+
+shown first
+
+Translate
+
+Arabic
+
+Voice
+
+one clip per segment
+
+Mix
+
+over the original
+
+The seven-step pipeline, run by a single background worker
+
+### Why joining clips drifts
+
+Arabic often takes longer to say than the English it translates. Join the voiced clips end to end and every sentence that runs a little long pushes the next one later. A few minutes in, the narrator is describing a slide that has already gone.
+
+English original
+
+1
+
+2
+
+3
+
+4
+
+Joined end to end
+
+1
+
+2
+
+3
+
+4 late
+
+Placed at each start
+
+1
+
+2
+
+3
+
+4
+
+0:00
+
+0:10
+
+0:20
+
+0:30
+
+0:40
+
+Joined clips drift later with every sentence; placed clips start with the speaker. Clip 3 ran long and was fitted to its slot
+
+### Place every clip on the original timeline
+
+Each transcript segment keeps its original start time. Its Arabic clip is placed at that start, never after the previous clip. When a clip is longer than its slot, a fit ladder shortens or speeds it up until it fits, so the voice stays with the speaker for the whole lecture.
+
+### Learning starts before the dub finishes
+
+The study pack (summary, key terms and their Arabic meanings) is built before anything is translated or voiced. The target is a study pack in about 30 to 40 seconds and a full dub in about 2 to 3 minutes for a 10-minute lecture. Those are spec targets, not measured figures.
+
+### Swappable providers, validated output
+
+Speech-to-text, language models and voice each sit behind an adapter, so the pipeline never imports a vendor SDK. Structured calls ask for JSON and validate it with Pydantic: invalid output gets one retry with the error attached, then the router moves to the next provider.
+
+The hard part of Arabic dubbing isn’t translation. It is time.
+
+Read the full Dubljly case study.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Field guide
+
+RAG past the tutorial: where retrieval quietly breaks
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# When not to use your own gateway · Saad Tamari
+
+URL: https://saadaltamari.com/writing-bypass-gateway
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## When not to use your own gateway
+
+I built a gateway that every app in the firm goes through. Then I built one platform that deliberately goes around it, and I would defend that call in any review.
+
+Saad Al-Tamari
+
+From the work: Data Sync Platform · Mar–Aug 2026
+
+2 min read
+
+Data pipelines
+
+Architecture
+
+Agents
+
+The Data Sync Platform pulls external systems (CRM, a knowledge base, meeting transcripts) into the shared 87-table schema. It is configured through a chat interface rather than code, and it runs as twelve agents, each with one job.
+
+Fetch
+
+with pagination
+
+Map
+
+fields to columns
+
+Resolve
+
+new · update · duplicate · conflict
+
+Transform
+
+enums and foreign keys
+
+Validate
+
+against live constraints
+
+Write
+
+bulk, with audit trail
+
+Reconcile
+
+counts and anomalies
+
+The seven core agents that run on every sync. Four more handle source-specific content, and one chat agent drives it all
+
+### Plugins are rows, not code
+
+Adding a data source means creating a configuration row, not deploying a code file. The seven core agents handle any REST API given the right config, which is why a new integration can be set up from a chat window in minutes. The chat agent can discover an API, propose mappings, create the configuration, trigger a sync, explain an error and roll back.
+
+### The numbers that made the call
+
+The gateway is built for app traffic: single operations, permissions, rate limits. It has no bulk upsert. Routed through it, one 150-record sync becomes 395+ HTTP round trips, runs straight into the rate limit, and makes the gateway a single point of failure for bulk traffic it was never designed for.
+
+Through the gateway
+
+395+ calls
+
+Direct bulk write
+
+one write
+
+One 150-record sync, two paths
+
+### Going around it without going dark
+
+Bypassing the gateway did not mean bypassing accountability. The platform still writes audit entries and source-mapping rows, so the gateway’s view of the data stays complete. Anyone reading the logs sees the sync exactly as if it had gone through the front door.
+
+### Safety nets for bulk writes
+
+Dry run
+
+The full pipeline runs with the writer switched off and produces a preview report before anything is committed.
+
+Rollback
+
+Every sync is tagged. Inserts are deleted and updates reverted to their prior values from the audit log.
+
+Two ways to make a bulk write reversible
+
+Knowing when not to route through your own abstraction matters more than building the abstraction.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+Skills that get better by losing
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Why my context engine leaves budget unspent · Saad Tamari
+
+URL: https://saadaltamari.com/writing-context-budget
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## Why my context engine leaves budget unspent
+
+Past a point, adding context makes answers worse while cost and latency keep rising. Most retrieval systems have nothing that ever says stop. I built one that does.
+
+Saad Al-Tamari
+
+From the work: Predictive Context Engine · Jun–Aug 2026
+
+2 min read
+
+Context engineering
+
+Agents
+
+LLM cost
+
+The Predictive Context Engine decides what an investment agent should actually see for a given task. It is a compiler, not a search box: every compose runs through nine stages and leaves a record you can audit months later.
+
+Classify
+
+Profile
+
+versioned
+
+Safety gate
+
+Score value
+
+Allocate
+
+budget
+
+Assemble
+
+Band
+
+trust
+
+Probe
+
+Emit
+
+snapshot
+
+The nine stages of one compose, each inspectable in the operator console
+
+### Pack by value per token, then stop
+
+Candidates are ranked by the value they add per token. Packing continues only while the next item clears a marginal-utility threshold. When it doesn’t, allocation stops, even with budget left over.
+
+Illustrative shape, not measured data: the engine stops where the next item adds less than it costs
+
+Allocation
+
+simplified
+
+for item in ranked_by_value_per_token(candidates):
+
+if marginal_utility(item) < threshold:
+
+break # stop, even with budget left
+
+if item.tokens > budget_left:
+
+reject(item, "over budget"); continue
+
+pack(item)
+
+reject_rest(reason="below threshold")
+
+### “Why not” is as auditable as “why”
+
+Every item that was left out is recorded with its reason. When an answer is wrong, the question is usually what the agent didn’t see, and that is now a query rather than a guess.
+
+### Injection is a boundary, not a filter
+
+Untrusted content is scanned and dropped rather than cleaned up, and low-trust sources are structurally barred from the instruction band. That rule is enforced in code and again by a database constraint, so a bug in one layer doesn’t open the door.
+
+Filter approach
+
+Clean up suspicious text, then pass it along with everything else. One missed pattern and it reaches the instructions.
+
+Boundary approach
+
+Low-trust sources can never enter the instruction band. Enforced in code, and again by a database CHECK constraint.
+
+Two ways to handle prompt injection; the engine uses the second
+
+### It never hard-fails
+
+An LLM summary degrades to a deterministic extract, embeddings degrade to lexical similarity, and a timeout returns a valid fallback instead of an error.
+
+### A learning loop that can’t approve itself
+
+Every compose is content-addressed and snapshot-backed, so it replays byte for byte. The engine proposes its own policy changes from measured evidence, and is structurally forbidden from applying them. A person approves, and reverting is one click. Before it trusts its own measurements, it calibrates its LLM judge against human labels.
+
+Leaving budget unspent looks like waste. It is the cheapest quality improvement I know.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+Let the code decide, let the model explain
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Mission control for 350 agents · Saad Tamari
+
+URL: https://saadaltamari.com/writing-control-plane
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## Mission control for 350 agents
+
+Once 350+ agents run across 35+ apps, the first question stops being “is the model good?” It becomes: which agent is failing, what is it costing, and can I stop it without a deploy?
+
+Saad Al-Tamari
+
+From the work: Agent Control Panel · Feb–Aug 2026
+
+3 min read
+
+Agent ops
+
+Observability
+
+LLM cost
+
+The Agent Control Panel was my answer at Decasonic: one login where every agent is observable, measurable and remotely controllable. It runs as a modular monolith, one Node process serving the API and the React app, with 9 tables and about 60 endpoints. No message broker, no worker fleet. The interesting decisions were about who it serves and what it refuses to hide.
+
+### Four people, four questions
+
+Operators
+
+Is anything broken or burning money?
+
+Outages and runaway spend, at a glance
+
+Prompt engineers
+
+Can I change it safely?
+
+Edit, version and roll back without a deploy
+
+Finance
+
+What does each agent cost?
+
+Token and dollar cost per agent, per app, per day
+
+Developers
+
+How do I connect a new app?
+
+A five-step integration wizard
+
+The four audiences the control plane serves, and the question each one asks first
+
+### A health score anyone can read
+
+Every connected app reports heartbeats and runs. Each agent gets a status (running, idle, paused, stopped or error) and a rolling health score recomputed on every run and heartbeat. I kept the formula deliberately simple, so an operator can check it in their head.
+
+health = 100 − (errors in the last 20 runs ÷ 20 × 100)
+
+Example: 3 errors in 20 runs
+
+health 85
+
+The rolling health score, with an example window of 20 runs (orange marks an error)
+
+### Control without redeploying
+
+Pause, resume, stop or restart an agent, swap its model, or push a new system prompt, while the target app keeps running. Commands travel as HMAC-SHA256-signed webhooks with exponential-backoff retry, and each one has a visible lifecycle so nobody wonders whether it landed.
+
+Command
+
+pause · model · prompt
+
+Pending
+
+queued and signed
+
+Sent
+
+webhook delivered
+
+Acknowledged
+
+the app confirms
+
+Failed
+
+retry with backoff
+
+Every remote command moves through the same visible lifecycle
+
+Prompts are versioned assets with one-click rollback. Feedback folds straight into a new version through tags like [INSTRUCTION], [IMPROVEMENT], [BUG FIX] and [KEEP DOING], and an AI reviewer scores answers from 0 to 100 with a written reason.
+
+### The platform watches itself
+
+The panel’s own AI features are modelled as eight real internal agents, so the platform’s LLM spend is tracked with exactly the same machinery as everyone else’s.
+
+Integration Analyzer
+
+Code Generator
+
+Quality Reviewer
+
+Pricing Searcher A
+
+Pricing Searcher B
+
+Pricing Judge
+
+Error Explainer
+
+Error Solver
+
+The eight internal agents, each with its own editable prompt and model
+
+### Prices that check their own sources
+
+Cost tracking is only as good as the price table behind it, and model prices change. So pricing discovery follows a protocol that spends tokens only when it has to.
+
+Public pricing API
+
+free and deterministic
+
+Two searchers
+
+run in parallel, only on failure
+
+Disagree?
+
+each re-checks against the other
+
+Judge
+
+a third model decides
+
+The pricing discovery protocol. Every step goes to a capped audit log, with per-model cooldowns and a global concurrency cap
+
+### Small things that matter in production
+
+- A heartbeat can never silently un-pause an agent someone stopped.
+
+- Token usage is upserted atomically, so concurrent heartbeats can’t lose counts.
+
+- When a provider fails, the fallback chain answers and the UI shows an amber badge, so an operator is never misled about which model replied.
+
+- Prompt and feedback bodies are base64-encoded on the way in, because a production firewall kept reading legitimate prompt text as an attack.
+
+You can’t improve agents you can’t see. Visibility first, then control, then cost.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+A 200 doesn’t mean your data is useful
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Let the code decide, let the model explain · Saad Tamari
+
+URL: https://saadaltamari.com/writing-fair-matching
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## Let the code decide, let the model explain
+
+300 founders, VCs and LPs in one room for one day, and every attendee asking the same question: who should I be talking to right now, and what do I say?
+
+Saad Al-Tamari
+
+From the work: Web3 Investor Day app · Apr–Jul 2026
+
+2 min read
+
+Matching
+
+Privacy
+
+Product engineering
+
+I built the whole platform for Decasonic’s Investor Day solo: an Expo mobile app, a React admin console and an Express API, about 60,000 hand-written lines of TypeScript. The part worth writing about is how it decided who should meet whom.
+
+300
+
+attendees, live
+
+21
+
+sessions, 47 speakers
+
+~124
+
+API operations
+
+188
+
+unit tests
+
+The event, and the system behind it
+
+### The model never decides who matches
+
+The pair-scoring function is pure, unit-tested code with no LLM in it. It decides who matches. The model’s only job is to write the human-readable reason, after the decision is made.
+
+Score every pair
+
+pure, tested function
+
+Exclude colleagues
+
+domain normalization
+
+Cap per company
+
+no fund hoards the room
+
+Starvation floor
+
+nobody gets zero
+
+LLM writes the why
+
+explains, never decides
+
+The matching pipeline: deterministic until the very last step
+
+### Fair by construction
+
+Colleagues never match each other. Per-company caps stop one fund from taking every good introduction. A starvation floor guarantees that nobody ends the day with zero introductions, which is the failure a pure “best score wins” system produces for quieter attendees.
+
+### Lunch, as an algorithm
+
+Lunch ran as a rotation: 9 companies, 9 timed rounds, and every attendee routed so they see every company once. A state machine invalidates a live rotation rather than corrupting it if something changes mid-event.
+
+T1
+
+T2
+
+T3
+
+T4
+
+T5
+
+T6
+
+T7
+
+T8
+
+T9
+
+R1
+
+R2
+
+R3
+
+R4
+
+R5
+
+R6
+
+R7
+
+R8
+
+R9
+
+One attendee’s lunch route: a different table (T) in each round (R), every company visited once
+
+### Privacy has to reach the prompt
+
+Some attendees chose to hide their name. Masking it in the API response is not enough: if the full record reaches the model, the generated text can still name them. So masking happens server-side before any surface sees the data, including the LLM prompt.
+
+Masked in the response only
+
+The API hides the name, but the model saw it, and writes “you should meet Sarah from…” in a recommendation.
+
+Masked before every surface
+
+The record is masked on the server first. The app, the admin console and the prompt all receive the same masked data.
+
+Why privacy is enforced as architecture, not as a filter on the way out
+
+### Boring guarantees
+
+- Scanning a QR code twice can’t double-count a check-in: idempotency is enforced by a database constraint, never read-then-write.
+
+- One OpenAPI spec generates the typed client and validation, so the app and the API cannot drift apart.
+
+- Every admin change writes to an audit log.
+
+Use the model for what it is good at, language. Keep the decisions in code you can test.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+When not to use your own gateway
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# A 200 doesn’t mean your data is useful · Saad Tamari
+
+URL: https://saadaltamari.com/writing-gateway-200
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## A 200 doesn’t mean your data is useful
+
+Every write through the gateway came back 200. The dashboards were still empty. So I stopped trusting status codes and audited the data itself.
+
+Saad Al-Tamari
+
+From the work: MCP Hub data audit · 2026
+
+3 min read
+
+Data quality
+
+MCP gateway
+
+Postgres
+
+At Decasonic, 35+ apps and 350+ AI agents write into one shared Postgres schema through a gateway I built. The gateway checks keys, permissions and rate limits, logs every request and translates raw database errors into messages an app can act on. By every operational metric it was healthy.
+
+And yet the views that depended on that data, like an action portal answering “what signals are about this company?”, came back thin or empty. The requests were arriving. The data was not doing its job.
+
+App writes a signal
+
+generated integration code
+
+Gateway
+
+200 OK
+
+Database
+
+row saved, linked to nothing
+
+Where the problem hides: the request succeeds, the data is orphaned
+
+### Success codes measure delivery, not meaning
+
+A 200 tells you the request was accepted. It says nothing about whether the row is linked to anything, whether a junction table was written, or whether the value in a UUID column is a UUID. When most of your write code is generated by AI builders, those are exactly the things that drift.
+
+### Five ways a successful write goes wrong
+
+- Casing against CHECK constraints. About 400 failures, nearly all of them 'prod' sent where the schema expects 'PROD'.
+
+- Plausible but wrong column names. About 30 failures from generated code guessing a name that sounds right.
+
+- Missing junction writes. Zero rows in every junction table, so nothing could answer which signals belong to which company.
+
+- Missing foreign keys. The agent on execution logs was filled on 0 of 1,021 rows. Contacts were linked to a company on 0 of 57.
+
+- Bad types. 'test-123' and '[object Object]' shipped as UUIDs.
+
+Agent set on execution logs
+
+0 / 1,021
+
+Company set on contacts
+
+0 / 57
+
+Signals linked to their run, before
+
+0 / 78
+
+Signals linked to their run, after
+
+777 / 864
+
+Foreign-key fill rates found by the audit. A 200 on every one of these writes
+
+### Fix it once, where it starts
+
+The gateway onboards new apps by generating their integration code from the schema. When the very first integration hit foreign-key violations, the cause was the generator: it wasn’t passing relationship information into the prompt. I fixed it there, once, and every integration after it inherited the fix.
+
+For the apps already live, I wrote a standard four-section fix prompt for each app and closed permission gaps in four of them.
+
+Signals flowing, before
+
+78
+
+Signals flowing, after
+
+864
+
+Agent runs recorded, before
+
+0
+
+Agent runs recorded, after
+
+72
+
+Before and after the fixes, across the nine connected apps. Each pair is on its own scale
+
+### Regressions happen on redeploy
+
+The audit was not a one-time cleanup. One app lost 11 of its 15 table integrations in a single redeploy, and its writes still came back 200. Data health needs checking after every deploy, the same way tests do.
+
+### What I would do from day one
+
+- Measure meaning, not status: foreign-key fill rates, junction row counts, and type validity per app.
+
+- Enforce enums and casing at the gateway, and return an error that names the allowed values.
+
+- Generate clients from a schema contract that carries human-written descriptions, so code knows a status column is a deal stage, not just a string.
+
+- Run the health check after every redeploy, not once a quarter.
+
+A gateway 200 tells you the request arrived. Only the data tells you whether it was worth sending.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+28 apps, 756 connections: why the database is the contract
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Evaluating RAG end to end without fooling yourself
+
+URL: https://saadaltamari.com/writing-rag-eval
+
+Home
+
+/
+
+Writing
+
+/
+
+Field guide
+
+## Evaluating RAG end to end without fooling yourself
+
+One accuracy number blends six different failures. Here is how to measure each layer, tie it to the end-to-end result, and report intervals that hold up.
+
+Saad Al-Tamari
+
+Field guide · End-to-end RAG evaluation
+
+8 min read
+
+Evaluation
+
+RAG
+
+Statistics
+
+LLM-as-judge
+
+A RAG system can fail in its index, retriever, reranker, packing, generator or citations, and one “answer accuracy” number blends all of them. This note is a method: evaluate each layer, connect the layers to the end-to-end result, and report numbers that would survive a statistician.
+
+### Evaluate the layers, then the system
+
+- Layer | Question it answers | Metric
+
+- Retrieval | Did the evidence come back? | Recall@k at rerank depth, nDCG@10
+
+- Context | Is what we packed useful? | Context precision, distractor rate
+
+- Generation | Is every claim supported? | Claim-level faithfulness
+
+- Correctness | Is the answer right? | Accuracy against a reference, abstention accuracy
+
+- Attribution | Do the citations hold up? | Citation precision and recall
+
+Each row fails differently. An end-to-end score tells you something broke, not where
+
+nDCG rewards ranking highly relevant passages near the top, with a logarithmic discount by position [1]. For RAG, recall at the depth you actually pass to the generator usually predicts answer quality better, because the generator reads everything you pack. Citation precision and recall come from ALCE [2], which builds on the AIS framework for judging whether a statement is attributable to a source [3].
+
+### Your relevance labels are incomplete, and that is a bias
+
+Ground truth is usually built by judging a pool of top results from a few systems. Documents that no pooled system retrieved are never judged and get treated as irrelevant, a bias studied since the TREC era [4]. A new retriever that finds good passages your old one missed is penalised for being better. Before trusting a comparison, judge a sample of the new system’s unjudged results.
+
+Synthetic test sets have their own bias. A question generated from a single chunk tends to reuse that chunk’s wording, which makes lexical retrieval look better than it will on real users, who ask in their own words. Generate from several chunks, paraphrase aggressively, and keep a slice of real queries from logs as the set that decides releases.
+
+### Judge retrieval by what it does to the answer
+
+Relevance labels measure whether a passage is about the question. The generator cares whether the passage helps it answer. eRAG turns that into the metric: feed each retrieved document to the generator on its own, score the output against the reference, and use that score as the document’s label. Salemi and Zamani found this correlates with end-to-end RAG performance better than evaluations built on query-document relevance labels, while using up to 50 times less GPU memory than full end-to-end runs [5].
+
+Retrieve top k
+
+Generate from doc 1 alone
+
+…doc k alone
+
+Score each output
+
+vs reference
+
+Doc labels
+
+aggregate to recall, nDCG
+
+eRAG: label documents by their downstream effect, then compute ordinary ranking metrics on those labels
+
+It also exposes the near-miss problem: a passage can be relevant by any human standard and still lower answer quality [6]. A label that only says “relevant” can’t see that.
+
+### Faithfulness, one claim at a time
+
+“Is this answer grounded?” is too coarse to judge reliably. FActScore splits a long answer into atomic facts and checks each against a knowledge source [7]. RAGChecker applies the idea to RAG: claims from the answer and the reference are checked for entailment against each other and against the retrieved context, which yields diagnostics such as context utilisation, noise sensitivity and hallucination rate rather than one score [8]. RAGAS popularised reference-free versions of these metrics [9].
+
+Generative search: sentences fully supported by citations
+
+51.5%
+
+Generative search: citations that support their sentence
+
+74.5%
+
+CRAG: best LLMs alone
+
+≤ 34%
+
+CRAG: straightforward RAG
+
+44%
+
+CRAG: industry RAG, answered without hallucination
+
+63%
+
+Published baselines: four generative search engines audited by Liu et al., and CRAG’s 4,409 questions
+
+Those are the base rates to beat [10, 11]. CRAG’s headline is worth repeating: adding retrieval in a straightforward way lifted accuracy only from about a third to 44%.
+
+### Validate the judge before you trust it
+
+LLM judges are the only practical way to score claim-level metrics at scale, and their biases are measurable. Zheng et al. documented position, verbosity and self-enhancement bias [12]; Wang et al. showed that swapping the order of two answers can flip a judge’s verdict [13]; Panickssery et al. found judges recognise and favour their own generations [14]. Shankar et al. add a subtler problem, criteria drift: people refine what “good” means while grading, so a rubric fixed in advance quietly stops matching what humans want [15].
+
+Raw agreement
+
+90%. Looks excellent. The judge approves everything, and 90% of answers happen to be good.
+
+Cohen’s kappa
+
+0.00. Agreement corrected for chance: (0.90 − 0.90) / (1 − 0.90). The judge adds nothing.
+
+The same judge, two metrics. Report kappa
+
+So: label 100 to 200 cases by hand, measure agreement with Cohen’s kappa [16], swap positions in every pairwise test, prefer binary claim-level checks over 1 to 10 scales, and re-label a sample whenever the rubric changes.
+
+### Valid intervals from a biased judge
+
+This is the most useful technique in the note. You have a small human-labelled set, say 150 questions, and a large judge-labelled set, say 5,000. The judge is cheap and biased; the humans are unbiased and few. Prediction-powered inference combines them: take the judge’s mean on the large set and correct it by the judge’s average error on the human set [17]. ARES applies it to RAG evaluation [18].
+
+θ̂PP = meanN( judge ) − meann( judge − human )
+
+The correction term removes the judge’s bias. The better the judge agrees with people, the tighter the interval
+
+The estimate stays unbiased even when the judge is systematically optimistic. When the judge agrees with humans most of the time, the interval is far tighter than the 150 human labels could give you alone.
+
+### Do the statistics, including the part people skip
+
+95% interval ≈ p ± 1.96 × √( p (1 − p) / n )
+
+50 questions
+
+± 11.1 pts
+
+100 questions
+
+± 7.8 pts
+
+200 questions
+
+± 5.5 pts
+
+400 questions
+
+± 3.9 pts
+
+1000 questions
+
+± 2.5 pts
+
+Half-widths of the 95% interval at an 80% pass rate, computed exactly. Grey rows can’t resolve a 3 to 5 point change
+
+Miller’s “Adding Error Bars to Evals” lays out the method: report standard errors, use paired differences when two systems answer the same questions, and cluster standard errors when questions are not independent [19]. The last point bites RAG specifically. Eval sets are usually built several questions per document, and questions about the same passage succeed or fail together.
+
+design effect = 1 + (m − 1) ρ → neff = n / design effect
+
+200
+
+questions
+
+10
+
+per document (m)
+
+0.3
+
+intra-document correlation (ρ)
+
+54
+
+effective sample size
+
+Kish’s design effect: 1 + 9 × 0.3 = 3.7, so the honest interval is √3.7 ≈ 1.9× wider than the naive one
+
+That is Kish’s design effect from survey sampling [20]: 200 clustered questions carry about as much information as 54 independent ones. For comparing two systems, count discordant pairs. If 9 questions flipped from fail to pass and 6 from pass to fail, McNemar’s test gives (9 − 6)² / (9 + 6) = 0.6, p ≈ 0.44 [21]: a +3 indistinguishable from chance. The 15 flipped questions are where to read.
+
+### Validate online, not only offline
+
+- Runtime groundedness. Run a cheap claim-support check before an answer ships, and abstain or regenerate when it fails.
+
+- Citation verification. Reject any answer that cites a passage ID that was not in the retrieved set.
+
+- Canaries. Keep a fixed set of questions with known answers and run it on every index rebuild. Re-embedding, chunking changes and deletes break retrieval silently.
+
+- Abstention as a metric. Track correct refusals on unanswerable questions next to accuracy. A system that never says “I don’t know” looks accurate until it isn’t.
+
+- Adversarial slices. Conflicting documents, stale versions, near-miss distractors and planted injections [22], each as its own slice with its own threshold.
+
+A RAG eval is a measurement instrument. Calibrate it against people, put error bars on it, and know which layer every number belongs to.
+
+### References
+
+01
+
+Järvelin & Kekäläinen, 2002. Cumulated Gain-Based Evaluation of IR Techniques. ACM TOIS.
+
+02
+
+Gao et al., 2023. Enabling Large Language Models to Generate Text with Citations. EMNLP 2023.
+
+03
+
+Rashkin et al., 2023. Measuring Attribution in Natural Language Generation Models. Computational Linguistics.
+
+04
+
+Buckley & Voorhees, 2004. Retrieval Evaluation with Incomplete Information. SIGIR 2004.
+
+05
+
+Salemi & Zamani, 2024. Evaluating Retrieval Quality in Retrieval-Augmented Generation. SIGIR 2024.
+
+06
+
+Cuconasu et al., 2024. The Power of Noise: Redefining Retrieval for RAG Systems. SIGIR 2024.
+
+07
+
+Min et al., 2023. FActScore: Fine-grained Atomic Evaluation of Factual Precision in Long Form Text Generation. EMNLP 2023.
+
+08
+
+Ru et al., 2024. RAGChecker: A Fine-grained Framework for Diagnosing Retrieval-Augmented Generation. NeurIPS 2024 Datasets and Benchmarks.
+
+09
+
+Es et al., 2024. RAGAS: Automated Evaluation of Retrieval Augmented Generation. EACL 2024 Demos.
+
+10
+
+Liu, Zhang & Liang, 2023. Evaluating Verifiability in Generative Search Engines. Findings of EMNLP 2023.
+
+11
+
+Yang et al., 2024. CRAG: Comprehensive RAG Benchmark. NeurIPS 2024 Datasets and Benchmarks.
+
+12
+
+Zheng et al., 2023. Judging LLM-as-a-Judge with MT-Bench and Chatbot Arena. NeurIPS 2023 Datasets and Benchmarks.
+
+13
+
+Wang et al., 2024. Large Language Models are not Fair Evaluators. ACL 2024.
+
+14
+
+Panickssery et al., 2024. LLM Evaluators Recognize and Favor Their Own Generations. NeurIPS 2024.
+
+15
+
+Shankar et al., 2024. Who Validates the Validators? Aligning LLM-Assisted Evaluation of LLM Outputs with Human Preferences. UIST 2024.
+
+16
+
+Cohen, 1960. A Coefficient of Agreement for Nominal Scales. Educational and Psychological Measurement.
+
+17
+
+Angelopoulos et al., 2023. Prediction-Powered Inference. Science.
+
+18
+
+Saad-Falcon et al., 2024. ARES: An Automated Evaluation Framework for Retrieval-Augmented Generation Systems. NAACL 2024.
+
+19
+
+Miller, 2024. Adding Error Bars to Evals: A Statistical Approach to Language Model Evaluations. arXiv.
+
+20
+
+Kish, 1965. Survey Sampling. Wiley.
+
+21
+
+McNemar, 1947. Note on the Sampling Error of the Difference Between Correlated Proportions or Percentages. Psychometrika.
+
+22
+
+Zou et al., 2025. PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models. USENIX Security 2025.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Field guide
+
+An AGI benchmark score is not a coding score
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# RAG past the tutorial: where retrieval quietly breaks
+
+URL: https://saadaltamari.com/writing-rag-retrieval
+
+Home
+
+/
+
+Writing
+
+/
+
+Field guide
+
+## RAG past the tutorial: where retrieval quietly breaks
+
+Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.
+
+Saad Al-Tamari
+
+Field guide · Advanced retrieval
+
+12 min read
+
+RAG
+
+Information retrieval
+
+Vector search
+
+Most writing about retrieval-augmented generation stops at the pipeline diagram: chunk, embed, take the top k, generate [1]. This note starts where that one ends. Recall has plateaued, the reranker no longer moves the numbers, and the remaining failures are subtle. Each section is a ceiling in the standard setup, the research that explains it, and what I would change.
+
+### A single vector has a capacity limit
+
+Dense retrieval compresses a passage into one vector and scores it against the query with a dot product [2]. It is fast and it generalises, and it has a geometric ceiling. Weller et al. show that the number of distinct top-k result sets a d-dimensional embedding can return is bounded by d, and the bound holds even when embeddings are optimised directly on the test set [3]. Their LIMIT dataset uses deliberately simple queries and still defeats state-of-the-art embedding models.
+
+In production this shows up on combinatorial queries: “contracts with a termination clause and a foreign counterparty”, “papers that cite A but not B”. The relevant set is an intersection, and one vector per document cannot represent every intersection a user might ask for. More training data does not lift a dimensional bound.
+
+Single vector
+
+One embedding per passage, score = q · d. Every top-k set a user could want has to fit in d dimensions.
+
+Late interaction
+
+One embedding per token, score = Σi maxj qi · dj. Each query term finds its own best match, so conjunctions survive.
+
+Single-vector scoring against ColBERT-style MaxSim scoring
+
+The alternatives each cost something. Late-interaction models such as ColBERT keep a vector per token and score with MaxSim [4]; ColBERTv2’s residual compression is what makes that index affordable [5]. Learned sparse models such as SPLADE expand documents into weighted vocabulary terms and keep the exactness of an inverted index [6]. Cross-encoders read query and passage together and have no capacity bottleneck at all, which is exactly why they belong at the end of the cascade, on a short list [7].
+
+### Hybrid search is coverage, and RRF is mostly a vote
+
+BEIR evaluated retrievers zero-shot across 18 datasets. BM25 held up as a strong baseline out of domain, dense retrievers trained on one domain often underperformed elsewhere, and reranking and late-interaction models were best on average at a much higher cost [8]. Keyword plus vector search is not a hedge. It is two different failure surfaces covering each other.
+
+Reciprocal Rank Fusion is the usual way to merge them [9]. Its constant k changes the behaviour more than most people expect.
+
+RRF(d) = Σlists 1 / (k + rank(d))
+
+- k | Weight at rank 1 | Weight at rank 10 | Rank 1 ÷ rank 10
+
+- 0 | 1.0000 | 0.1000 | 10.00×
+
+- 10 | 0.0909 | 0.0500 | 1.82×
+
+- 60 | 0.0164 | 0.0143 | 1.15×
+
+Computed exactly. At the standard k = 60, one list barely distinguishes its 1st result from its 10th
+
+At k = 60, a document a list ranks 1st gets only 1.15 times the weight of one it ranks 10th. RRF behaves like a vote counter: appearing in both lists matters far more than where you appear in either.
+
+- Doc | BM25 rank | Vector rank | Sum | RRF score | Fused
+
+- Doc B | 3 | 1 | 1/63 + 1/61 | 0.0323 | 1
+
+- Doc A | 1 | 4 | 1/61 + 1/64 | 0.0320 | 2
+
+- Doc E | 4 | 3 | 1/64 + 1/63 | 0.0315 | 3
+
+- Doc C | 2 | – | 1/62 | 0.0161 | 4 (tie)
+
+- Doc D | – | 2 | 1/62 | 0.0161 | 4 (tie)
+
+A worked example at k = 60. Doc E is never first in either list, but both lists agree on it, so it beats Doc C, which only one list liked
+
+That is what you want when the two lists are complementary, and the wrong behaviour when one retriever is clearly better for a query class. For identifier-shaped queries (error codes, SKUs, function names) you want BM25’s first hit to dominate. Lower k for that class, or route those queries to the lexical leg before fusion. And fuse at the depth you rerank: a document missing from a list contributes zero, so fusing two lists of depth 10 silently drops everything one retriever ranked 11th.
+
+### Chunking is a modelling decision
+
+Chunk boundaries decide what can be retrieved together. There are four serious answers, and they fit different question shapes.
+
+- Question shape | What breaks with plain chunks | Index structure that fits
+
+- A fact inside a long section | The answer is split across a boundary | Small-to-big: retrieve sentences, return the parent section
+
+- Pronouns and implied entities | “Revenue rose 12%” with no company named | Contextual chunk headers, or late chunking
+
+- Synthesis across one document | No single chunk contains the answer | A recursive summary tree
+
+- Themes across the corpus | “What are the main risks across all reports?” | Graph community summaries
+
+Pick the index structure from the questions you actually get, not from a default chunk size
+
+Contextual retrieval prepends a short, model-written description of where each chunk sits in its document before embedding and indexing it. Anthropic reported it roughly halved failed retrievals in their tests, with a further gain when combined with reranking [10]. Late chunking reaches a similar goal without an LLM call per chunk: embed the whole document with a long-context encoder, then pool the token embeddings per chunk, so every chunk vector is conditioned on the full document [11]. RAPTOR clusters and recursively summarises chunks into a tree, so a question can match a summary node when no leaf holds the answer [12]. GraphRAG extracts an entity graph, summarises its communities, and answers global questions by map-reducing over those summaries [13]. It is the right tool for “what are the themes” questions, and an expensive one: every chunk passes through an extraction call at indexing time.
+
+### The reranker cannot fix what the first stage never fetched
+
+A cascade is bounded by first-stage recall at the depth you rerank. If the gold passage sits at position 140 and you rerank the top 100, the best cross-encoder available returns a confident wrong answer. The number to watch is first-stage recall@100, not final recall@5.
+
+Index
+
+every chunk
+
+Hybrid first stage
+
+~100 candidates
+
+Cross-encoder or LLM rerank
+
+top ~20
+
+Packed into the prompt
+
+5 to 8
+
+Typical shape of the cascade, not a benchmark. Everything downstream is bounded by the second row
+
+LLM rerankers are now competitive with trained cross-encoders; RankGPT showed listwise reranking with a sliding window over the candidates [14]. Two details matter in production. Listwise rerankers are sensitive to the order candidates arrive in, and aggregating over several shuffled orders measurably improves them [15], which is worth the cost on high-stakes queries. And reranker scores are not calibrated across queries: 0.7 means something different for a short factoid than for a long analytical question. A single global “abstain below 0.5” threshold will be wrong for some query class. Calibrate thresholds per query type, or use the margin between the first and second candidate as the confidence signal.
+
+### The dangerous passage is the near miss
+
+Long context windows do not remove the ordering problem. Liu et al. found models use information at the start and end of the input more reliably than in the middle [16], and Shi et al. showed irrelevant context measurably distracts models even on simple problems [17]. Cuconasu et al. then found something more uncomfortable: passages that rank highly but do not contain the answer hurt accuracy, while adding random documents raised accuracy by up to 35% in their setup [18].
+
+Illustrative shape of the lost-in-the-middle finding, not data from a specific model
+
+Gold
+
+Contains the answer
+
+The only passage you actually want.
+
+Random
+
+Unrelated to the query
+
+Mostly harmless, and in some setups it helped.
+
+Near miss
+
+Looks relevant, no answer
+
+The most damaging. The model treats it as evidence.
+
+Three kinds of passage in a packed context, ordered by how much they hurt
+
+The practical reading is that your worst passages are your reranker’s confident false positives, because they look exactly like evidence. Track a distractor rate on the eval set: the share of packed passages that score as relevant but do not support the answer. Then pack fewer passages, put the strongest first, and restate the question at the end of the prompt.
+
+### Decide whether to retrieve, then check what came back
+
+Not every query needs retrieval, and not every retrieval should be trusted. Self-RAG trains a model to emit reflection tokens that decide when to retrieve and whether the retrieved passages support the output [19]. Corrective RAG adds a lightweight evaluator that grades retrieved documents and triggers a fallback, such as web search or refinement, when confidence is low [20]. You don’t need their training recipes to use the idea: a cheap router in front of retrieval and a sufficiency check after it catch a large class of failures before generation.
+
+On the query side, HyDE embeds a generated hypothetical answer instead of the question [21], and Ma et al. trained a small rewriter with reinforcement learning against downstream answer quality [22]. The trick I’d add: rewriters paraphrase away exact tokens. Send the original query to the lexical leg and the rewritten one to the dense leg, then fuse. You keep the identifier match and gain the semantic expansion.
+
+User query
+
+kept verbatim
+
+BM25 leg
+
+original wording
+
+Rewriter
+
+expand, decompose
+
+Dense leg
+
+rewritten query
+
+Fuse + rerank
+
+at depth 100
+
+Split the query by leg so rewriting never costs you an exact match
+
+### The index is an approximation too
+
+HNSW, the default graph index in most vector databases, is approximate by design [23]. Its recall against exact search is below 1 and moves with parameters like ef_search, and few teams measure it. Sample a few hundred real queries, run brute-force search on them, and compare. If ANN recall@10 is 0.92, no amount of embedding or reranker tuning recovers the missing 8%.
+
+Filters make this worse. Under a restrictive metadata filter, say one tenant and one month, post-filtering an HNSW result can leave almost nothing, and pre-filtering can cut the graph into pieces so the search stalls in a region with no valid nodes. Predicate-aware indexes such as ACORN were built for this case [24]. If you can’t change the index, partition by the most selective filter, which is usually the tenant.
+
+Compression has the same shape. Product quantisation [25] and Matryoshka embeddings, which can be truncated to fewer dimensions [26], cut memory dramatically at some recall cost. The standard recovery is two passes: search with compressed vectors, then rescore the top few hundred with full-precision ones before reranking.
+
+### Your corpus is an attack surface
+
+Anything retrievable can be injected. Greshake et al. demonstrated indirect prompt injection through retrieved content in real LLM-integrated applications [27]. PoisonedRAG measured how little it takes: five malicious texts per target question, in a knowledge base of millions of texts, reached a 90% attack success rate [28].
+
+- Keep provenance on every chunk (source, owner, ingestion time, trust tier) and filter on it at retrieval time.
+
+- Present passages as quoted data, never as instructions, and never let retrieved text change which tools the model may call.
+
+- Watch for new documents that suddenly rank first for many unrelated queries. An optimised poison looks exactly like that.
+
+### The checklist I actually use
+
+- Measure first-stage recall at rerank depth, ANN recall against brute force, and distractor rate, as three separate numbers.
+
+- Route identifier-shaped queries to lexical search, and tune RRF’s k per query class.
+
+- Choose the chunking strategy from question shape, not from a default size.
+
+- Calibrate abstention thresholds per query type.
+
+- Version the embedding model together with the index, and migrate through a shadow index rather than in place.
+
+- Keep provenance on every chunk, and filter on it.
+
+Every ceiling in RAG is a retrieval ceiling first. The model can only reason over what you hand it.
+
+### References
+
+01
+
+Lewis et al., 2020. Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks. NeurIPS 2020.
+
+02
+
+Karpukhin et al., 2020. Dense Passage Retrieval for Open-Domain Question Answering. EMNLP 2020.
+
+03
+
+Weller et al., 2025. On the Theoretical Limitations of Embedding-Based Retrieval. ICLR 2026.
+
+04
+
+Khattab & Zaharia, 2020. ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT. SIGIR 2020.
+
+05
+
+Santhanam et al., 2022. ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction. NAACL 2022.
+
+06
+
+Formal et al., 2021. SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking. SIGIR 2021.
+
+07
+
+Nogueira & Cho, 2019. Passage Re-ranking with BERT. arXiv.
+
+08
+
+Thakur et al., 2021. BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models. NeurIPS 2021 Datasets and Benchmarks.
+
+09
+
+Cormack, Clarke & Büttcher, 2009. Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods. SIGIR 2009.
+
+10
+
+Anthropic, 2024. Introducing Contextual Retrieval. Engineering blog.
+
+11
+
+Günther et al., 2024. Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models. arXiv.
+
+12
+
+Sarthi et al., 2024. RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval. ICLR 2024.
+
+13
+
+Edge et al., 2024. From Local to Global: A Graph RAG Approach to Query-Focused Summarization. arXiv.
+
+14
+
+Sun et al., 2023. Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents. EMNLP 2023.
+
+15
+
+Tang et al., 2024. Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models. NAACL 2024.
+
+16
+
+Liu et al., 2024. Lost in the Middle: How Language Models Use Long Contexts. TACL 2024.
+
+17
+
+Shi et al., 2023. Large Language Models Can Be Easily Distracted by Irrelevant Context. ICML 2023.
+
+18
+
+Cuconasu et al., 2024. The Power of Noise: Redefining Retrieval for RAG Systems. SIGIR 2024.
+
+19
+
+Asai et al., 2024. Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection. ICLR 2024.
+
+20
+
+Yan et al., 2024. Corrective Retrieval Augmented Generation. arXiv.
+
+21
+
+Gao et al., 2023. Precise Zero-Shot Dense Retrieval without Relevance Labels. ACL 2023.
+
+22
+
+Ma et al., 2023. Query Rewriting for Retrieval-Augmented Large Language Models. EMNLP 2023.
+
+23
+
+Malkov & Yashunin, 2018. Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs. IEEE TPAMI.
+
+24
+
+Patel et al., 2024. ACORN: Performant and Predicate-Agnostic Search Over Vector Embeddings and Structured Data. SIGMOD 2024.
+
+25
+
+Jégou, Douze & Schmid, 2011. Product Quantization for Nearest Neighbor Search. IEEE TPAMI.
+
+26
+
+Kusupati et al., 2022. Matryoshka Representation Learning. NeurIPS 2022.
+
+27
+
+Greshake et al., 2023. Not What You’ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection. AISec 2023.
+
+28
+
+Zou et al., 2025. PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models. USENIX Security 2025.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Field guide
+
+Agent orchestration, the hard parts
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# 28 apps, 756 connections: why the database is the contract
+
+URL: https://saadaltamari.com/writing-schema-contract
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## 28 apps, 756 connections: why the database is the contract
+
+Decasonic had 300+ agents spread across 10 to 15 products, each with its own database and no shared memory. I replaced the mesh with one rule: every app writes what it knows to one schema and reads what it needs from it.
+
+Saad Al-Tamari
+
+From the work: DDS v3 schema · Jan–Aug 2026
+
+2 min read
+
+Data architecture
+
+Postgres
+
+Multi-agent
+
+No app calls another app’s API for data. The database is the contract. It sounds conservative. It is the reason the platform grew from about 10 products to 35+ without integration work eating the project.
+
+### The arithmetic of a mesh
+
+If every app can talk to every other app, the number of possible connections grows as n × (n − 1). With one shared contract it grows as n. The gap is small at five apps and absurd at thirty.
+
+Mesh: n × (n − 1)
+
+Shared database: n
+
+x-axis: number of apps
+
+Exact counts, not estimates: at 28 apps a mesh needs 756 connections; a shared schema needs 28
+
+### What 87 tables are made of
+
+DDS v3 shipped as one 1,571-line SQL migration: 87 tables and 73 enum types.
+
+Primary entities
+
+35
+
+Junction tables
+
+41
+
+Sync tables
+
+6
+
+Gateway tables
+
+5
+
+The 87 tables by kind. Junction tables outnumber entities on purpose: relationships are first-class
+
+### Decisions, written down and locked
+
+Nine structural decisions were recorded before the first table was created, so nobody had to rediscover them under pressure. Among them:
+
+UUID primary keys
+
+Junction tables over JSONB arrays
+
+Identity-centric ownership
+
+Audit log on every change
+
+CHECK constraints over Postgres enums
+
+Soft deletes
+
+Environment separation
+
+Optimistic concurrency
+
+Some of the nine locked structural decisions
+
+### A schema that describes itself
+
+A schema-discovery call returns every table with its columns, types, foreign keys, constraints and human-written descriptions as JSON. Every downstream app and every AI code generator reads that one document, so generated integration code never guesses a column name.
+
+Schema + descriptions
+
+written by people
+
+Discovery JSON
+
+one call, always current
+
+Code generator
+
+reads meaning, not just shape
+
+Integration client
+
+real column names
+
+From schema to working client, without anyone copying column names by hand
+
+### When sources disagree
+
+A CRM, a meeting transcript and an agent can all claim a different value for the same field. A system-of-record priority model resolves those conflicts deterministically, field by field, so the answer doesn’t depend on which write arrived last.
+
+A shared schema is slower to design and faster to live with. That trade is almost always worth it.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+Why my context engine leaves budget unspent
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑
+
+
+---
+
+# Skills that get better by losing · Saad Tamari
+
+URL: https://saadaltamari.com/writing-skills-loop
+
+Home
+
+/
+
+Writing
+
+/
+
+Build note
+
+## Skills that get better by losing
+
+A skill is a block of instructions an agent loads at runtime. Most teams write them once and hope. We tested them against real agents, and let the losers be rewritten.
+
+Saad Al-Tamari
+
+From the work: Agent Skills OS · May–Aug 2026
+
+2 min read
+
+Agent skills
+
+Evaluation
+
+Prompting
+
+Agent Skills OS is a content system and test lab for agent instructions. A skill is written, versioned, A/B tested against a real agent, judged, improved if it loses, and only then deployed into production prompts.
+
+Write
+
+or generate a skill
+
+Version
+
+immutable snapshot
+
+Test twice
+
+real agent, with and without
+
+Judge
+
+structured verdict
+
+Rewrite
+
+only if it lost
+
+Assign
+
+pin a version per agent
+
+The closed loop. A rewritten skill goes back into testing as a new version
+
+### Test on the real thing
+
+The test lab runs the same prompt through a real, synced production agent twice: once with its normal system prompt, once with the skill added, using that agent’s actual model. An LLM judge compares the two outputs and returns a structured verdict. Results reflect how the agent really behaves, not a simulation of it.
+
+### Losing is useful
+
+If the skill loses, a frontier model rewrites it into a new version, using both test outputs and the judge’s reasoning. That version is tested again. Skills improve through evaluation rather than through whoever last edited them.
+
+### Fail open, on purpose
+
+Agents pull their enabled skills at prompt-fetch time. If this service is unreachable, agents fall back to their base prompts instead of breaking. It is a deliberate availability trade: an outage in the skills service must never take down the agent fleet.
+
+Fail closed
+
+Skills service down, so every agent that depends on it errors. One service takes down the fleet.
+
+Fail open
+
+Skills service down, so agents run on their base prompts. Quality dips a little; nothing breaks.
+
+The availability trade the service is built around
+
+### Suggestions you can trust
+
+A suggestions engine reads the real skills, agents, tests and assignments and proposes new skills. Any agent or skill identifier it hallucinates is filtered out by schema validation before it reaches the screen.
+
+If you can’t measure a skill against the agent that will use it, you are guessing.
+
+Saad Al-Tamari
+
+Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.
+
+About me
+
+Read next · Build note
+
+Dubbing Arabic without drifting off the speaker
+
+Contact
+
+### Let's build
+
+Building something like this, or want me to write about your problem next? One email is enough to start.
+
+Book a 30-min call
+
+Download CV
+
+© 2026 Saad Tamari
+
+← All notes
+
+Back to top ↑

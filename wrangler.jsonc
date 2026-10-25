@@ -1,0 +1,15 @@
+{
+  // Cloudflare Worker serving the static site in public/
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "saadaltamari",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "html_handling": "drop-trailing-slash",
+    "not_found_handling": "404-page"
+  },
+  "routes": [
+    { "pattern": "saadaltamari.com", "custom_domain": true }
+  ],
+  "observability": { "enabled": true }
+}

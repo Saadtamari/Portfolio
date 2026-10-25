@@ -1,0 +1,67 @@
+# Saad Tamari
+
+> Saad Tamari (also written Saad Al-Tamari, سعد الطماري) is a full-stack AI engineer in Amman, Jordan. He designs and ships AI products end to end: the agents, the data underneath, and the app people actually use. He co-founded SKAI Group, an AI-native software studio.
+
+## Key facts
+
+- Role: AI Engineer, full-stack (Python and TypeScript)
+- Location: Amman, Jordan. Works remotely with teams anywhere.
+- Shipped 20+ production projects since 2023. 11 of them are documented as case studies on this site.
+- Focus areas: AI agents and orchestration, RAG and context engineering, MCP gateways, AI evaluation, Claude Code and agent skills, full-stack web apps
+- Experience: Co-founder & Software Engineer at SKAI Group; AI Operations Manager (contract) at Decasonic, where he built the agent control panel, MCP hub and context engine; Head of IT at Bader Wa Sahem
+- Recognition: 15+ competition wins, including 1st place in the Arab World at the Artificial Intelligence Olympiad (2023), 2nd in the Arab World and 1st in Jordan at the Datadrip Hackathon (2025), and 1st in Jordan at the HAAC Hakeem Competition (2025)
+- Education: BSc in Data Science & Artificial Intelligence, Yarmouk University (2025). 42 Amman.
+- Teaching: runs AI workshops for teams
+- Languages: Arabic and English
+- Open to: full-time, part-time and contract roles; freelance AI builds; team workshops
+
+## Contact
+
+- Email: saadaltamari@gmail.com
+- Book a 30-minute call: https://cal.com/saad-altamari-y0upir/30min
+- LinkedIn: https://www.linkedin.com/in/saad-altamari/
+- GitHub: https://github.com/Saadtamari
+- Upwork: https://www.upwork.com/freelancers/saadaltamari
+
+## Main pages
+
+- [Home](https://saadaltamari.com/): Saad Tamari, AI engineer in Amman. I design and ship AI products end to end: the agents, the data underneath, and the app people use. 20+ projects shipped.
+- [Work](https://saadaltamari.com/work): Selected work by Saad Tamari: 11 case studies across agent platforms, MCP gateways, context engines, Arabic AI products and full-stack apps.
+- [Hire an AI Engineer](https://saadaltamari.com/services): Hire Saad Tamari, AI engineer: full-time, part-time or contract roles, AI product builds, agent and RAG systems, and hands-on AI workshops for teams.
+- [About Saad Tamari](https://saadaltamari.com/about): About Saad Tamari: AI engineer and co-founder of SKAI Group in Amman, Jordan. How I build, the tools I use, and 15+ competition wins.
+- [Writing on RAG, agents and AI evaluation](https://saadaltamari.com/writing): Field guides and build notes by Saad Tamari on RAG, agent orchestration, evaluation, context engineering, MCP gateways and AGI benchmarks.
+
+## Case studies
+
+- [Context Engine](https://saadaltamari.com/case-context-engine): A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and why?
+- [Agent Control Panel](https://saadaltamari.com/case-control-panel): Mission control for 350+ agents across 35+ apps. One login, and every agent is observable, measurable and remotely controllable.
+- [Dubljly](https://saadaltamari.com/case-dubljly): Paste an English lecture. Get it back in Arabic: a synced voice-over, subtitles, a study pack, and a tutor that knows the lecture.
+- [Flora AI](https://saadaltamari.com/case-flora): An Arabic AI nutritionist that builds meal plans from your profile, and the first startup I founded.
+- [Hemolock](https://saadaltamari.com/case-hemolock): An emergency kit for a medical-device team. Flip one switch, and it sends your GPS location and places a phone call.
+- [Investor Day App](https://saadaltamari.com/case-investor-day): An invite-only networking engine for 300 founders, VCs and LPs at Willis Tower, Chicago. One question per person: who should I talk to right now?
+- [JoFotara POS](https://saadaltamari.com/case-jo-fotara): A multi-tenant point of sale built to Jordan’s UBL 2.1 e-invoicing standard, with zero third-party packages.
+- [Masraf](https://saadaltamari.com/case-masraf): An Arabic-first voice co-pilot for freelancers’ money. Speak a command, and the app answers while it moves the screen with you.
+- [MCP Hub](https://saadaltamari.com/case-mcp-hub): An air-traffic controller for data. Every app talks to the Hub, the Hub talks to the database, and no app holds a credential.
+- [AI Product Enhancer](https://saadaltamari.com/case-product-enhancer): Reviews an AI product end to end from its demo video, its memo and its architecture, then writes the prompt that fixes it.
+- [Agent Skills OS](https://saadaltamari.com/case-skills-os): A content system and test lab for the skills AI agents load at runtime. Skills are A/B tested against real agents, and the losers get rewritten.
+
+## Writing
+
+- [Agent orchestration, the hard parts](https://saadaltamari.com/writing-agent-orchestration): The loop is ten lines. Everything that makes it survive real traffic lives around it: reliability you can measure, side effects that happen once, a context…
+- [An AGI benchmark score is not a coding score](https://saadaltamari.com/writing-agi-benchmarks): GPT-6 Astra hit 99.9% on ARC-AGI-3 and gained about two points on the coding indexes. Here is why both are true, and what it says about reading any benchmark.
+- [Dubbing Arabic without drifting off the speaker](https://saadaltamari.com/writing-arabic-dubbing): The obvious way to dub a lecture is to translate it, voice it and join the clips. In Arabic, that slowly pulls the voice away from the face.
+- [When not to use your own gateway](https://saadaltamari.com/writing-bypass-gateway): I built a gateway that every app in the firm goes through. Then I built one platform that deliberately goes around it, and I would defend that call in any…
+- [Why my context engine leaves budget unspent](https://saadaltamari.com/writing-context-budget): Past a point, adding context makes answers worse while cost and latency keep rising. Most retrieval systems have nothing that ever says stop. I built one…
+- [Mission control for 350 agents](https://saadaltamari.com/writing-control-plane): Once 350+ agents run across 35+ apps, the first question stops being “is the model good?” It becomes: which agent is failing, what is it costing, and can I…
+- [Let the code decide, let the model explain](https://saadaltamari.com/writing-fair-matching): 300 founders, VCs and LPs in one room for one day, and every attendee asking the same question: who should I be talking to right now, and what do I say?
+- [A 200 doesn’t mean your data is useful](https://saadaltamari.com/writing-gateway-200): Every write through the gateway came back 200. The dashboards were still empty. So I stopped trusting status codes and audited the data itself.
+- [Evaluating RAG end to end without fooling yourself](https://saadaltamari.com/writing-rag-eval): One accuracy number blends six different failures. Here is how to measure each layer, tie it to the end-to-end result, and report intervals that hold up.
+- [RAG past the tutorial: where retrieval quietly breaks](https://saadaltamari.com/writing-rag-retrieval): Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.
+- [28 apps, 756 connections: why the database is the contract](https://saadaltamari.com/writing-schema-contract): Decasonic had 300+ agents spread across 10 to 15 products, each with its own database and no shared memory. I replaced the mesh with one rule: every app…
+- [Skills that get better by losing](https://saadaltamari.com/writing-skills-loop): A skill is a block of instructions an agent loads at runtime. Most teams write them once and hope. We tested them against real agents, and let the losers be…
+
+## Optional
+
+- [Full text of every page](https://saadaltamari.com/llms-full.txt): all pages as plain Markdown
+- [CV, AI Specialist (PDF)](https://saadaltamari.com/cv/Saad-Al-Tamari-CV-AI-Specialist.pdf)
+- [CV, AI Trainer (PDF)](https://saadaltamari.com/cv/Saad-Al-Tamari-CV-AI-Trainer.pdf)

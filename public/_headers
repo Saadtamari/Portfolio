@@ -1,0 +1,30 @@
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  X-Frame-Options: SAMEORIGIN
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
+  Strict-Transport-Security: max-age=31536000; includeSubDomains
+
+/assets/*
+  Cache-Control: public, max-age=2592000
+
+/logos/*
+  Cache-Control: public, max-age=2592000
+
+/cv/*
+  Cache-Control: public, max-age=86400
+
+/dc-runtime.js
+  Cache-Control: public, max-age=86400
+
+/site.css
+  Cache-Control: public, max-age=3600
+
+/motion.js
+  Cache-Control: public, max-age=3600
+
+/llms.txt
+  Content-Type: text/plain; charset=utf-8
+
+/llms-full.txt
+  Content-Type: text/plain; charset=utf-8

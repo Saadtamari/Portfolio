@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<title>RAG past the tutorial: where retrieval quietly breaks</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.">
+<meta name="author" content="Saad Tamari">
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
+<link rel="canonical" href="https://saadaltamari.com/writing-rag-retrieval">
+<meta name="theme-color" content="#EFEDE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="alternate" type="text/plain" title="LLM summary" href="/llms.txt">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Saad Tamari">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="RAG past the tutorial: where retrieval quietly breaks">
+<meta property="og:description" content="Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.">
+<meta property="og:url" content="https://saadaltamari.com/writing-rag-retrieval">
+<meta property="og:image" content="https://saadaltamari.com/assets/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Saad Tamari, AI Engineer">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="RAG past the tutorial: where retrieval quietly breaks">
+<meta name="twitter:description" content="Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.">
+<meta name="twitter:image" content="https://saadaltamari.com/assets/img/og.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script>document.documentElement.classList.add("ssr-js")</script>
+<style>x-dc{display:none}.ssr-js #ssr{display:none}</style>
+<meta property="article:published_time" content="2026-10-25">
+<meta property="article:author" content="Saad Tamari">
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"TechArticle","@id":"https://saadaltamari.com/writing-rag-retrieval#article","headline":"RAG past the tutorial: where retrieval quietly breaks","description":"Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.","url":"https://saadaltamari.com/writing-rag-retrieval","mainEntityOfPage":"https://saadaltamari.com/writing-rag-retrieval","author":{"@id":"https://saadaltamari.com/#person"},"publisher":{"@id":"https://saadaltamari.com/#person"},"datePublished":"2026-10-25","dateModified":"2026-10-25","inLanguage":"en","image":"https://saadaltamari.com/assets/img/og.jpg","isPartOf":{"@id":"https://saadaltamari.com/#website"},"articleSection":"Field guide","timeRequired":"PT12M"},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://saadaltamari.com/"},{"@type":"ListItem","position":2,"name":"Writing","item":"https://saadaltamari.com/writing"},{"@type":"ListItem","position":3,"name":"RAG past the tutorial: where retrieval quietly breaks","item":"https://saadaltamari.com/writing-rag-retrieval"}]}]}</script>
+<script src="/dc-runtime.js"></script>
+<link rel="stylesheet" href="/site.css">
+<script src="/motion.js"></script>
+</head>
+<body>
+<div id="ssr"><div class="sc-host" data-sc-name="writing-rag-retrieval"><div class="site" style="--sig: #FF5A1F; --fd: 'Anybody'; --fz: 1;">
+  
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="/" aria-label="Saad Tamari, home"></a>
+      <a class="nl" href="/"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="/work"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="/services"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="/about"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl on" href="/writing" aria-current="page"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      
+      <button class="icon-btn tt" type="button" aria-label="Switch to dark mode">
+        
+        
+      </button>
+      <button class="icon-btn burger" type="button" aria-label="Open menu" aria-expanded="false"></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  
+
+  <header class="phero nhero">
+    <img class="topo" src="/assets/img/topography.svg" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="/">Home</a><span>/</span><a href="/writing">Writing</a><span>/</span><span>Field guide</span></div>
+        <h1 class="ntitle">RAG past the tutorial: where retrieval quietly breaks</h1>
+        <p class="psub">Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.</p>
+        <div class="nmeta mono"><span><img class="hav" src="/assets/img/portrait.jpg" alt="">Saad Al-Tamari</span><span>Field guide · Advanced retrieval</span><span>12 min read</span></div>
+        <div class="stack mono" style="margin-top: 18px;"><span class="pill lt mono">RAG</span><span class="pill lt mono">Information retrieval</span><span class="pill lt mono">Vector search</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <article class="art"><p>Most writing about retrieval-augmented generation stops at the pipeline diagram: chunk, embed, take the top k, generate <span class="cite">[<a href="#r1">1</a>]</span>. This note starts where that one ends. Recall has plateaued, the reranker no longer moves the numbers, and the remaining failures are subtle. Each section is a ceiling in the standard setup, the research that explains it, and what I would change.</p><h2>A single vector has a capacity limit</h2><p>Dense retrieval compresses a passage into one vector and scores it against the query with a dot product <span class="cite">[<a href="#r2">2</a>]</span>. It is fast and it generalises, and it has a geometric ceiling. Weller et al. show that the number of distinct top-k result sets a d-dimensional embedding can return is bounded by d, and the bound holds even when embeddings are optimised directly on the test set <span class="cite">[<a href="#r3">3</a>]</span>. Their LIMIT dataset uses deliberately simple queries and still defeats state-of-the-art embedding models.</p><p>In production this shows up on combinatorial queries: “contracts with a termination clause <i>and</i> a foreign counterparty”, “papers that cite A but not B”. The relevant set is an intersection, and one vector per document cannot represent every intersection a user might ask for. More training data does not lift a dimensional bound.</p><figure class="nfig"><div class="nviz"><div class="vc"><div class="bad2"><span class="mono">Single vector</span><p>One embedding per passage, score = q · d. Every top-k set a user could want has to fit in d dimensions.</p></div><div class="good"><span class="mono">Late interaction</span><p>One embedding per token, score = Σ<sub>i</sub> max<sub>j</sub> q<sub>i</sub> · d<sub>j</sub>. Each query term finds its own best match, so conjunctions survive.</p></div></div></div><figcaption class="mono">Single-vector scoring against ColBERT-style MaxSim scoring</figcaption></figure><p>The alternatives each cost something. Late-interaction models such as ColBERT keep a vector per token and score with MaxSim <span class="cite">[<a href="#r4">4</a>]</span>; ColBERTv2’s residual compression is what makes that index affordable <span class="cite">[<a href="#r5">5</a>]</span>. Learned sparse models such as SPLADE expand documents into weighted vocabulary terms and keep the exactness of an inverted index <span class="cite">[<a href="#r6">6</a>]</span>. Cross-encoders read query and passage together and have no capacity bottleneck at all, which is exactly why they belong at the end of the cascade, on a short list <span class="cite">[<a href="#r7">7</a>]</span>.</p><h2>Hybrid search is coverage, and RRF is mostly a vote</h2><p>BEIR evaluated retrievers zero-shot across 18 datasets. BM25 held up as a strong baseline out of domain, dense retrievers trained on one domain often underperformed elsewhere, and reranking and late-interaction models were best on average at a much higher cost <span class="cite">[<a href="#r8">8</a>]</span>. Keyword plus vector search is not a hedge. It is two different failure surfaces covering each other.</p><p>Reciprocal Rank Fusion is the usual way to merge them <span class="cite">[<a href="#r9">9</a>]</span>. Its constant k changes the behaviour more than most people expect.</p><figure class="nfig"><div class="nviz"><div class="vfx">RRF(d) = Σ<sub>lists</sub> <b>1 / (k + rank(d))</b></div><div class="vsep"></div><div class="vtable tight"><table><thead><tr><th>k</th><th>Weight at rank 1</th><th>Weight at rank 10</th><th>Rank 1 ÷ rank 10</th></tr></thead><tbody><tr><td data-l="k">0</td><td data-l="Weight at rank 1">1.0000</td><td data-l="Weight at rank 10">0.1000</td><td data-l="Rank 1 ÷ rank 10">10.00×</td></tr><tr><td data-l="k">10</td><td data-l="Weight at rank 1">0.0909</td><td data-l="Weight at rank 10">0.0500</td><td data-l="Rank 1 ÷ rank 10">1.82×</td></tr><tr class="hi"><td data-l="k">60</td><td data-l="Weight at rank 1">0.0164</td><td data-l="Weight at rank 10">0.0143</td><td data-l="Rank 1 ÷ rank 10">1.15×</td></tr></tbody></table></div></div><figcaption class="mono">Computed exactly. At the standard k = 60, one list barely distinguishes its 1st result from its 10th</figcaption></figure><p>At k = 60, a document a list ranks 1st gets only 1.15 times the weight of one it ranks 10th. RRF behaves like a vote counter: appearing in both lists matters far more than where you appear in either.</p><figure class="nfig"><div class="nviz"><div class="vtable drop4"><table><thead><tr><th>Doc</th><th>BM25 rank</th><th>Vector rank</th><th>Sum</th><th>RRF score</th><th>Fused</th></tr></thead><tbody><tr><td data-l="Doc">Doc B</td><td data-l="BM25 rank">3</td><td data-l="Vector rank">1</td><td data-l="Sum">1/63 + 1/61</td><td data-l="RRF score">0.0323</td><td data-l="Fused">1</td></tr><tr><td data-l="Doc">Doc A</td><td data-l="BM25 rank">1</td><td data-l="Vector rank">4</td><td data-l="Sum">1/61 + 1/64</td><td data-l="RRF score">0.0320</td><td data-l="Fused">2</td></tr><tr class="hi"><td data-l="Doc">Doc E</td><td data-l="BM25 rank">4</td><td data-l="Vector rank">3</td><td data-l="Sum">1/64 + 1/63</td><td data-l="RRF score">0.0315</td><td data-l="Fused">3</td></tr><tr><td data-l="Doc">Doc C</td><td data-l="BM25 rank">2</td><td data-l="Vector rank">–</td><td data-l="Sum">1/62</td><td data-l="RRF score">0.0161</td><td data-l="Fused">4 (tie)</td></tr><tr><td data-l="Doc">Doc D</td><td data-l="BM25 rank">–</td><td data-l="Vector rank">2</td><td data-l="Sum">1/62</td><td data-l="RRF score">0.0161</td><td data-l="Fused">4 (tie)</td></tr></tbody></table></div></div><figcaption class="mono">A worked example at k = 60. Doc E is never first in either list, but both lists agree on it, so it beats Doc C, which only one list liked</figcaption></figure><p>That is what you want when the two lists are complementary, and the wrong behaviour when one retriever is clearly better for a query class. For identifier-shaped queries (error codes, SKUs, function names) you want BM25’s first hit to dominate. Lower k for that class, or route those queries to the lexical leg before fusion. And fuse at the depth you rerank: a document missing from a list contributes zero, so fusing two lists of depth 10 silently drops everything one retriever ranked 11th.</p><h2>Chunking is a modelling decision</h2><p>Chunk boundaries decide what can be retrieved together. There are four serious answers, and they fit different question shapes.</p><figure class="nfig"><div class="nviz"><div class="vtable wrapcells"><table><thead><tr><th>Question shape</th><th>What breaks with plain chunks</th><th>Index structure that fits</th></tr></thead><tbody><tr><td data-l="Question shape">A fact inside a long section</td><td data-l="What breaks with plain chunks">The answer is split across a boundary</td><td data-l="Index structure that fits">Small-to-big: retrieve sentences, return the parent section</td></tr><tr><td data-l="Question shape">Pronouns and implied entities</td><td data-l="What breaks with plain chunks">“Revenue rose 12%” with no company named</td><td data-l="Index structure that fits">Contextual chunk headers, or late chunking</td></tr><tr><td data-l="Question shape">Synthesis across one document</td><td data-l="What breaks with plain chunks">No single chunk contains the answer</td><td data-l="Index structure that fits">A recursive summary tree</td></tr><tr><td data-l="Question shape">Themes across the corpus</td><td data-l="What breaks with plain chunks">“What are the main risks across all reports?”</td><td data-l="Index structure that fits">Graph community summaries</td></tr></tbody></table></div></div><figcaption class="mono">Pick the index structure from the questions you actually get, not from a default chunk size</figcaption></figure><p>Contextual retrieval prepends a short, model-written description of where each chunk sits in its document before embedding and indexing it. Anthropic reported it roughly halved failed retrievals in their tests, with a further gain when combined with reranking <span class="cite">[<a href="#r10">10</a>]</span>. Late chunking reaches a similar goal without an LLM call per chunk: embed the whole document with a long-context encoder, then pool the token embeddings per chunk, so every chunk vector is conditioned on the full document <span class="cite">[<a href="#r11">11</a>]</span>. RAPTOR clusters and recursively summarises chunks into a tree, so a question can match a summary node when no leaf holds the answer <span class="cite">[<a href="#r12">12</a>]</span>. GraphRAG extracts an entity graph, summarises its communities, and answers global questions by map-reducing over those summaries <span class="cite">[<a href="#r13">13</a>]</span>. It is the right tool for “what are the themes” questions, and an expensive one: every chunk passes through an extraction call at indexing time.</p><h2>The reranker cannot fix what the first stage never fetched</h2><p>A cascade is bounded by first-stage recall at the depth you rerank. If the gold passage sits at position 140 and you rerank the top 100, the best cross-encoder available returns a confident wrong answer. The number to watch is first-stage recall@100, not final recall@5.</p><figure class="nfig"><div class="nviz"><div class="vb"><div class="r"><span class="l">Index</span><span class="t"><i class="mute" style="width: 100%;"></i></span><b>every chunk</b></div><div class="r"><span class="l">Hybrid first stage</span><span class="t"><i class="mute" style="width: 40%;"></i></span><b>~100 candidates</b></div><div class="r"><span class="l">Cross-encoder or LLM rerank</span><span class="t"><i class="" style="width: 16%;"></i></span><b>top ~20</b></div><div class="r"><span class="l">Packed into the prompt</span><span class="t"><i class="" style="width: 7%;"></i></span><b>5 to 8</b></div></div></div><figcaption class="mono">Typical shape of the cascade, not a benchmark. Everything downstream is bounded by the second row</figcaption></figure><p>LLM rerankers are now competitive with trained cross-encoders; RankGPT showed listwise reranking with a sliding window over the candidates <span class="cite">[<a href="#r14">14</a>]</span>. Two details matter in production. Listwise rerankers are sensitive to the order candidates arrive in, and aggregating over several shuffled orders measurably improves them <span class="cite">[<a href="#r15">15</a>]</span>, which is worth the cost on high-stakes queries. And reranker scores are not calibrated across queries: 0.7 means something different for a short factoid than for a long analytical question. A single global “abstain below 0.5” threshold will be wrong for some query class. Calibrate thresholds per query type, or use the margin between the first and second candidate as the confidence signal.</p><h2>The dangerous passage is the near miss</h2><p>Long context windows do not remove the ordering problem. Liu et al. found models use information at the start and end of the input more reliably than in the middle <span class="cite">[<a href="#r16">16</a>]</span>, and Shi et al. showed irrelevant context measurably distracts models even on simple problems <span class="cite">[<a href="#r17">17</a>]</span>. Cuconasu et al. then found something more uncomfortable: passages that rank highly but do not contain the answer hurt accuracy, while adding random documents raised accuracy by up to 35% in their setup <span class="cite">[<a href="#r18">18</a>]</span>.</p><figure class="nfig"><div class="nviz"><svg class="vsvg" viewBox="0 0 560 220" aria-label="Illustrative U-shaped curve: answers are most accurate when the relevant passage sits at the start or end of the context.">Illustrative U-shaped curve: answers are most accurate when the relevant passage sits at the start or end of the context.</svg></div><figcaption class="mono">Illustrative shape of the lost-in-the-middle finding, not data from a specific model</figcaption></figure><figure class="nfig"><div class="nviz"><div class="v4 v6"><div><span class="mono">Gold</span><b>Contains the answer</b><small>The only passage you actually want.</small></div><div><span class="mono">Random</span><b>Unrelated to the query</b><small>Mostly harmless, and in some setups it helped.</small></div><div><span class="mono">Near miss</span><b>Looks relevant, no answer</b><small>The most damaging. The model treats it as evidence.</small></div></div></div><figcaption class="mono">Three kinds of passage in a packed context, ordered by how much they hurt</figcaption></figure><p>The practical reading is that your worst passages are your reranker’s confident false positives, because they look exactly like evidence. Track a distractor rate on the eval set: the share of packed passages that score as relevant but do not support the answer. Then pack fewer passages, put the strongest first, and restate the question at the end of the prompt.</p><h2>Decide whether to retrieve, then check what came back</h2><p>Not every query needs retrieval, and not every retrieval should be trusted. Self-RAG trains a model to emit reflection tokens that decide when to retrieve and whether the retrieved passages support the output <span class="cite">[<a href="#r19">19</a>]</span>. Corrective RAG adds a lightweight evaluator that grades retrieved documents and triggers a fallback, such as web search or refinement, when confidence is low <span class="cite">[<a href="#r20">20</a>]</span>. You don’t need their training recipes to use the idea: a cheap router in front of retrieval and a sufficiency check after it catch a large class of failures before generation.</p><p>On the query side, HyDE embeds a generated hypothetical answer instead of the question <span class="cite">[<a href="#r21">21</a>]</span>, and Ma et al. trained a small rewriter with reinforcement learning against downstream answer quality <span class="cite">[<a href="#r22">22</a>]</span>. The trick I’d add: rewriters paraphrase away exact tokens. Send the original query to the lexical leg and the rewritten one to the dense leg, then fuse. You keep the identifier match and gain the semantic expansion.</p><figure class="nfig"><div class="nviz"><div class="vf wrap"><div class="n "><b>User query</b><small>kept verbatim</small></div><div class="n hot"><b>BM25 leg</b><small>original wording</small></div><div class="n "><b>Rewriter</b><small>expand, decompose</small></div><div class="n hot"><b>Dense leg</b><small>rewritten query</small></div><div class="n "><b>Fuse + rerank</b><small>at depth 100</small></div></div></div><figcaption class="mono">Split the query by leg so rewriting never costs you an exact match</figcaption></figure><h2>The index is an approximation too</h2><p>HNSW, the default graph index in most vector databases, is approximate by design <span class="cite">[<a href="#r23">23</a>]</span>. Its recall against exact search is below 1 and moves with parameters like ef_search, and few teams measure it. Sample a few hundred real queries, run brute-force search on them, and compare. If ANN recall@10 is 0.92, no amount of embedding or reranker tuning recovers the missing 8%.</p><p>Filters make this worse. Under a restrictive metadata filter, say one tenant and one month, post-filtering an HNSW result can leave almost nothing, and pre-filtering can cut the graph into pieces so the search stalls in a region with no valid nodes. Predicate-aware indexes such as ACORN were built for this case <span class="cite">[<a href="#r24">24</a>]</span>. If you can’t change the index, partition by the most selective filter, which is usually the tenant.</p><p>Compression has the same shape. Product quantisation <span class="cite">[<a href="#r25">25</a>]</span> and Matryoshka embeddings, which can be truncated to fewer dimensions <span class="cite">[<a href="#r26">26</a>]</span>, cut memory dramatically at some recall cost. The standard recovery is two passes: search with compressed vectors, then rescore the top few hundred with full-precision ones before reranking.</p><h2>Your corpus is an attack surface</h2><p>Anything retrievable can be injected. Greshake et al. demonstrated indirect prompt injection through retrieved content in real LLM-integrated applications <span class="cite">[<a href="#r27">27</a>]</span>. PoisonedRAG measured how little it takes: five malicious texts per target question, in a knowledge base of millions of texts, reached a 90% attack success rate <span class="cite">[<a href="#r28">28</a>]</span>.</p><ul><li>Keep provenance on every chunk (source, owner, ingestion time, trust tier) and filter on it at retrieval time.</li><li>Present passages as quoted data, never as instructions, and never let retrieved text change which tools the model may call.</li><li>Watch for new documents that suddenly rank first for many unrelated queries. An optimised poison looks exactly like that.</li></ul><h2>The checklist I actually use</h2><ul><li>Measure first-stage recall at rerank depth, ANN recall against brute force, and distractor rate, as three separate numbers.</li><li>Route identifier-shaped queries to lexical search, and tune RRF’s k per query class.</li><li>Choose the chunking strategy from question shape, not from a default size.</li><li>Calibrate abstention thresholds per query type.</li><li>Version the embedding model together with the index, and migrate through a shadow index rather than in place.</li><li>Keep provenance on every chunk, and filter on it.</li></ul><p class="nclose">Every ceiling in RAG is a retrieval ceiling first. The model can only reason over what you hand it.</p><h2>References</h2><ol class="refs"><li><span class="rn mono">01</span><span><b>Lewis et al., 2020.</b> <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>. <span class="rv">NeurIPS 2020.</span></span></li><li><span class="rn mono">02</span><span><b>Karpukhin et al., 2020.</b> <a href="https://arxiv.org/abs/2004.04906" target="_blank" rel="noopener">Dense Passage Retrieval for Open-Domain Question Answering</a>. <span class="rv">EMNLP 2020.</span></span></li><li><span class="rn mono">03</span><span><b>Weller et al., 2025.</b> <a href="https://arxiv.org/abs/2508.21038" target="_blank" rel="noopener">On the Theoretical Limitations of Embedding-Based Retrieval</a>. <span class="rv">ICLR 2026.</span></span></li><li><span class="rn mono">04</span><span><b>Khattab &amp; Zaharia, 2020.</b> <a href="https://arxiv.org/abs/2004.12832" target="_blank" rel="noopener">ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT</a>. <span class="rv">SIGIR 2020.</span></span></li><li><span class="rn mono">05</span><span><b>Santhanam et al., 2022.</b> <a href="https://arxiv.org/abs/2112.01488" target="_blank" rel="noopener">ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction</a>. <span class="rv">NAACL 2022.</span></span></li><li><span class="rn mono">06</span><span><b>Formal et al., 2021.</b> <a href="https://arxiv.org/abs/2107.05720" target="_blank" rel="noopener">SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking</a>. <span class="rv">SIGIR 2021.</span></span></li><li><span class="rn mono">07</span><span><b>Nogueira &amp; Cho, 2019.</b> <a href="https://arxiv.org/abs/1901.04085" target="_blank" rel="noopener">Passage Re-ranking with BERT</a>. <span class="rv">arXiv.</span></span></li><li><span class="rn mono">08</span><span><b>Thakur et al., 2021.</b> <a href="https://arxiv.org/abs/2104.08663" target="_blank" rel="noopener">BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models</a>. <span class="rv">NeurIPS 2021 Datasets and Benchmarks.</span></span></li><li><span class="rn mono">09</span><span><b>Cormack, Clarke &amp; Büttcher, 2009.</b> <a href="https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf" target="_blank" rel="noopener">Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods</a>. <span class="rv">SIGIR 2009.</span></span></li><li><span class="rn mono">10</span><span><b>Anthropic, 2024.</b> <a href="https://www.anthropic.com/news/contextual-retrieval" target="_blank" rel="noopener">Introducing Contextual Retrieval</a>. <span class="rv">Engineering blog.</span></span></li><li><span class="rn mono">11</span><span><b>Günther et al., 2024.</b> <a href="https://arxiv.org/abs/2409.04701" target="_blank" rel="noopener">Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models</a>. <span class="rv">arXiv.</span></span></li><li><span class="rn mono">12</span><span><b>Sarthi et al., 2024.</b> <a href="https://arxiv.org/abs/2401.18059" target="_blank" rel="noopener">RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval</a>. <span class="rv">ICLR 2024.</span></span></li><li><span class="rn mono">13</span><span><b>Edge et al., 2024.</b> <a href="https://arxiv.org/abs/2404.16130" target="_blank" rel="noopener">From Local to Global: A Graph RAG Approach to Query-Focused Summarization</a>. <span class="rv">arXiv.</span></span></li><li><span class="rn mono">14</span><span><b>Sun et al., 2023.</b> <a href="https://arxiv.org/abs/2304.09542" target="_blank" rel="noopener">Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents</a>. <span class="rv">EMNLP 2023.</span></span></li><li><span class="rn mono">15</span><span><b>Tang et al., 2024.</b> <a href="https://arxiv.org/abs/2310.07712" target="_blank" rel="noopener">Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models</a>. <span class="rv">NAACL 2024.</span></span></li><li><span class="rn mono">16</span><span><b>Liu et al., 2024.</b> <a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Lost in the Middle: How Language Models Use Long Contexts</a>. <span class="rv">TACL 2024.</span></span></li><li><span class="rn mono">17</span><span><b>Shi et al., 2023.</b> <a href="https://arxiv.org/abs/2302.00093" target="_blank" rel="noopener">Large Language Models Can Be Easily Distracted by Irrelevant Context</a>. <span class="rv">ICML 2023.</span></span></li><li><span class="rn mono">18</span><span><b>Cuconasu et al., 2024.</b> <a href="https://arxiv.org/abs/2401.14887" target="_blank" rel="noopener">The Power of Noise: Redefining Retrieval for RAG Systems</a>. <span class="rv">SIGIR 2024.</span></span></li><li><span class="rn mono">19</span><span><b>Asai et al., 2024.</b> <a href="https://arxiv.org/abs/2310.11511" target="_blank" rel="noopener">Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection</a>. <span class="rv">ICLR 2024.</span></span></li><li><span class="rn mono">20</span><span><b>Yan et al., 2024.</b> <a href="https://arxiv.org/abs/2401.15884" target="_blank" rel="noopener">Corrective Retrieval Augmented Generation</a>. <span class="rv">arXiv.</span></span></li><li><span class="rn mono">21</span><span><b>Gao et al., 2023.</b> <a href="https://arxiv.org/abs/2212.10496" target="_blank" rel="noopener">Precise Zero-Shot Dense Retrieval without Relevance Labels</a>. <span class="rv">ACL 2023.</span></span></li><li><span class="rn mono">22</span><span><b>Ma et al., 2023.</b> <a href="https://arxiv.org/abs/2305.14283" target="_blank" rel="noopener">Query Rewriting for Retrieval-Augmented Large Language Models</a>. <span class="rv">EMNLP 2023.</span></span></li><li><span class="rn mono">23</span><span><b>Malkov &amp; Yashunin, 2018.</b> <a href="https://arxiv.org/abs/1603.09320" target="_blank" rel="noopener">Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs</a>. <span class="rv">IEEE TPAMI.</span></span></li><li><span class="rn mono">24</span><span><b>Patel et al., 2024.</b> <a href="https://arxiv.org/abs/2403.04871" target="_blank" rel="noopener">ACORN: Performant and Predicate-Agnostic Search Over Vector Embeddings and Structured Data</a>. <span class="rv">SIGMOD 2024.</span></span></li><li><span class="rn mono">25</span><span><b>Jégou, Douze &amp; Schmid, 2011.</b> <a href="https://doi.org/10.1109/TPAMI.2010.57" target="_blank" rel="noopener">Product Quantization for Nearest Neighbor Search</a>. <span class="rv">IEEE TPAMI.</span></span></li><li><span class="rn mono">26</span><span><b>Kusupati et al., 2022.</b> <a href="https://arxiv.org/abs/2205.13147" target="_blank" rel="noopener">Matryoshka Representation Learning</a>. <span class="rv">NeurIPS 2022.</span></span></li><li><span class="rn mono">27</span><span><b>Greshake et al., 2023.</b> <a href="https://arxiv.org/abs/2302.12173" target="_blank" rel="noopener">Not What You’ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a>. <span class="rv">AISec 2023.</span></span></li><li><span class="rn mono">28</span><span><b>Zou et al., 2025.</b> <a href="https://arxiv.org/abs/2402.07867" target="_blank" rel="noopener">PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models</a>. <span class="rv">USENIX Security 2025.</span></span></li></ol>
+
+      </article>
+      <div class="byline">
+        
+        <div><b>Saad Al-Tamari</b><span>Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.</span></div>
+        <a class="btn btn-line" href="/about">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="/writing-agent-orchestration" style="display: flex; border-top: 1px solid var(--line);">
+    <span><span class="mono muted">Read next · Field guide</span><span class="disp" style="display: block; margin-top: 10px;">Agent orchestration, the hard parts</span></span>
+    
+  </a>
+
+  <section class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build">Let's build</h2>
+        <div class="cgrid">
+          <p>Building something like this, or want me to write about your problem next? One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" aria-label="Copy email address saadaltamari@gmail.com"><span><span class="sc-interp">Copy email</span></span></button>
+            <a class="btn btn-line" href="/cv/Saad-Al-Tamari-CV-AI-Specialist.pdf" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="/writing">← All notes</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer></div></div></div>
+<script type="text/x-dc-template" id="dc-tpl"><x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<meta name="description" content="An advanced field guide to retrieval-augmented generation: the capacity limit of single-vector embeddings, what RRF’s k really does, chunking by question shape, cascade recall, near-miss distractors, filtered ANN search and corpus poisoning. With references.">
+<meta name="author" content="Saad Al-Tamari">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="/" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="/"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="/work"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="/services"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="/about"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl on" href="/writing" aria-current="page"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="/" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="/work" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="/services" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="/about" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="/writing" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero nhero">
+    <img class="topo" src="/assets/img/topography.svg" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="/">Home</a><span>/</span><a href="/writing">Writing</a><span>/</span><span>Field guide</span></div>
+        <h1 class="ntitle">RAG past the tutorial: where retrieval quietly breaks</h1>
+        <p class="psub">Chunk, embed, top-k, generate gets you a demo. This is about the second year: the ceilings in that pipeline, the papers that explain them, and what to change.</p>
+        <div class="nmeta mono"><span><img class="hav" src="/assets/img/portrait.jpg" alt="">Saad Al-Tamari</span><span>Field guide · Advanced retrieval</span><span>12 min read</span></div>
+        <div class="stack mono" style="margin-top: 18px"><span class="pill lt mono">RAG</span><span class="pill lt mono">Information retrieval</span><span class="pill lt mono">Vector search</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <article class="art">
+
+<p>Most writing about retrieval-augmented generation stops at the pipeline diagram: chunk, embed, take the top k, generate <span class="cite">[<a href="#r1">1</a>]</span>. This note starts where that one ends. Recall has plateaued, the reranker no longer moves the numbers, and the remaining failures are subtle. Each section is a ceiling in the standard setup, the research that explains it, and what I would change.</p>
+
+<h2>A single vector has a capacity limit</h2>
+<p>Dense retrieval compresses a passage into one vector and scores it against the query with a dot product <span class="cite">[<a href="#r2">2</a>]</span>. It is fast and it generalises, and it has a geometric ceiling. Weller et al. show that the number of distinct top-k result sets a d-dimensional embedding can return is bounded by d, and the bound holds even when embeddings are optimised directly on the test set <span class="cite">[<a href="#r3">3</a>]</span>. Their LIMIT dataset uses deliberately simple queries and still defeats state-of-the-art embedding models.</p>
+<p>In production this shows up on combinatorial queries: “contracts with a termination clause <i>and</i> a foreign counterparty”, “papers that cite A but not B”. The relevant set is an intersection, and one vector per document cannot represent every intersection a user might ask for. More training data does not lift a dimensional bound.</p>
+<figure class="nfig"><div class="nviz"><div class="vc"><div class="bad2"><span class="mono">Single vector</span><p>One embedding per passage, score = q · d. Every top-k set a user could want has to fit in d dimensions.</p></div><div class="good"><span class="mono">Late interaction</span><p>One embedding per token, score = Σ<sub>i</sub> max<sub>j</sub> q<sub>i</sub> · d<sub>j</sub>. Each query term finds its own best match, so conjunctions survive.</p></div></div></div><figcaption class="mono">Single-vector scoring against ColBERT-style MaxSim scoring</figcaption></figure>
+
+<p>The alternatives each cost something. Late-interaction models such as ColBERT keep a vector per token and score with MaxSim <span class="cite">[<a href="#r4">4</a>]</span>; ColBERTv2’s residual compression is what makes that index affordable <span class="cite">[<a href="#r5">5</a>]</span>. Learned sparse models such as SPLADE expand documents into weighted vocabulary terms and keep the exactness of an inverted index <span class="cite">[<a href="#r6">6</a>]</span>. Cross-encoders read query and passage together and have no capacity bottleneck at all, which is exactly why they belong at the end of the cascade, on a short list <span class="cite">[<a href="#r7">7</a>]</span>.</p>
+
+<h2>Hybrid search is coverage, and RRF is mostly a vote</h2>
+<p>BEIR evaluated retrievers zero-shot across 18 datasets. BM25 held up as a strong baseline out of domain, dense retrievers trained on one domain often underperformed elsewhere, and reranking and late-interaction models were best on average at a much higher cost <span class="cite">[<a href="#r8">8</a>]</span>. Keyword plus vector search is not a hedge. It is two different failure surfaces covering each other.</p>
+<p>Reciprocal Rank Fusion is the usual way to merge them <span class="cite">[<a href="#r9">9</a>]</span>. Its constant k changes the behaviour more than most people expect.</p>
+<figure class="nfig"><div class="nviz"><div class="vfx">RRF(d) = Σ<sub>lists</sub> <b>1 / (k + rank(d))</b></div><div class="vsep"></div><div class="vtable tight"><table><thead><tr><th>k</th><th>Weight at rank 1</th><th>Weight at rank 10</th><th>Rank 1 ÷ rank 10</th></tr></thead><tbody><tr><td data-l="k">0</td><td data-l="Weight at rank 1">1.0000</td><td data-l="Weight at rank 10">0.1000</td><td data-l="Rank 1 ÷ rank 10">10.00×</td></tr><tr><td data-l="k">10</td><td data-l="Weight at rank 1">0.0909</td><td data-l="Weight at rank 10">0.0500</td><td data-l="Rank 1 ÷ rank 10">1.82×</td></tr><tr class="hi"><td data-l="k">60</td><td data-l="Weight at rank 1">0.0164</td><td data-l="Weight at rank 10">0.0143</td><td data-l="Rank 1 ÷ rank 10">1.15×</td></tr></tbody></table></div></div><figcaption class="mono">Computed exactly. At the standard k = 60, one list barely distinguishes its 1st result from its 10th</figcaption></figure>
+
+<p>At k = 60, a document a list ranks 1st gets only 1.15 times the weight of one it ranks 10th. RRF behaves like a vote counter: appearing in both lists matters far more than where you appear in either.</p>
+<figure class="nfig"><div class="nviz"><div class="vtable drop4"><table><thead><tr><th>Doc</th><th>BM25 rank</th><th>Vector rank</th><th>Sum</th><th>RRF score</th><th>Fused</th></tr></thead><tbody><tr><td data-l="Doc">Doc B</td><td data-l="BM25 rank">3</td><td data-l="Vector rank">1</td><td data-l="Sum">1/63 + 1/61</td><td data-l="RRF score">0.0323</td><td data-l="Fused">1</td></tr><tr><td data-l="Doc">Doc A</td><td data-l="BM25 rank">1</td><td data-l="Vector rank">4</td><td data-l="Sum">1/61 + 1/64</td><td data-l="RRF score">0.0320</td><td data-l="Fused">2</td></tr><tr class="hi"><td data-l="Doc">Doc E</td><td data-l="BM25 rank">4</td><td data-l="Vector rank">3</td><td data-l="Sum">1/64 + 1/63</td><td data-l="RRF score">0.0315</td><td data-l="Fused">3</td></tr><tr><td data-l="Doc">Doc C</td><td data-l="BM25 rank">2</td><td data-l="Vector rank">–</td><td data-l="Sum">1/62</td><td data-l="RRF score">0.0161</td><td data-l="Fused">4 (tie)</td></tr><tr><td data-l="Doc">Doc D</td><td data-l="BM25 rank">–</td><td data-l="Vector rank">2</td><td data-l="Sum">1/62</td><td data-l="RRF score">0.0161</td><td data-l="Fused">4 (tie)</td></tr></tbody></table></div></div><figcaption class="mono">A worked example at k = 60. Doc E is never first in either list, but both lists agree on it, so it beats Doc C, which only one list liked</figcaption></figure>
+
+<p>That is what you want when the two lists are complementary, and the wrong behaviour when one retriever is clearly better for a query class. For identifier-shaped queries (error codes, SKUs, function names) you want BM25’s first hit to dominate. Lower k for that class, or route those queries to the lexical leg before fusion. And fuse at the depth you rerank: a document missing from a list contributes zero, so fusing two lists of depth 10 silently drops everything one retriever ranked 11th.</p>
+
+<h2>Chunking is a modelling decision</h2>
+<p>Chunk boundaries decide what can be retrieved together. There are four serious answers, and they fit different question shapes.</p>
+<figure class="nfig"><div class="nviz"><div class="vtable wrapcells"><table><thead><tr><th>Question shape</th><th>What breaks with plain chunks</th><th>Index structure that fits</th></tr></thead><tbody><tr><td data-l="Question shape">A fact inside a long section</td><td data-l="What breaks with plain chunks">The answer is split across a boundary</td><td data-l="Index structure that fits">Small-to-big: retrieve sentences, return the parent section</td></tr><tr><td data-l="Question shape">Pronouns and implied entities</td><td data-l="What breaks with plain chunks">“Revenue rose 12%” with no company named</td><td data-l="Index structure that fits">Contextual chunk headers, or late chunking</td></tr><tr><td data-l="Question shape">Synthesis across one document</td><td data-l="What breaks with plain chunks">No single chunk contains the answer</td><td data-l="Index structure that fits">A recursive summary tree</td></tr><tr><td data-l="Question shape">Themes across the corpus</td><td data-l="What breaks with plain chunks">“What are the main risks across all reports?”</td><td data-l="Index structure that fits">Graph community summaries</td></tr></tbody></table></div></div><figcaption class="mono">Pick the index structure from the questions you actually get, not from a default chunk size</figcaption></figure>
+
+<p>Contextual retrieval prepends a short, model-written description of where each chunk sits in its document before embedding and indexing it. Anthropic reported it roughly halved failed retrievals in their tests, with a further gain when combined with reranking <span class="cite">[<a href="#r10">10</a>]</span>. Late chunking reaches a similar goal without an LLM call per chunk: embed the whole document with a long-context encoder, then pool the token embeddings per chunk, so every chunk vector is conditioned on the full document <span class="cite">[<a href="#r11">11</a>]</span>. RAPTOR clusters and recursively summarises chunks into a tree, so a question can match a summary node when no leaf holds the answer <span class="cite">[<a href="#r12">12</a>]</span>. GraphRAG extracts an entity graph, summarises its communities, and answers global questions by map-reducing over those summaries <span class="cite">[<a href="#r13">13</a>]</span>. It is the right tool for “what are the themes” questions, and an expensive one: every chunk passes through an extraction call at indexing time.</p>
+
+<h2>The reranker cannot fix what the first stage never fetched</h2>
+<p>A cascade is bounded by first-stage recall at the depth you rerank. If the gold passage sits at position 140 and you rerank the top 100, the best cross-encoder available returns a confident wrong answer. The number to watch is first-stage recall@100, not final recall@5.</p>
+<figure class="nfig"><div class="nviz"><div class="vb"><div class="r"><span class="l">Index</span><span class="t"><i class="mute" style="width: 100%"></i></span><b>every chunk</b></div><div class="r"><span class="l">Hybrid first stage</span><span class="t"><i class="mute" style="width: 40%"></i></span><b>~100 candidates</b></div><div class="r"><span class="l">Cross-encoder or LLM rerank</span><span class="t"><i class="" style="width: 16%"></i></span><b>top ~20</b></div><div class="r"><span class="l">Packed into the prompt</span><span class="t"><i class="" style="width: 7%"></i></span><b>5 to 8</b></div></div></div><figcaption class="mono">Typical shape of the cascade, not a benchmark. Everything downstream is bounded by the second row</figcaption></figure>
+
+<p>LLM rerankers are now competitive with trained cross-encoders; RankGPT showed listwise reranking with a sliding window over the candidates <span class="cite">[<a href="#r14">14</a>]</span>. Two details matter in production. Listwise rerankers are sensitive to the order candidates arrive in, and aggregating over several shuffled orders measurably improves them <span class="cite">[<a href="#r15">15</a>]</span>, which is worth the cost on high-stakes queries. And reranker scores are not calibrated across queries: 0.7 means something different for a short factoid than for a long analytical question. A single global “abstain below 0.5” threshold will be wrong for some query class. Calibrate thresholds per query type, or use the margin between the first and second candidate as the confidence signal.</p>
+
+<h2>The dangerous passage is the near miss</h2>
+<p>Long context windows do not remove the ordering problem. Liu et al. found models use information at the start and end of the input more reliably than in the middle <span class="cite">[<a href="#r16">16</a>]</span>, and Shi et al. showed irrelevant context measurably distracts models even on simple problems <span class="cite">[<a href="#r17">17</a>]</span>. Cuconasu et al. then found something more uncomfortable: passages that rank highly but do not contain the answer hurt accuracy, while adding random documents raised accuracy by up to 35% in their setup <span class="cite">[<a href="#r18">18</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><svg class="vsvg" viewBox="0 0 560 220" role="img" aria-label="Illustrative U-shaped curve: answers are most accurate when the relevant passage sits at the start or end of the context.">
+<line x1="40" x2="546" y1="190" y2="190" style="stroke: var(--line2); stroke-width: 1"></line><line x1="40" x2="40" y1="14" y2="190" style="stroke: var(--line2); stroke-width: 1"></line>
+<polyline points="40.0,32.3 45.1,35.0 50.1,37.7 55.2,40.3 60.2,42.9 65.3,45.4 70.4,47.9 75.4,50.3 80.5,52.6 85.5,54.9 90.6,57.2 95.7,59.4 100.7,61.5 105.8,63.6 110.8,65.7 115.9,67.7 121.0,69.6 126.0,71.5 131.1,73.3 136.1,75.1 141.2,76.8 146.3,78.5 151.3,80.1 156.4,81.6 161.4,83.1 166.5,84.6 171.6,86.0 176.6,87.3 181.7,88.6 186.7,89.9 191.8,91.1 196.9,92.2 201.9,93.3 207.0,94.3 212.0,95.3 217.1,96.2 222.2,97.1 227.2,97.9 232.3,98.7 237.3,99.4 242.4,100.0 247.5,100.6 252.5,101.2 257.6,101.7 262.6,102.1 267.7,102.5 272.8,102.9 277.8,103.1 282.9,103.4 287.9,103.6 293.0,103.7 298.1,103.8 303.1,103.8 308.2,103.7 313.2,103.7 318.3,103.5 323.4,103.3 328.4,103.1 333.5,102.8 338.5,102.4 343.6,102.0 348.7,101.6 353.7,101.1 358.8,100.5 363.8,99.9 368.9,99.2 374.0,98.5 379.0,97.7 384.1,96.9 389.1,96.0 394.2,95.0 399.3,94.1 404.3,93.0 409.4,91.9 414.4,90.8 419.5,89.6 424.6,88.3 429.6,87.0 434.7,85.6 439.7,84.2 444.8,82.8 449.9,81.2 454.9,79.7 460.0,78.0 465.0,76.4 470.1,74.6 475.2,72.8 480.2,71.0 485.3,69.1 490.3,67.2 495.4,65.2 500.5,63.1 505.5,61.0 510.6,58.9 515.6,56.6 520.7,54.4 525.8,52.1 530.8,49.7 535.9,47.3 540.9,44.8 546.0,42.3" style="fill: none; stroke: var(--sig); stroke-width: 3"></polyline>
+<text x="48" y="30" class="sm">start</text><text x="300" y="176" text-anchor="middle" class="lb">the middle gets lost</text><text x="538" y="30" text-anchor="end" class="sm">end</text>
+<text x="40" y="212" class="tk">position of the right passage in the context →</text></svg></div><figcaption class="mono">Illustrative shape of the lost-in-the-middle finding, not data from a specific model</figcaption></figure>
+
+<figure class="nfig"><div class="nviz"><div class="v4 v6"><div><span class="mono">Gold</span><b>Contains the answer</b><small>The only passage you actually want.</small></div><div><span class="mono">Random</span><b>Unrelated to the query</b><small>Mostly harmless, and in some setups it helped.</small></div><div><span class="mono">Near miss</span><b>Looks relevant, no answer</b><small>The most damaging. The model treats it as evidence.</small></div></div></div><figcaption class="mono">Three kinds of passage in a packed context, ordered by how much they hurt</figcaption></figure>
+
+<p>The practical reading is that your worst passages are your reranker’s confident false positives, because they look exactly like evidence. Track a distractor rate on the eval set: the share of packed passages that score as relevant but do not support the answer. Then pack fewer passages, put the strongest first, and restate the question at the end of the prompt.</p>
+
+<h2>Decide whether to retrieve, then check what came back</h2>
+<p>Not every query needs retrieval, and not every retrieval should be trusted. Self-RAG trains a model to emit reflection tokens that decide when to retrieve and whether the retrieved passages support the output <span class="cite">[<a href="#r19">19</a>]</span>. Corrective RAG adds a lightweight evaluator that grades retrieved documents and triggers a fallback, such as web search or refinement, when confidence is low <span class="cite">[<a href="#r20">20</a>]</span>. You don’t need their training recipes to use the idea: a cheap router in front of retrieval and a sufficiency check after it catch a large class of failures before generation.</p>
+<p>On the query side, HyDE embeds a generated hypothetical answer instead of the question <span class="cite">[<a href="#r21">21</a>]</span>, and Ma et al. trained a small rewriter with reinforcement learning against downstream answer quality <span class="cite">[<a href="#r22">22</a>]</span>. The trick I’d add: rewriters paraphrase away exact tokens. Send the original query to the lexical leg and the rewritten one to the dense leg, then fuse. You keep the identifier match and gain the semantic expansion.</p>
+<figure class="nfig"><div class="nviz"><div class="vf wrap"><div class="n "><b>User query</b><small>kept verbatim</small></div><span class="a" aria-hidden="true">→</span><div class="n hot"><b>BM25 leg</b><small>original wording</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Rewriter</b><small>expand, decompose</small></div><span class="a" aria-hidden="true">→</span><div class="n hot"><b>Dense leg</b><small>rewritten query</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Fuse + rerank</b><small>at depth 100</small></div></div></div><figcaption class="mono">Split the query by leg so rewriting never costs you an exact match</figcaption></figure>
+
+
+<h2>The index is an approximation too</h2>
+<p>HNSW, the default graph index in most vector databases, is approximate by design <span class="cite">[<a href="#r23">23</a>]</span>. Its recall against exact search is below 1 and moves with parameters like ef_search, and few teams measure it. Sample a few hundred real queries, run brute-force search on them, and compare. If ANN recall@10 is 0.92, no amount of embedding or reranker tuning recovers the missing 8%.</p>
+<p>Filters make this worse. Under a restrictive metadata filter, say one tenant and one month, post-filtering an HNSW result can leave almost nothing, and pre-filtering can cut the graph into pieces so the search stalls in a region with no valid nodes. Predicate-aware indexes such as ACORN were built for this case <span class="cite">[<a href="#r24">24</a>]</span>. If you can’t change the index, partition by the most selective filter, which is usually the tenant.</p>
+<p>Compression has the same shape. Product quantisation <span class="cite">[<a href="#r25">25</a>]</span> and Matryoshka embeddings, which can be truncated to fewer dimensions <span class="cite">[<a href="#r26">26</a>]</span>, cut memory dramatically at some recall cost. The standard recovery is two passes: search with compressed vectors, then rescore the top few hundred with full-precision ones before reranking.</p>
+
+<h2>Your corpus is an attack surface</h2>
+<p>Anything retrievable can be injected. Greshake et al. demonstrated indirect prompt injection through retrieved content in real LLM-integrated applications <span class="cite">[<a href="#r27">27</a>]</span>. PoisonedRAG measured how little it takes: five malicious texts per target question, in a knowledge base of millions of texts, reached a 90% attack success rate <span class="cite">[<a href="#r28">28</a>]</span>.</p>
+<ul>
+<li>Keep provenance on every chunk (source, owner, ingestion time, trust tier) and filter on it at retrieval time.</li>
+<li>Present passages as quoted data, never as instructions, and never let retrieved text change which tools the model may call.</li>
+<li>Watch for new documents that suddenly rank first for many unrelated queries. An optimised poison looks exactly like that.</li>
+</ul>
+
+<h2>The checklist I actually use</h2>
+<ul>
+<li>Measure first-stage recall at rerank depth, ANN recall against brute force, and distractor rate, as three separate numbers.</li>
+<li>Route identifier-shaped queries to lexical search, and tune RRF’s k per query class.</li>
+<li>Choose the chunking strategy from question shape, not from a default size.</li>
+<li>Calibrate abstention thresholds per query type.</li>
+<li>Version the embedding model together with the index, and migrate through a shadow index rather than in place.</li>
+<li>Keep provenance on every chunk, and filter on it.</li>
+</ul>
+<p class="nclose">Every ceiling in RAG is a retrieval ceiling first. The model can only reason over what you hand it.</p>
+<h2 id="refs">References</h2>
+<ol class="refs"><li id="r1"><span class="rn mono">01</span><span><b>Lewis et al., 2020.</b> <a href="https://arxiv.org/abs/2005.11401" target="_blank" rel="noopener">Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks</a>. <span class="rv">NeurIPS 2020.</span></span></li><li id="r2"><span class="rn mono">02</span><span><b>Karpukhin et al., 2020.</b> <a href="https://arxiv.org/abs/2004.04906" target="_blank" rel="noopener">Dense Passage Retrieval for Open-Domain Question Answering</a>. <span class="rv">EMNLP 2020.</span></span></li><li id="r3"><span class="rn mono">03</span><span><b>Weller et al., 2025.</b> <a href="https://arxiv.org/abs/2508.21038" target="_blank" rel="noopener">On the Theoretical Limitations of Embedding-Based Retrieval</a>. <span class="rv">ICLR 2026.</span></span></li><li id="r4"><span class="rn mono">04</span><span><b>Khattab & Zaharia, 2020.</b> <a href="https://arxiv.org/abs/2004.12832" target="_blank" rel="noopener">ColBERT: Efficient and Effective Passage Search via Contextualized Late Interaction over BERT</a>. <span class="rv">SIGIR 2020.</span></span></li><li id="r5"><span class="rn mono">05</span><span><b>Santhanam et al., 2022.</b> <a href="https://arxiv.org/abs/2112.01488" target="_blank" rel="noopener">ColBERTv2: Effective and Efficient Retrieval via Lightweight Late Interaction</a>. <span class="rv">NAACL 2022.</span></span></li><li id="r6"><span class="rn mono">06</span><span><b>Formal et al., 2021.</b> <a href="https://arxiv.org/abs/2107.05720" target="_blank" rel="noopener">SPLADE: Sparse Lexical and Expansion Model for First Stage Ranking</a>. <span class="rv">SIGIR 2021.</span></span></li><li id="r7"><span class="rn mono">07</span><span><b>Nogueira & Cho, 2019.</b> <a href="https://arxiv.org/abs/1901.04085" target="_blank" rel="noopener">Passage Re-ranking with BERT</a>. <span class="rv">arXiv.</span></span></li><li id="r8"><span class="rn mono">08</span><span><b>Thakur et al., 2021.</b> <a href="https://arxiv.org/abs/2104.08663" target="_blank" rel="noopener">BEIR: A Heterogeneous Benchmark for Zero-shot Evaluation of Information Retrieval Models</a>. <span class="rv">NeurIPS 2021 Datasets and Benchmarks.</span></span></li><li id="r9"><span class="rn mono">09</span><span><b>Cormack, Clarke & Büttcher, 2009.</b> <a href="https://plg.uwaterloo.ca/~gvcormac/cormacksigir09-rrf.pdf" target="_blank" rel="noopener">Reciprocal Rank Fusion Outperforms Condorcet and Individual Rank Learning Methods</a>. <span class="rv">SIGIR 2009.</span></span></li><li id="r10"><span class="rn mono">10</span><span><b>Anthropic, 2024.</b> <a href="https://www.anthropic.com/news/contextual-retrieval" target="_blank" rel="noopener">Introducing Contextual Retrieval</a>. <span class="rv">Engineering blog.</span></span></li><li id="r11"><span class="rn mono">11</span><span><b>Günther et al., 2024.</b> <a href="https://arxiv.org/abs/2409.04701" target="_blank" rel="noopener">Late Chunking: Contextual Chunk Embeddings Using Long-Context Embedding Models</a>. <span class="rv">arXiv.</span></span></li><li id="r12"><span class="rn mono">12</span><span><b>Sarthi et al., 2024.</b> <a href="https://arxiv.org/abs/2401.18059" target="_blank" rel="noopener">RAPTOR: Recursive Abstractive Processing for Tree-Organized Retrieval</a>. <span class="rv">ICLR 2024.</span></span></li><li id="r13"><span class="rn mono">13</span><span><b>Edge et al., 2024.</b> <a href="https://arxiv.org/abs/2404.16130" target="_blank" rel="noopener">From Local to Global: A Graph RAG Approach to Query-Focused Summarization</a>. <span class="rv">arXiv.</span></span></li><li id="r14"><span class="rn mono">14</span><span><b>Sun et al., 2023.</b> <a href="https://arxiv.org/abs/2304.09542" target="_blank" rel="noopener">Is ChatGPT Good at Search? Investigating Large Language Models as Re-Ranking Agents</a>. <span class="rv">EMNLP 2023.</span></span></li><li id="r15"><span class="rn mono">15</span><span><b>Tang et al., 2024.</b> <a href="https://arxiv.org/abs/2310.07712" target="_blank" rel="noopener">Found in the Middle: Permutation Self-Consistency Improves Listwise Ranking in Large Language Models</a>. <span class="rv">NAACL 2024.</span></span></li><li id="r16"><span class="rn mono">16</span><span><b>Liu et al., 2024.</b> <a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Lost in the Middle: How Language Models Use Long Contexts</a>. <span class="rv">TACL 2024.</span></span></li><li id="r17"><span class="rn mono">17</span><span><b>Shi et al., 2023.</b> <a href="https://arxiv.org/abs/2302.00093" target="_blank" rel="noopener">Large Language Models Can Be Easily Distracted by Irrelevant Context</a>. <span class="rv">ICML 2023.</span></span></li><li id="r18"><span class="rn mono">18</span><span><b>Cuconasu et al., 2024.</b> <a href="https://arxiv.org/abs/2401.14887" target="_blank" rel="noopener">The Power of Noise: Redefining Retrieval for RAG Systems</a>. <span class="rv">SIGIR 2024.</span></span></li><li id="r19"><span class="rn mono">19</span><span><b>Asai et al., 2024.</b> <a href="https://arxiv.org/abs/2310.11511" target="_blank" rel="noopener">Self-RAG: Learning to Retrieve, Generate, and Critique through Self-Reflection</a>. <span class="rv">ICLR 2024.</span></span></li><li id="r20"><span class="rn mono">20</span><span><b>Yan et al., 2024.</b> <a href="https://arxiv.org/abs/2401.15884" target="_blank" rel="noopener">Corrective Retrieval Augmented Generation</a>. <span class="rv">arXiv.</span></span></li><li id="r21"><span class="rn mono">21</span><span><b>Gao et al., 2023.</b> <a href="https://arxiv.org/abs/2212.10496" target="_blank" rel="noopener">Precise Zero-Shot Dense Retrieval without Relevance Labels</a>. <span class="rv">ACL 2023.</span></span></li><li id="r22"><span class="rn mono">22</span><span><b>Ma et al., 2023.</b> <a href="https://arxiv.org/abs/2305.14283" target="_blank" rel="noopener">Query Rewriting for Retrieval-Augmented Large Language Models</a>. <span class="rv">EMNLP 2023.</span></span></li><li id="r23"><span class="rn mono">23</span><span><b>Malkov & Yashunin, 2018.</b> <a href="https://arxiv.org/abs/1603.09320" target="_blank" rel="noopener">Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs</a>. <span class="rv">IEEE TPAMI.</span></span></li><li id="r24"><span class="rn mono">24</span><span><b>Patel et al., 2024.</b> <a href="https://arxiv.org/abs/2403.04871" target="_blank" rel="noopener">ACORN: Performant and Predicate-Agnostic Search Over Vector Embeddings and Structured Data</a>. <span class="rv">SIGMOD 2024.</span></span></li><li id="r25"><span class="rn mono">25</span><span><b>Jégou, Douze & Schmid, 2011.</b> <a href="https://doi.org/10.1109/TPAMI.2010.57" target="_blank" rel="noopener">Product Quantization for Nearest Neighbor Search</a>. <span class="rv">IEEE TPAMI.</span></span></li><li id="r26"><span class="rn mono">26</span><span><b>Kusupati et al., 2022.</b> <a href="https://arxiv.org/abs/2205.13147" target="_blank" rel="noopener">Matryoshka Representation Learning</a>. <span class="rv">NeurIPS 2022.</span></span></li><li id="r27"><span class="rn mono">27</span><span><b>Greshake et al., 2023.</b> <a href="https://arxiv.org/abs/2302.12173" target="_blank" rel="noopener">Not What You’ve Signed Up For: Compromising Real-World LLM-Integrated Applications with Indirect Prompt Injection</a>. <span class="rv">AISec 2023.</span></span></li><li id="r28"><span class="rn mono">28</span><span><b>Zou et al., 2025.</b> <a href="https://arxiv.org/abs/2402.07867" target="_blank" rel="noopener">PoisonedRAG: Knowledge Corruption Attacks to Retrieval-Augmented Generation of Large Language Models</a>. <span class="rv">USENIX Security 2025.</span></span></li></ol>
+
+      </article>
+      <div class="byline">
+        <span class="bymark ph" aria-hidden="true"><img src="/assets/img/portrait.jpg" alt=""></span>
+        <div><b>Saad Al-Tamari</b><span>Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.</span></div>
+        <a class="btn btn-line" href="/about">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="/writing-agent-orchestration" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Read next · Field guide</span><span class="disp" style="display: block; margin-top: 10px">Agent orchestration, the hard parts</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Building something like this, or want me to write about your problem next? One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="/writing">← All notes</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc></script>
+<script>(function(){var t=document.getElementById("dc-tpl"),d=document.createElement("div");d.innerHTML=t.textContent.replace(/ d="\{\{menuPath\}\}"/g," d=\"M0 0\"");t.replaceWith(d.firstElementChild);var r=document.documentElement,o=new MutationObserver(function(){var m=document.getElementById("dc-root");if(m&&m.childElementCount){var x=document.getElementById("ssr");x&&x.remove();o.disconnect();}});o.observe(document.body,{childList:true,subtree:true});setTimeout(function(){if(!document.getElementById("dc-root"))r.classList.remove("ssr-js");},5000);})();</script>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9600}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      ctaAll: mk("LET'S BUILD"),
+      cvA: '/cv/Saad-Al-Tamari-CV-AI-Specialist.pdf', cvT: '/cv/Saad-Al-Tamari-CV-AI-Trainer.pdf',
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>
