@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>MCP Hub · Case study</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="Main.dc.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="Main.dc.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl on" href="Work.dc.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="Services.dc.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="About.dc.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl" href="Notes.dc.html"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="Main.dc.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="Work.dc.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="Services.dc.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="About.dc.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="Notes.dc.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero chero s-mcp">
+    <span class="sh-art" aria-hidden="true"><i class="moon"></i><i class="hill"></i><i class="hill h2"></i></span>
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="Main.dc.html">Home</a><span>/</span><a href="Work.dc.html">Work</a><span>/</span><span>Case 02</span></div>
+        <h1 class="ptitle disp">MCP Hub</h1>
+        <p class="psub">An air-traffic controller for data. Every app talks to the Hub, the Hub talks to the database, and <span class="serif">no app</span> holds a credential.</p>
+        <div class="meta">
+          <div><span class="mono">Role</span><strong>Architect &amp; builder</strong></div>
+          <div><span class="mono">When</span><strong>Feb–Aug 2026 · Decasonic</strong></div>
+          <div><span class="mono">Stack</span><strong>Next.js 14 · Supabase · SSE</strong></div>
+          <div><span class="mono">Models</span><strong>Anthropic → OpenAI → xAI</strong></div>
+        </div>
+        <div class="bigstats">
+          <div class="bs"><b>35+</b><span>codebases that no longer hold DB keys</span></div>
+          <div class="bs"><b>87</b><span>tables behind one gateway</span></div>
+          <div class="bs"><b>11×</b><span>signal throughput after the audit</span></div>
+          <div class="bs"><b>Min</b><span>to onboard an app, down from days</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>01 / The problem</span></div>
+      <div class="prob">
+        <div>
+          <h2 class="h3 disp" style="margin-bottom: 22px">Every app had<br>the keys to everything.</h2>
+          <p>Before the Hub, database credentials sat in 35+ codebases. There was no central visibility, no least privilege, and a schema change could break an app without anyone hearing about it. Onboarding a new app was a manual, multi-day job.</p>
+          <p>I had already designed the shared 87-table schema. The Hub is what made it safe to share.</p>
+        </div>
+        <div class="bad">
+          <div class="badrow">Credentials copied into every codebase.</div>
+          <div class="badrow">No record of who wrote what, or when.</div>
+          <div class="badrow">Schema changes break apps silently.</div>
+          <div class="badrow">New integrations take days by hand.</div>
+          <div class="badrow ok">One gateway, strict per-app rules, and generated clients.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-ink">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>02 / One request, start to finish</span></div>
+        <div class="shead rv"><h2 class="h2 disp">Follow a<br>single write.</h2><p class="mono">POST /api/gateway with an API key and a payload. Here is what happens to it.</p></div>
+        <div class="sticky">
+          <div class="steps">
+            <div class="{{sc0}}" data-i="0"><span class="mono">Step 01 · Authenticate</span><h3>Who is asking?</h3><p>The key is validated and the app's status checked. Apps move from pending to configured to active, and promote themselves on their first successful request.</p></div>
+            <div class="{{sc1}}" data-i="1"><span class="mono">Step 02 · Authorize</span><h3>What are they allowed to touch?</h3><p>Rate limits and timeouts first, then permissions at the level of the table and the column. An app can be allowed to read a table and still be blocked from one field in it.</p></div>
+            <div class="{{sc2}}" data-i="2"><span class="mono">Step 03 · Execute and log</span><h3>Do it, and write it down.</h3><p>The query runs against Supabase, the request is logged with sensitive values stripped, and raw database errors come back as friendly 400 and 409 messages.</p></div>
+            <div class="{{sc3}}" data-i="3"><span class="mono">Step 04 · Onboard the next app</span><h3>An AI handshake between apps.</h3><p>Paste a new app's discovery file. The model recommends permissions, you review them, and the Hub generates a complete integration client in JS, TS or Python, plus a prompt to paste back into the app's builder.</p></div>
+          </div>
+          <div class="stage" aria-hidden="true">
+            <sc-if value="{{s0}}" hint-placeholder-val="{{ true }}">
+              <div class="scr">
+                <h4><span>Incoming request</span><span class="live mono">Live</span></h4>
+                <div class="code" style="border-radius: 12px; padding-bottom: 12px"><span class="ln2"> </span><span class="ln2"><span class="k">POST</span> /api/gateway</span><span class="ln2">x-api-key: <span class="s">••••••••••••</span></span><span class="ln2"> </span><span class="ln2">{ "operation": <span class="s">"insert"</span>,</span><span class="ln2">  "table": <span class="s">"signals"</span>,</span><span class="ln2">  "data": { … } }</span></div>
+                <div class="life"><span>Pending</span><i>→</i><span>Configured</span><i>→</i><span>Active</span></div>
+                <span class="vcap mono">Request sketch</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s1}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Permissions · AI Sourcing</span><span class="mono" style="color: var(--invmute)">table + column</span></h4>
+                <div class="mx">
+                  <span></span><span class="h">Read</span><span class="h">Insert</span><span class="h">Update</span><span class="h">Delete</span>
+                  <span class="t">signals</span><span class="c y">✓</span><span class="c y">✓</span><span class="c y">✓</span><span class="c">—</span>
+                  <span class="t">companies</span><span class="c y">✓</span><span class="c y">✓</span><span class="c p">cols</span><span class="c">—</span>
+                  <span class="t">deals</span><span class="c y">✓</span><span class="c">—</span><span class="c">—</span><span class="c">—</span>
+                  <span class="t">identities</span><span class="c p">cols</span><span class="c">—</span><span class="c">—</span><span class="c">—</span>
+                  <span class="t">agents</span><span class="c">—</span><span class="c">—</span><span class="c">—</span><span class="c">—</span>
+                </div>
+                <div class="formula">rate limit per app · timeout per call · <b>deny by default</b></div>
+                <span class="vcap mono">Interface sketch · sample permissions</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s2}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Request log</span><span class="live mono">Live mode</span></h4>
+                <div class="logs">
+                  <div><span>insert</span><span class="ok">200</span><span>signals · AI Sourcing</span><span>41ms</span></div>
+                  <div><span>select</span><span class="ok">200</span><span>companies · AI Coach</span><span>18ms</span></div>
+                  <div><span>update</span><span class="w">409</span><span>duplicate key, explained</span><span>22ms</span></div>
+                  <div><span>insert</span><span class="x">400</span><span>column not permitted</span><span>9ms</span></div>
+                  <div><span>select</span><span class="ok">200</span><span>deals · Action Portal</span><span>27ms</span></div>
+                </div>
+                <div class="formula">raw error → <b>friendly message</b> the app can act on</div>
+                <span class="vcap mono">Interface sketch · sample log</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s3}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Onboard a new app</span><span class="mono" style="color: var(--invmute)">SSE · fallback</span></h4>
+                <div class="wiz">
+                  <div class="wz done"><i>1</i><span>Paste the discovery file<small>The app describes itself: tables, fields, intent</small></span></div>
+                  <div class="wz done"><i>2</i><span>Model recommends permissions<small>Using human-written column meanings</small></span></div>
+                  <div class="wz now"><i>3</i><span>You review and tweak<small>Nothing is granted without a person</small></span></div>
+                  <div class="wz"><i>4</i><span>Client generated<small>Retries, timeouts, real column names</small></span></div>
+                  <div class="wz"><i>5</i><span>Paste-back prompt<small>The app's own builder wires it in</small></span></div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>03 / Before and after</span></div>
+      <div class="shead rv"><h2 class="h2 disp">Drag the<br>line.</h2><p class="mono">A database health audit across the connected apps. Left: what I found. Right: after the fixes.</p></div>
+      <div class="compare">
+        <div class="cside">
+          <span class="mono">Before the audit</span>
+          <div class="crow"><span>Signals flowing</span><span class="cbar"><span style="width: 9%"></span></span><b>78</b></div>
+          <div class="crow"><span>Signals linked to their source run</span><span class="cbar"><span style="width: 1%"></span></span><b>0</b></div>
+          <div class="crow"><span>Agent runs recorded</span><span class="cbar"><span style="width: 1%"></span></span><b>0</b></div>
+          <div class="crow"><span>Apps fixed</span><span class="cbar"><span style="width: 1%"></span></span><b>0</b></div>
+          <p class="muted" style="margin: 8px 0 0; font-size: 14.5px; max-width: 46ch">~400 CHECK failures from 'prod' vs 'PROD'. Zero rows in every junction table. '[object Object]' saved as a UUID.</p>
+        </div>
+        <div class="cside after" style="clip-path: inset(0 0 0 {{cmp}}%)">
+          <span class="mono">After the fixes</span>
+          <div class="crow"><span>Signals flowing</span><span class="cbar"><span style="width: 100%"></span></span><b>864</b></div>
+          <div class="crow"><span>Signals linked to their source run</span><span class="cbar"><span style="width: 90%"></span></span><b>777</b></div>
+          <div class="crow"><span>Agent runs recorded</span><span class="cbar"><span style="width: 60%"></span></span><b>72</b></div>
+          <div class="crow"><span>Apps fixed</span><span class="cbar"><span style="width: 100%"></span></span><b>9</b></div>
+          <p style="margin: 8px 0 0; font-size: 14.5px; max-width: 46ch; color: var(--invfg2)">Five failure classes, a four-section fix-prompt template, and permission gaps closed in four apps.</p>
+        </div>
+        <span class="chandle" style="left: {{cmp}}%"></span>
+        <input class="crange" type="range" min="0" max="100" value="{{cmp}}" onChange="{{setCmp}}" aria-label="Compare before and after the audit">
+      </div>
+      <p class="muted" style="margin-top: 18px; font-size: 15px">Two lessons I carry everywhere: a gateway 200 doesn't mean the data is useful, and regressions happen during redeploys.</p>
+
+      <div class="cmp">
+        <div class="code"><div class="ch"><b>Before</b><span>every app holds every key</span></div><span class="ln2"> </span><span class="ln2 del"><span class="k">const</span> db = createClient(URL, SERVICE_ROLE_KEY);</span><span class="ln2"><span class="k">await</span> db.from(<span class="s">'signals'</span>).insert(row);</span><span class="ln2 c2">// no permissions, no log, no warning</span></div>
+        <div class="code"><div class="ch"><b>After</b><span>one gateway, least privilege</span></div><span class="ln2"> </span><span class="ln2 add"><span class="k">await</span> fetch(HUB + <span class="s">'/api/gateway'</span>, {</span><span class="ln2">  method: <span class="s">'POST'</span>,</span><span class="ln2">  headers: { <span class="s">'x-api-key'</span>: process.env.HUB_KEY },</span><span class="ln2 add">  body: JSON.stringify({ operation: <span class="s">'insert'</span>, table: <span class="s">'signals'</span>, data: row })</span><span class="ln2">});</span><span class="ln2 c2">// checked, rate limited, permitted, logged</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>04 / Decisions worth explaining</span></div>
+      <div class="decisions">
+        <details class="dq" open="{{ true }}"><summary><span class="mono muted">01</span><span class="q">When do you go around your own gateway?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Twice, on purpose. Bulk sync writes directly: without upsert, a 150-record sync would take 395+ round trips and hit the rate limit, so it writes straight to the database and still logs to the audit table. Analytics reads go direct with a read-only key, because a dashboard needs joins and window functions the gateway doesn't do.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">02</span><span class="q">What did the first integration teach you?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>It hit foreign-key violations, because the generator wasn't passing relationship information into the prompt. I fixed it in the generator, once, and every later integration inherited the fix.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">03</span><span class="q">Why write meanings into the schema?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Human-written table and column descriptions feed the code generator. That's the difference between knowing a status column is a varchar and knowing it's a deal pipeline stage.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">04</span><span class="q">What if a model fails halfway through generating a client?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Generation streams over server-sent events with automatic fallback from Anthropic to OpenAI to xAI if a provider fails or truncates.</p></div></details>
+      </div>
+      <div class="stack mono" style="margin-top: 40px"><span class="pill lt">Next.js 14</span><span class="pill lt">Supabase Auth</span><span class="pill lt">PostgreSQL</span><span class="pill lt">Server-sent events</span><span class="pill lt">Schema introspection</span><span class="pill lt">3 LLM providers</span></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail" style="padding-block: 8px 56px">
+      <div class="ctaband rv">
+        <p><b>Need something like this?</b> I build these end to end, as a full-time engineer, on contract, or with SKAI Group.</p>
+        <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a 30-min call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="Case-ContextEngine.dc.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Next case · 03</span><span class="disp" style="display: block; margin-top: 10px">Context Engine</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Credentials in every repo? I can map it, gate it and audit it.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="Work.dc.html">← All work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9200}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, cmp: 50, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  setCmp = (e) => { const v = Number(e.target.value); if (!isNaN(v)) this.setState({ cmp: v }); };
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--', cmp: s.cmp, setCmp: this.setCmp,
+      ctaAll: mk("LET'S BUILD"),
+      cvA: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/f7f37eb38bce1c4eab8e0bea5214dea4'; })(), cvT: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/befad928a1065a524caf917c104e529f'; })(),
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>

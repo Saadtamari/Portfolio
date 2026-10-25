@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Services · Saad Tamari</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="Main.dc.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="Main.dc.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="Work.dc.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl on" href="Services.dc.html" aria-current="page"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="About.dc.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl" href="Notes.dc.html"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="Main.dc.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="Work.dc.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="Services.dc.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="About.dc.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="Notes.dc.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header class="phero">
+    <img class="topo" src="/_blob/e5475fa57534c430364755ccaffa5714" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="Main.dc.html">Home</a><span>/</span><span>Services</span></div>
+        <h1 class="ptitle disp">Use cases</h1>
+        <p class="psub">The problems I get called for, what I build for each one, and the <span class="serif">proof</span> that I've built it before.</p>
+        <div class="meta">
+          <div><span class="mono">Work as</span><strong>Full-time · contract · studio · workshops</strong></div>
+          <div><span class="mono">Core</span><strong>AI products, agents &amp; enablement</strong></div>
+          <div><span class="mono">Languages</span><strong>Arabic &amp; English</strong></div>
+          <div><span class="mono">Based in</span><strong>Amman, Jordan · GMT+3</strong></div>
+        </div>
+        <div class="ctas" style="margin-top: 28px">
+          <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a 30-min call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a>
+          <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Hiring? Get my CV</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ USE CASES (scroll stack) ============ -->
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>01 / If this sounds familiar</span></div>
+      <div class="shead rv">
+        <h2 class="h2 disp">Five problems<br>I solve.</h2>
+      </div>
+      <div class="ucs">
+        <article class="uc ink">
+          <div><span class="mono">Use case 01</span><h3 class="ucn disp" style="margin: 12px 0 0">Invisible agents</h3><p class="q">"We have agents in production and nobody can tell which ones are working, what they cost, or why one broke."</p></div>
+          <dl>
+            <div><dt>What I build</dt><dd>A control plane: heartbeats and health scores for every agent, cost per agent and per app, remote pause, model swap and prompt push, versioned prompts with rollback.</dd></div>
+            <div><dt>Proof</dt><dd class="proof"><span class="sq"></span>Agent Control Panel · 350+ agents across 35+ apps</dd></div>
+            <div><a class="caselink" href="Case-ControlPanel.dc.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.8"></path></svg></a></div>
+          </dl>
+        </article>
+        <article class="uc">
+          <div><span class="mono">Use case 02</span><h3 class="ucn disp" style="margin: 12px 0 0">Keys everywhere</h3><p class="q">"Every app holds its own database credentials, schema changes break things silently, and onboarding an app takes days."</p></div>
+          <dl>
+            <div><dt>What I build</dt><dd>One gateway with table- and column-level permissions, request logs, friendly errors and rate limits, plus AI-generated integration clients for each new app.</dd></div>
+            <div><dt>Proof</dt><dd class="proof"><span class="sq"></span>MCP Hub · onboarding went from days to minutes</dd></div>
+            <div><a class="caselink" href="Case-MCPHub.dc.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.8"></path></svg></a></div>
+          </dl>
+        </article>
+        <article class="uc ink">
+          <div><span class="mono">Use case 03</span><h3 class="ucn disp" style="margin: 12px 0 0">Wrong context</h3><p class="q">"Our agents see too much, too little or the wrong thing, and we can't explain why an answer came out the way it did."</p></div>
+          <dl>
+            <div><dt>What I build</dt><dd>A context layer that ranks sources by value per token, keeps untrusted text out of instructions, and records every decision so it can be replayed and audited.</dd></div>
+            <div><dt>Proof</dt><dd class="proof"><span class="sq"></span>Context Engine · 9-stage pipeline, byte-for-byte replay</dd></div>
+            <div><a class="caselink" href="Case-ContextEngine.dc.html">Read the case study <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.8"></path></svg></a></div>
+          </dl>
+        </article>
+        <article class="uc sig">
+          <div><span class="mono">Use case 04</span><h3 class="ucn disp" style="margin: 12px 0 0">AI-curious team</h3><p class="q">"Our engineers want to use Claude Code, skills and MCP properly, not just paste into a chat window."</p></div>
+          <dl>
+            <div><dt>What I do</dt><dd>Hands-on workshops and setup sprints: Claude Code, writing skills, wiring MCP, building agents your team can trust, in Arabic or English.</dd></div>
+            <div><dt>Proof</dt><dd class="proof"><span class="sq" style="background: #111110"></span>190+ people across four workshops, plus five diploma cohorts</dd></div>
+            <div><a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a workshop</a></div>
+          </dl>
+        </article>
+        <article class="uc">
+          <div><span class="mono">Use case 05</span><h3 class="ucn disp" style="margin: 12px 0 0">An MVP that holds</h3><p class="q">"We need a product built, our budget is real but small, and we can't afford something that falls over."</p></div>
+          <dl>
+            <div><dt>What we build</dt><dd>With SKAI Group, the studio I co-founded: AI systems, web, mobile and SaaS. We scale the scope to your budget. Never the quality.</dd></div>
+            <div><dt>Proof</dt><dd class="proof"><span class="sq"></span>4 clients closed in 2 weeks · Al Delma ISO training platform</dd></div>
+            <div><a class="btn btn-line" href="https://skaigroup.tech" target="_blank" rel="noopener">Visit SKAI Group</a></div>
+          </dl>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PROCESS STEPPER ============ -->
+  <section class="band-ink">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>02 / How a project runs</span></div>
+        <div class="shead rv">
+          <h2 class="h2 disp">Four steps.<br>No mystery.</h2>
+        </div>
+        <div class="stepper">
+          <div class="sdots">
+            <sc-for list="{{dots}}" as="d" hint-placeholder-count="4">
+              <button type="button" class="{{d.cls}}" onClick="{{d.go}}" aria-label="{{d.label}}" aria-current="{{d.cur}}">{{d.n}}</button>
+              <sc-if value="{{d.line}}" hint-placeholder-val="{{ true }}"><span class="sline" aria-hidden="true"><span style="transform: {{d.fill}}"></span></span></sc-if>
+            </sc-for>
+          </div>
+          <div class="spanel">
+            <div>
+              <span class="mono" style="color: var(--sig)">Step {{cur.n}} of 4</span>
+              <h3 class="disp">{{cur.title}}</h3>
+              <p>{{cur.body}}</p>
+            </div>
+            <div>
+              <span class="mono" style="color: var(--invmute)">You keep</span>
+              <ul class="pts" style="margin-top: 12px"><sc-for list="{{cur.get}}" as="g" hint-placeholder-count="3"><li>{{g}}</li></sc-for></ul>
+            </div>
+          </div>
+          <div class="snav">
+            <button type="button" onClick="{{prev}}" disabled="{{atStart}}">Back</button>
+            <button type="button" class="go" onClick="{{next}}" disabled="{{atEnd}}">Next step</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CLAUDE ORBIT ============ -->
+  <section class="wrap">
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>03 / The Claude ecosystem</span></div>
+      <div class="teach" style="align-items: center">
+        <div class="tcopy">
+          <h2 class="h2 disp" style="margin-bottom: 8px">Taught by<br>someone who<br>ships with it.</h2>
+          <p>Claude Code is my daily driver. I've built an MCP gateway, a skills CMS that A/B tests skills against real agents, and a control plane for 350+ agents.</p>
+          <p class="sm">That's the difference between a workshop that demos features and one that leaves your team with a working setup.</p>
+        </div>
+        <div style="flex: 1 1 420px">
+          <div class="orbit" aria-label="The Claude toolkit I teach: Claude Code, Skills, MCP, Agents, Cowork and Claude Design" role="img">
+            <div class="ring2 b"></div>
+            <div class="ring2 a"></div>
+            <div class="orb"><span class="sat s1"><span>Claude Code</span></span><span class="sat s2"><span>Skills</span></span><span class="sat s3"><span>MCP</span></span></div>
+            <div class="orb rev"><span class="sat s4"><span>Agents</span></span><span class="sat s5"><span>Cowork</span></span><span class="sat s6"><span>Claude Design</span></span></div>
+            <div class="ocore"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: var(--sig); stroke-width: 2.2; stroke-linecap: square"></path></svg></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WORKSHOP TICKET ============ -->
+  <section id="ticket" class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>04 / Workshops</span></div>
+      <div class="shead rv">
+        <h2 class="h2 disp">Admit one<br>team.</h2>
+      </div>
+      <div class="ticket">
+        <div class="tmain">
+          <span class="mono">Hands-on workshop · team admission</span>
+          <span class="disp">Claude Code<br>Ecosystem</span>
+          <div class="tmeta mono">
+            <div>Format<b>Half day or full day</b></div>
+            <div>Seats<b>Your team</b></div>
+            <div>Language<b>Arabic or English</b></div>
+            <div>Where<b>On-site, Amman</b></div>
+          </div>
+          <p style="margin: 0; color: var(--invfg2); font-size: 15px">Also available: Build Your Own AI Agent, Build Your Own AI Chatbot, and AI for Business.</p>
+        </div>
+        <a class="tstub" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">
+          <span class="mono">Stub · keep this</span>
+          <span class="disp">Book<br>it</span>
+          <span class="tbarcode" aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="formats">
+        <div class="fmt"><span class="disp">Full-time</span><p>AI engineering roles across the stack: agents, RAG and data, and the product around them.</p><span class="mono">Open now</span></div>
+        <div class="fmt"><span class="disp">Contract</span><p>Scoped builds and audits: a gateway, a control plane, a context layer, or a database health check.</p><span class="mono">Hourly or per project</span></div>
+        <div class="fmt"><span class="disp">Studio</span><p>Products and MVPs through SKAI Group, the AI-native studio I co-founded in Amman.</p><span class="mono">Scope scaled to budget</span></div>
+        <div class="fmt"><span class="disp">Workshops</span><p>Training for engineering teams and companies adopting the Claude toolkit.</p><span class="mono">Half or full day</span></div>
+      </div>
+      <div class="ctaband rv">
+        <p><b>Not sure which one fits?</b> Book 30 minutes. We'll work out what you need, and I'll tell you honestly if I'm not the right person for it.</p>
+        <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a 30-min call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>05 / Questions people ask</span></div>
+      <div class="decisions">
+        <details class="dq"><summary><span class="mono muted">01</span><span class="q">Do you only work with Claude?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>No. My production systems run Claude, OpenAI, Gemini, Grok, Groq and OpenRouter behind one gateway with fallback chains. Claude is where I go deepest, and the toolkit I teach.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">02</span><span class="q">Can you work inside our existing stack?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Yes. My default is TypeScript, Node, PostgreSQL or Supabase and React, with Python for ML. Either way, I start by mapping what already exists before I suggest changing anything.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">03</span><span class="q">What does an audit actually look like?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>A snapshot query of what's really in your database, then failure classes with counts and a fix plan for each. The last one I ran found 5 failure classes across 9 apps and took signal throughput from 78 to 864.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">04</span><span class="q">Can you show us code?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Systems I built for employers belong to them, so for those I walk you through architecture and decisions. My own projects I can show directly.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">05</span><span class="q">Arabic or English?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Both. I write, teach and present in either.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Tell me which use case is yours. One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="https://www.upwork.com/freelancers/saadaltamari" target="_blank" rel="noopener">Hire on Upwork</a>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a><a class="btn btn-line" href="{{cvT}}" target="_blank" rel="noopener">Trainer CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <span>Amman · {{time}} GMT+3</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 7800}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  STEPS = [
+    { title: 'Map', body: 'Before I suggest anything, I measure what exists: a snapshot query of your data, a list of every app and agent, and where they actually break. Arguments start from numbers, not adjectives.', get: ['A written picture of your system, with counts', 'Failure classes ranked by impact', 'A short list of what not to touch'] },
+    { title: 'Design', body: 'Contracts first. The schema, the API spec and the rules the database must enforce are written down before code, so the UI and the server cannot drift apart later.', get: ['A schema and an OpenAPI contract', 'Decisions written down with the reason', 'A build order you can see'] },
+    { title: 'Build', body: 'Thin routes and pure, tested logic. Deterministic code where the decision matters, AI where it helps, one gateway for every model call, and a fallback for every failure.', get: ['Working software, deployed', 'Tests on the parts that decide things', 'Monitoring you can read'] },
+    { title: 'Hand off', body: 'You should never depend on me to keep it alive. I document it, walk your team through it, and run a workshop if the team is new to the tools.', get: ['Docs and runbooks', 'A walkthrough with your team', 'Optional training session'] }
+  ];
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tick(); this.clock = setInterval(() => this.tick(), 20000); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.raf) cancelAnimationFrame(this.raf); }
+  tick() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  prev = () => this.setState((p) => ({ step: Math.max(0, p.step - 1) }));
+  next = () => this.setState((p) => ({ step: Math.min(this.STEPS.length - 1, p.step + 1) }));
+
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const dots = this.STEPS.map((st, i) => ({
+      n: String(i + 1).padStart(2, '0'),
+      label: 'Step ' + (i + 1) + ': ' + st.title,
+      cls: 'sdot' + (i < s.step ? ' done' : '') + (i === s.step ? ' cur' : ''),
+      cur: i === s.step ? 'step' : 'false',
+      go: () => this.setState({ step: i }),
+      line: i < this.STEPS.length - 1,
+      fill: i < s.step ? 'scaleX(1)' : 'scaleX(0)'
+    }));
+    const c = this.STEPS[s.step];
+    const dark = s.theme === 'dark';
+    return {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      dots: dots,
+      cur: { n: s.step + 1, title: c.title, body: c.body, get: c.get },
+      prev: this.prev, next: this.next,
+      atStart: s.step === 0, atEnd: s.step === this.STEPS.length - 1,
+      ctaAll: mk("LET'S BUILD"),
+      cvA: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/f7f37eb38bce1c4eab8e0bea5214dea4'; })(), cvT: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/befad928a1065a524caf917c104e529f'; })(),
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    };
+  }
+}
+</script>
+</body>
+</html>

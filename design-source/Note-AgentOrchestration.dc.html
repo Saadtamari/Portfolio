@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agent orchestration, the hard parts · Saad Al-Tamari</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<meta name="description" content="An advanced guide to orchestrating LLM agents in production: pass^k reliability, DAG planning, KV-cache discipline, batch-invariant determinism, constrained decoding trade-offs, sagas and idempotency, multi-agent failure modes and the lethal trifecta. With references.">
+<meta name="author" content="Saad Al-Tamari">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="Main.dc.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="Main.dc.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="Work.dc.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="Services.dc.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="About.dc.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl on" href="Notes.dc.html" aria-current="page"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="Main.dc.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="Work.dc.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="Services.dc.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="About.dc.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="Notes.dc.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero nhero">
+    <img class="topo" src="/_blob/e5475fa57534c430364755ccaffa5714" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="Main.dc.html">Home</a><span>/</span><a href="Notes.dc.html">Writing</a><span>/</span><span>Field guide</span></div>
+        <h1 class="ntitle">Agent orchestration, the hard parts</h1>
+        <p class="psub">The loop is ten lines. Everything that makes it survive real traffic lives around it: reliability you can measure, side effects that happen once, a context that stays cheap, and tool output you never trust.</p>
+        <div class="nmeta mono"><span><img class="hav" src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt="">Saad Al-Tamari</span><span>Field guide · Agent orchestration</span><span>10 min read</span></div>
+        <div class="stack mono" style="margin-top: 18px"><span class="pill lt mono">Agents</span><span class="pill lt mono">Orchestration</span><span class="pill lt mono">Reliability</span><span class="pill lt mono">Security</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <article class="art">
+
+<p>An agent framework gives you a loop. Production gives you everything the loop ignores: runs that succeed once and fail the next time, side effects that happen twice, contexts that grow until they cost more than the answer, and tool output that turns into instructions. This note is about those parts.</p>
+
+<h2>Measure reliability as pass^k, not pass@1</h2>
+<p>Benchmarks usually report pass@1, or pass@k, where a task counts as solved if any of k attempts succeeds <span class="cite">[<a href="#r1">1</a>]</span>. Users don’t experience pass@k. They experience the same agent on the same kind of task, again and again. τ-bench made this explicit with pass^k, the probability that all k trials of a task succeed. In its retail domain, state-of-the-art function-calling agents such as GPT-4o solved fewer than half the tasks, and pass^8 fell below 25% <span class="cite">[<a href="#r2">2</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><div class="vfx">pass@k = 1 − C(n − c, k) / C(n, k)<br>pass^k = <b>C(c, k) / C(n, k)</b></div></div><figcaption class="mono">Unbiased estimators from n trials of a task with c successes, averaged over tasks</figcaption></figure>
+
+<p>The non-obvious part: pass^k depends on how failures are distributed across tasks, not only on the average.</p>
+<figure class="nfig"><div class="nviz"><div class="vtable wrapcells"><table><thead><tr><th></th><th>System A</th><th>System B</th></tr></thead><tbody><tr><td data-l="">How it fails</td><td data-l="System A">Every task succeeds 60% of the time</td><td data-l="System B">60% of tasks always pass, 40% always fail</td></tr><tr><td data-l="">pass@1</td><td data-l="System A">60%</td><td data-l="System B">60%</td></tr><tr class="hi"><td data-l="">pass^8</td><td data-l="System A">1.7%</td><td data-l="System B">60%</td></tr></tbody></table></div></div><figcaption class="mono">Computed exactly. The same pass@1, and a 36× difference in pass^8. Reliability lives in the variance, not the mean</figcaption></figure>
+
+<p>System A looks fine on a leaderboard and is unusable in a workflow, because no task is dependable. System B is honest about what it can’t do, and you can route around it. When you improve an agent, check whether pass^k moved, not only pass@1. METR’s time-horizon work makes the same point from another angle: the length of task frontier agents complete at 50% success has doubled roughly every seven months since 2019, and the horizon at higher reliability thresholds is much shorter <span class="cite">[<a href="#r3">3</a>]</span>. “Can do” and “reliably does” are different curves.</p>
+<figure class="nfig"><div class="nviz"><svg class="vsvg" viewBox="0 0 560 250" role="img" aria-label="pass^k for independent trials falls as p to the power k."><line x1="46" x2="546" y1="220.0" y2="220.0" style="stroke: var(--line); stroke-width: 1"></line><text x="38" y="224.0" text-anchor="end" class="tk">0%</text><line x1="46" x2="546" y1="168.5" y2="168.5" style="stroke: var(--line); stroke-width: 1"></line><text x="38" y="172.5" text-anchor="end" class="tk">25%</text><line x1="46" x2="546" y1="117.0" y2="117.0" style="stroke: var(--line); stroke-width: 1"></line><text x="38" y="121.0" text-anchor="end" class="tk">50%</text><line x1="46" x2="546" y1="65.5" y2="65.5" style="stroke: var(--line); stroke-width: 1"></line><text x="38" y="69.5" text-anchor="end" class="tk">75%</text><line x1="46" x2="546" y1="14.0" y2="14.0" style="stroke: var(--line); stroke-width: 1"></line><text x="38" y="18.0" text-anchor="end" class="tk">100%</text><text x="46.0" y="240" text-anchor="middle" class="tk">1</text><text x="117.4" y="240" text-anchor="middle" class="tk">2</text><text x="188.9" y="240" text-anchor="middle" class="tk">3</text><text x="260.3" y="240" text-anchor="middle" class="tk">4</text><text x="331.7" y="240" text-anchor="middle" class="tk">5</text><text x="403.1" y="240" text-anchor="middle" class="tk">6</text><text x="474.6" y="240" text-anchor="middle" class="tk">7</text><text x="546.0" y="240" text-anchor="middle" class="tk">8</text><polyline points="46.0,24.3 117.4,34.1 188.9,43.4 260.3,52.2 331.7,60.6 403.1,68.6 474.6,76.1 546.0,83.3" style="fill: none; stroke: var(--fg); stroke-width: 3"></polyline><polyline points="46.0,55.2 117.4,88.2 188.9,114.5 260.3,135.6 331.7,152.5 403.1,166.0 474.6,176.8 546.0,185.4" style="fill: none; stroke: var(--sig); stroke-width: 3"></polyline><polyline points="46.0,96.4 117.4,145.8 188.9,175.5 260.3,193.3 331.7,204.0 403.1,210.4 474.6,214.2 546.0,216.5" style="fill: none; stroke: var(--mute); stroke-width: 3"></polyline><circle cx="546.0" cy="185.4" r="5" style="fill: var(--fg)"></circle><text x="536.0" y="175.4" text-anchor="end" class="lb">17%</text></svg><div class="vleg mono"><span><i style="background: var(--fg)"></i>p = 0.95</span><span><i style="background: var(--sig)"></i>p = 0.80</span><span><i style="background: var(--mute)"></i>p = 0.60</span><span>x-axis: k, number of trials that must all pass</span></div></div><figcaption class="mono">pass^k when every task has the same per-trial success p. Real systems sit between this curve and System B</figcaption></figure>
+
+
+<h2>Plan as a graph, execute in parallel</h2>
+<p>ReAct interleaves reasoning and tool calls in one loop <span class="cite">[<a href="#r4">4</a>]</span>. It is flexible and pays for it: every observation goes back through the model, and every step waits for the one before. ReWOO separates planning from observation: a planner writes the whole plan with placeholders, workers fill them, and a solver composes the answer, which cuts token use substantially <span class="cite">[<a href="#r5">5</a>]</span>. LLMCompiler compiles the plan into a dependency graph of function calls and runs them in parallel as soon as their inputs are ready <span class="cite">[<a href="#r6">6</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><div class="vlanes"><div class="vlane"><span class="mono">ReAct loop</span><div class="ln"><span class="drift" style="left: 1%; width: 14%">think</span><span class="drift" style="left: 16%; width: 12%">tool A</span><span class="drift" style="left: 29%; width: 12%">think</span><span class="drift" style="left: 42%; width: 12%">tool B</span><span class="drift" style="left: 55%; width: 12%">think</span><span class="drift" style="left: 68%; width: 12%">tool C</span><span class="drift" style="left: 81%; width: 14%">answer</span></div></div><div class="vlane"><span class="mono">Planned DAG</span><div class="ln"><span class="ok" style="left: 1%; width: 14%">plan</span><span class="ok" style="left: 16%; width: 12%">A ∥ B</span><span class="ok" style="left: 29%; width: 12%">C</span><span class="fit" style="left: 42%; width: 14%">answer</span></div></div><div class="vticks mono"><span>start</span><span></span><span></span><span>time →</span></div></div></div><figcaption class="mono">Same three tools. Independent calls run together once the plan exists</figcaption></figure>
+
+<p>Planning up front has a second benefit that matters more than speed. If the plan is fixed before any untrusted data is read, a malicious tool result can’t add steps to it. Plan-then-execute is one of the core patterns in the prompt-injection design work below <span class="cite">[<a href="#r7">7</a>]</span>. Re-planning is still allowed, but it becomes an explicit, logged transition rather than something a web page can trigger.</p>
+
+<h2>Treat the context window as a cache</h2>
+<p>For long-running agents the prompt is mostly input. Manus reported about 100 input tokens per output token and called KV-cache hit rate the single most important metric for a production agent; with Claude Sonnet at the time, cached input cost $0.30 per million tokens against $3 uncached <span class="cite">[<a href="#r8">8</a>]</span>. Cache hits need byte-identical prefixes, which turns some innocent habits into expensive bugs.</p>
+<figure class="nfig"><div class="nviz"><div class="vc"><div class="bad2"><span class="mono">Breaks the cache</span><p>A timestamp at the top of the system prompt. Tools added or removed mid-run. JSON serialised with unstable key order. Rewriting earlier turns to tidy the history.</p></div><div class="good"><span class="mono">Keeps the cache</span><p>A stable system prompt and tool list. Append-only history. Deterministic serialisation. Tools masked at decode time instead of removed.</p></div></div></div><figcaption class="mono">Prompt-layout choices that decide whether you pay for the prefix once or on every step</figcaption></figure>
+
+<p>Three more Manus lessons are worth stealing. Use the file system as unbounded, restorable memory: drop a page’s content from context but keep its URL or path. Leave failed actions and stack traces in context, because erasing them removes the evidence the model needs to avoid repeating the mistake. And have the agent rewrite its task list near the end of the context, which keeps the global goal where models attend most reliably <span class="cite">[<a href="#r8">8</a>, <a href="#r9">9</a>]</span>.</p>
+
+<h2>Temperature zero is not reproducibility</h2>
+<p>The usual explanation for nondeterminism at temperature 0 is floating-point arithmetic under concurrency. Thinking Machines showed the bigger cause in inference servers is a lack of batch invariance: kernels return slightly different numbers depending on batch size, and batch size depends on whoever else is using the server at that moment <span class="cite">[<a href="#r10">10</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><div class="nstats"><div><b>1,000</b><span>completions at temperature 0</span></div><div><b>80</b><span>distinct outputs</span></div><div><b>103</b><span>first token where runs diverged</span></div><div><b>1</b><span>distinct output with batch-invariant kernels</span></div></div></div><figcaption class="mono">Qwen3-235B, one prompt, as reported by Thinking Machines</figcaption></figure>
+
+<p>Two consequences for agents. Replay has to use recorded model outputs and tool results, not re-execution, or the debugger will show you a different run. And every eval needs repeated trials per task, which is pass^k again.</p>
+
+<h2>Constrain the interface, not the thinking</h2>
+<p>Constrained decoding guarantees syntactically valid output by masking tokens that would break a grammar or schema <span class="cite">[<a href="#r11">11</a>]</span>. It fixes parsing, not correctness, and it has a cost: Tam et al. found a significant decline in reasoning under strict format restrictions <span class="cite">[<a href="#r12">12</a>]</span>. Two patterns keep both properties. Let the model reason in free text and emit the structured result in a second, constrained step. Or put a free-text reasoning field before the answer fields in the schema, so generation order follows thought order. Then validate semantically (the ID exists, the amount is in range) and return failures to the model as tool results; one retry with the error attached fixes a large share of bad calls.</p>
+
+<h2>Side effects need idempotency or compensation</h2>
+<p>Retries are the right response to transient failure and dangerous around side effects. The classic answer is idempotency: key each operation so that doing it again returns the first result <span class="cite">[<a href="#r13">13</a>]</span>. Derive the key from the run and the step, and store the result before acknowledging.</p>
+<div class="code nscode"><div class="ch"><b>One side-effecting step</b><span>sketch</span></div><span class="ln2"> </span><span class="ln2">key = <span class="s">f"{run.id}:{step.id}"</span></span><span class="ln2"><span class="k">if</span> (done := ledger.get(key)): <span class="k">return</span> done      <span class="c2"># a retry replays, never redoes</span></span><span class="ln2">args = schema.validate(call.args)            <span class="c2"># reject bad arguments early</span></span><span class="ln2">result = tool.run(args, idempotency_key=key)</span><span class="ln2">ledger.put(key, result)                      <span class="c2"># checkpoint before moving on</span></span></div>
+
+<p>Some actions can’t be made idempotent, and some multi-step tasks have to be undone halfway. Databases solved this decades ago with sagas: split a long transaction into steps, give each step a compensating action, and on failure run the compensations in reverse <span class="cite">[<a href="#r14">14</a>]</span>. For agents the rule becomes: every tool with a side effect declares either an idempotency key or a compensation, and the planner schedules irreversible steps, such as sending a message or charging a card, as late as possible, after everything that can fail has already succeeded.</p>
+<figure class="nfig"><div class="nviz"><div class="vf wrap"><div class="n "><b>Reserve slot</b><small>undo: release it</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Draft invoice</b><small>undo: void it</small></div><span class="a" aria-hidden="true">→</span><div class="n warn"><b>Charge card</b><small>the pivot: irreversible</small></div><span class="a" aria-hidden="true">→</span><div class="n hot"><b>Send confirmation</b><small>retry with a key</small></div></div></div><figcaption class="mono">A saga for an agent workflow. Everything before the pivot can be undone; everything after it must be safely retryable</figcaption></figure>
+
+
+<h2>Multi-agent: spend tokens on breadth, keep one writer</h2>
+<p>Anthropic’s research system, a lead agent delegating to parallel subagents, beat a single agent by 90.2% on their internal research eval. It also used about 15 times the tokens of a chat interaction, and on BrowseComp, token usage alone explained 80% of the variance in performance <span class="cite">[<a href="#r15">15</a>]</span>. Cognition argued the other side in “Don’t Build Multi-Agents”: subagents that can’t see each other’s context make conflicting implicit decisions, so context should be shared in full and actions kept single-threaded <span class="cite">[<a href="#r16">16</a>]</span>.</p>
+<p>The two positions are consistent once you separate reading from writing. Research is breadth-first reading: independent subtasks, results merged by a lead, no conflicting side effects. Coding and operations are writing: every action carries decisions the next one depends on. Fan out to read; keep a single writer for decisions and side effects.</p>
+<figure class="nfig"><div class="nviz"><div class="v4 v6"><div><span class="mono">System design</span><b>Disobeying the spec, repeating steps</b><small>Failures baked into roles, prompts and stop conditions.</small></div><div><span class="mono">Inter-agent misalignment</span><b>Withholding, ignoring, derailing</b><small>Agents that don’t share what they know, or ignore what others said.</small></div><div><span class="mono">Task verification</span><b>Stopping early, checking badly</b><small>No verification, or verification that passes wrong work.</small></div></div></div><figcaption class="mono">The three categories of MAST, a taxonomy of 14 failure modes built from 1,600+ traces across 7 frameworks, with inter-annotator agreement of κ = 0.88</figcaption></figure>
+
+<p>That taxonomy comes from Cemri et al. <span class="cite">[<a href="#r17">17</a>]</span>. The uncomfortable finding is how many failures are organisational, not model errors: unclear roles, missing verification, information one agent had and never passed on.</p>
+
+<h2>Security: break the lethal trifecta</h2>
+<p>Simon Willison’s framing is the most useful threat model I know for agents: an agent that has access to private data, is exposed to untrusted content, and can communicate externally can be tricked into exfiltrating that data <span class="cite">[<a href="#r18">18</a>]</span>. Remove any one of the three and that class of attack closes.</p>
+<figure class="nfig"><div class="nviz"><div class="v4 v6"><div><span class="mono">01</span><b>Private data</b><small>Mail, files, databases, credentials the agent can read.</small></div><div><span class="mono">02</span><b>Untrusted content</b><small>Web pages, inbound email, documents, tool output.</small></div><div><span class="mono">03</span><b>A way out</b><small>Sending messages, making requests, rendering links or images.</small></div></div></div><figcaption class="mono">Any agent holding all three at once is one injected instruction away from a leak</figcaption></figure>
+
+<p>When you can’t remove one, design for it. AgentDojo benchmarks agents against realistic injection attacks <span class="cite">[<a href="#r19">19</a>]</span>. CaMeL separates a privileged model that plans from a quarantined model that parses untrusted data, while an interpreter tracks where every value came from and enforces which values may flow into which tools <span class="cite">[<a href="#r20">20</a>]</span>. Beurer-Kellner et al. catalogue patterns with provable properties: action selectors, plan-then-execute, map-reduce over untrusted inputs, dual LLMs, code-then-execute and context minimisation <span class="cite">[<a href="#r7">7</a>]</span>. Each trades flexibility for a guarantee, which is the right trade wherever money, data or reputation is involved.</p>
+
+<h2>Workflows first, still</h2>
+<p>Anthropic’s guide draws the line between workflows, where code decides the path, and agents, where the model does, and recommends the simplest option that works <span class="cite">[<a href="#r21">21</a>]</span>. Everything above is the cost of moving right on that spectrum.</p>
+<figure class="nfig"><div class="nviz"><div class="vf wrap"><div class="n "><b>Single call</b><small>one prompt</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Chain</b><small>fixed steps</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Router</b><small>model picks a branch</small></div><span class="a" aria-hidden="true">→</span><div class="n hot"><b>Orchestrator + workers</b><small>model splits the work</small></div><span class="a" aria-hidden="true">→</span><div class="n warn"><b>Autonomous agent</b><small>model owns the loop</small></div></div></div><figcaption class="mono">Left to right: more flexibility, less predictability, more cost</figcaption></figure>
+
+<p class="nclose">An agent is a distributed system with a probabilistic component. Engineer it like one: measure pass^k, protect the cache, key every side effect, and assume tool output is hostile.</p>
+<h2 id="refs">References</h2>
+<ol class="refs"><li id="r1"><span class="rn mono">01</span><span><b>Chen et al., 2021.</b> <a href="https://arxiv.org/abs/2107.03374" target="_blank" rel="noopener">Evaluating Large Language Models Trained on Code</a>. <span class="rv">arXiv.</span></span></li><li id="r2"><span class="rn mono">02</span><span><b>Yao et al., 2024.</b> <a href="https://arxiv.org/abs/2406.12045" target="_blank" rel="noopener">τ-bench: A Benchmark for Tool-Agent-User Interaction in Real-World Domains</a>. <span class="rv">arXiv.</span></span></li><li id="r3"><span class="rn mono">03</span><span><b>Kwa et al., 2025.</b> <a href="https://arxiv.org/abs/2503.14499" target="_blank" rel="noopener">Measuring AI Ability to Complete Long Tasks</a>. <span class="rv">METR.</span></span></li><li id="r4"><span class="rn mono">04</span><span><b>Yao et al., 2023.</b> <a href="https://arxiv.org/abs/2210.03629" target="_blank" rel="noopener">ReAct: Synergizing Reasoning and Acting in Language Models</a>. <span class="rv">ICLR 2023.</span></span></li><li id="r5"><span class="rn mono">05</span><span><b>Xu et al., 2023.</b> <a href="https://arxiv.org/abs/2305.18323" target="_blank" rel="noopener">ReWOO: Decoupling Reasoning from Observations for Efficient Augmented Language Models</a>. <span class="rv">arXiv.</span></span></li><li id="r6"><span class="rn mono">06</span><span><b>Kim et al., 2024.</b> <a href="https://arxiv.org/abs/2312.04511" target="_blank" rel="noopener">An LLM Compiler for Parallel Function Calling</a>. <span class="rv">ICML 2024.</span></span></li><li id="r7"><span class="rn mono">07</span><span><b>Beurer-Kellner et al., 2025.</b> <a href="https://arxiv.org/abs/2506.08837" target="_blank" rel="noopener">Design Patterns for Securing LLM Agents against Prompt Injections</a>. <span class="rv">arXiv.</span></span></li><li id="r8"><span class="rn mono">08</span><span><b>Ji, 2025.</b> <a href="https://manus.im/blog/Context-Engineering-for-AI-Agents-Lessons-from-Building-Manus" target="_blank" rel="noopener">Context Engineering for AI Agents: Lessons from Building Manus</a>. <span class="rv">Manus blog.</span></span></li><li id="r9"><span class="rn mono">09</span><span><b>Liu et al., 2024.</b> <a href="https://arxiv.org/abs/2307.03172" target="_blank" rel="noopener">Lost in the Middle: How Language Models Use Long Contexts</a>. <span class="rv">TACL 2024.</span></span></li><li id="r10"><span class="rn mono">10</span><span><b>He & Thinking Machines Lab, 2025.</b> <a href="https://thinkingmachines.ai/blog/defeating-nondeterminism-in-llm-inference/" target="_blank" rel="noopener">Defeating Nondeterminism in LLM Inference</a>. <span class="rv">Connectionism blog.</span></span></li><li id="r11"><span class="rn mono">11</span><span><b>Willard & Louf, 2023.</b> <a href="https://arxiv.org/abs/2307.09702" target="_blank" rel="noopener">Efficient Guided Generation for Large Language Models</a>. <span class="rv">arXiv.</span></span></li><li id="r12"><span class="rn mono">12</span><span><b>Tam et al., 2024.</b> <a href="https://arxiv.org/abs/2408.02442" target="_blank" rel="noopener">Let Me Speak Freely? A Study on the Impact of Format Restrictions on Performance of Large Language Models</a>. <span class="rv">EMNLP 2024 Industry.</span></span></li><li id="r13"><span class="rn mono">13</span><span><b>Helland, 2012.</b> <a href="https://doi.org/10.1145/2181796.2187821" target="_blank" rel="noopener">Idempotence Is Not a Medical Condition</a>. <span class="rv">ACM Queue.</span></span></li><li id="r14"><span class="rn mono">14</span><span><b>Garcia-Molina & Salem, 1987.</b> <a href="https://doi.org/10.1145/38713.38742" target="_blank" rel="noopener">Sagas</a>. <span class="rv">SIGMOD 1987.</span></span></li><li id="r15"><span class="rn mono">15</span><span><b>Anthropic, 2025.</b> <a href="https://www.anthropic.com/engineering/multi-agent-research-system" target="_blank" rel="noopener">How We Built Our Multi-Agent Research System</a>. <span class="rv">Engineering blog.</span></span></li><li id="r16"><span class="rn mono">16</span><span><b>Yan, 2025.</b> <a href="https://cognition.ai/blog/dont-build-multi-agents" target="_blank" rel="noopener">Don’t Build Multi-Agents</a>. <span class="rv">Cognition blog.</span></span></li><li id="r17"><span class="rn mono">17</span><span><b>Cemri et al., 2025.</b> <a href="https://arxiv.org/abs/2503.13657" target="_blank" rel="noopener">Why Do Multi-Agent LLM Systems Fail?</a>. <span class="rv">NeurIPS 2025 Datasets and Benchmarks.</span></span></li><li id="r18"><span class="rn mono">18</span><span><b>Willison, 2025.</b> <a href="https://simonwillison.net/2025/Jun/16/the-lethal-trifecta/" target="_blank" rel="noopener">The Lethal Trifecta for AI Agents</a>. <span class="rv">simonwillison.net.</span></span></li><li id="r19"><span class="rn mono">19</span><span><b>Debenedetti et al., 2024.</b> <a href="https://arxiv.org/abs/2406.13352" target="_blank" rel="noopener">AgentDojo: A Dynamic Environment to Evaluate Prompt Injection Attacks and Defenses for LLM Agents</a>. <span class="rv">NeurIPS 2024 Datasets and Benchmarks.</span></span></li><li id="r20"><span class="rn mono">20</span><span><b>Debenedetti et al., 2025.</b> <a href="https://arxiv.org/abs/2503.18813" target="_blank" rel="noopener">Defeating Prompt Injections by Design</a>. <span class="rv">arXiv.</span></span></li><li id="r21"><span class="rn mono">21</span><span><b>Anthropic, 2024.</b> <a href="https://www.anthropic.com/engineering/building-effective-agents" target="_blank" rel="noopener">Building Effective Agents</a>. <span class="rv">Engineering blog.</span></span></li></ol>
+
+      </article>
+      <div class="byline">
+        <span class="bymark ph" aria-hidden="true"><img src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt=""></span>
+        <div><b>Saad Al-Tamari</b><span>Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.</span></div>
+        <a class="btn btn-line" href="About.dc.html">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="Note-RAGEval.dc.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Read next · Field guide</span><span class="disp" style="display: block; margin-top: 10px">Evaluating RAG end to end without fooling yourself</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Building something like this, or want me to write about your problem next? One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="Notes.dc.html">← All notes</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9600}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      ctaAll: mk("LET'S BUILD"),
+      cvA: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/f7f37eb38bce1c4eab8e0bea5214dea4'; })(), cvT: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/befad928a1065a524caf917c104e529f'; })(),
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>

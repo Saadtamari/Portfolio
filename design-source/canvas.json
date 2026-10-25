@@ -1,0 +1,351 @@
+{
+  "v": 3,
+  "attachments": {},
+  "boards": {
+    "About.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "About",
+      "w": 1440,
+      "x": 5944,
+      "y": 0
+    },
+    "Case-ContextEngine.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Case · Context Engine",
+      "w": 1440,
+      "x": 10504,
+      "y": 0
+    },
+    "Case-ControlPanel.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Case · Agent Control Panel",
+      "w": 1440,
+      "x": 7464,
+      "y": 0
+    },
+    "Case-Dubljly.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Case · Dubljly",
+      "w": 1440,
+      "x": 13544,
+      "y": 0
+    },
+    "Case-InvestorDay.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Case · Investor Day",
+      "w": 1440,
+      "x": 12024,
+      "y": 0
+    },
+    "Case-MCPHub.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Case · MCP Hub",
+      "w": 1440,
+      "x": 8984,
+      "y": 0
+    },
+    "Home-Mobile.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Home · Phone 390",
+      "w": 390,
+      "x": 2434,
+      "y": 0
+    },
+    "Home-Tablet.dc.html": {
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Home · Tablet 834",
+      "w": 834,
+      "x": 1520,
+      "y": 0
+    },
+    "Main.dc.html": {
+      "expand": "fill",
+      "h": 8000,
+      "is_interactive": true,
+      "title": "Home · Desktop",
+      "w": 1440,
+      "x": 0,
+      "y": 0
+    },
+    "Note-ArabicDubbing.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 12 · Arabic dubbing",
+      "w": 1440,
+      "x": 42424,
+      "y": 0
+    },
+    "Note-BypassGateway.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 10 · When not to use your gateway",
+      "w": 1440,
+      "x": 39384,
+      "y": 0
+    },
+    "Note-ContextBudget.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 08 · Budget left unspent",
+      "w": 1440,
+      "x": 36344,
+      "y": 0
+    },
+    "Note-ControlPlane.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 05 · Mission control",
+      "w": 1440,
+      "x": 31784,
+      "y": 0
+    },
+    "Note-FairMatching.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 09 · Code decides, model explains",
+      "w": 1440,
+      "x": 37864,
+      "y": 0
+    },
+    "Note-Gateway200.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 06 · A 200 isn’t useful data",
+      "w": 1440,
+      "x": 33304,
+      "y": 0
+    },
+    "Note-SchemaContract.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 07 · The database is the contract",
+      "w": 1440,
+      "x": 34824,
+      "y": 0
+    },
+    "Note-SkillsLoop.dc.html": {
+      "expand": "fill",
+      "h": 7600,
+      "is_interactive": true,
+      "title": "Note 11 · Skills that improve by losing",
+      "w": 1440,
+      "x": 40904,
+      "y": 0
+    },
+    "Notes.dc.html": {
+      "expand": "fill",
+      "h": 4400,
+      "is_interactive": true,
+      "title": "Notes",
+      "w": 1440,
+      "x": 24184,
+      "y": 0
+    },
+    "Services.dc.html": {
+      "expand": "fill",
+      "h": 7800,
+      "is_interactive": true,
+      "title": "Services · Use cases",
+      "w": 1440,
+      "x": 4424,
+      "y": 0
+    },
+    "Work.dc.html": {
+      "expand": "fill",
+      "h": 6800,
+      "is_interactive": true,
+      "title": "Work",
+      "w": 1440,
+      "x": 2904,
+      "y": 0
+    },
+    "Note-RAGRetrieval.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "y": 0,
+      "h": 13200,
+      "x": 25704,
+      "title": "Note 01 · RAG past the tutorial"
+    },
+    "Note-AgentOrchestration.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "y": 0,
+      "h": 12000,
+      "x": 27224,
+      "title": "Note 02 · Orchestration, the hard parts"
+    },
+    "Note-RAGEval.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "y": 0,
+      "h": 10600,
+      "x": 28744,
+      "title": "Note 03 · Evaluating RAG end to end"
+    },
+    "Note-AGIBenchmarks.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "y": 0,
+      "h": 9400,
+      "x": 30264,
+      "title": "Note 04 · AGI score vs coding score"
+    },
+    "Case-SkillsOS.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 15064,
+      "title": "Case · Agent Skills OS"
+    },
+    "Case-ProductEnhancer.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 16584,
+      "title": "Case · AI Product Enhancer"
+    },
+    "Case-Flora.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 18104,
+      "title": "Case · Flora AI"
+    },
+    "Case-JoFotara.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 19624,
+      "title": "Case · JoFotara POS"
+    },
+    "Case-Masraf.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 21144,
+      "title": "Case · Masraf · مصرف"
+    },
+    "Case-Hemolock.dc.html": {
+      "expand": "fill",
+      "is_interactive": true,
+      "w": 1440,
+      "h": 7200,
+      "y": 0,
+      "x": 22664,
+      "title": "Case · Hemolock"
+    }
+  },
+  "createdOnFiles": {
+    "at": "2026-10-20T19:20:00Z",
+    "v": 1
+  },
+  "designSystems": [],
+  "launch": {
+    "file": "Main.dc.html",
+    "view": "focused"
+  },
+  "notes": {
+    "t1": {
+      "kind": "title1",
+      "maxW": 2824,
+      "text": "Home · desktop, tablet and phone",
+      "w": 240,
+      "x": 0,
+      "y": -320
+    },
+    "t2": {
+      "kind": "title1",
+      "maxW": 4480,
+      "text": "Pages",
+      "w": 240,
+      "x": 2904,
+      "y": -320
+    },
+    "t3": {
+      "kind": "title1",
+      "maxW": 16720,
+      "text": "Case studies",
+      "w": 240,
+      "x": 7464,
+      "y": -320
+    },
+    "t4": {
+      "kind": "title1",
+      "maxW": 19760,
+      "text": "Notes",
+      "w": 240,
+      "x": 24184,
+      "y": -320
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "Home-Tablet.dc.html",
+    "Home-Mobile.dc.html",
+    "Work.dc.html",
+    "Services.dc.html",
+    "About.dc.html",
+    "Case-ControlPanel.dc.html",
+    "Case-MCPHub.dc.html",
+    "Case-ContextEngine.dc.html",
+    "Case-InvestorDay.dc.html",
+    "Case-Dubljly.dc.html",
+    "Case-SkillsOS.dc.html",
+    "Case-ProductEnhancer.dc.html",
+    "Case-Flora.dc.html",
+    "Case-JoFotara.dc.html",
+    "Case-Masraf.dc.html",
+    "Case-Hemolock.dc.html",
+    "Notes.dc.html",
+    "Note-RAGRetrieval.dc.html",
+    "Note-AgentOrchestration.dc.html",
+    "Note-RAGEval.dc.html",
+    "Note-AGIBenchmarks.dc.html",
+    "Note-ControlPlane.dc.html",
+    "Note-Gateway200.dc.html",
+    "Note-SchemaContract.dc.html",
+    "Note-ContextBudget.dc.html",
+    "Note-FairMatching.dc.html",
+    "Note-BypassGateway.dc.html",
+    "Note-SkillsLoop.dc.html",
+    "Note-ArabicDubbing.dc.html"
+  ],
+  "pages": [],
+  "title": "Saad Tamari Portfolio"
+}

@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Work · Saad Tamari</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Everything I&#x27;ve built, from an 87-table agent platform to an emergency kit with a GPS chip.">
+<meta name="author" content="Saad Tamari">
+<meta name="theme-color" content="#EFEDE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Work · Saad Tamari">
+<meta property="og:description" content="Everything I&#x27;ve built, from an 87-table agent platform to an emergency kit with a GPS chip.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>x-dc{display:none}</style>
+<script src="./dc-runtime.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="index.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="index.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl on" href="work.html" aria-current="page"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="services.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="about.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl" href="writing.html"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="index.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="work.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="services.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="about.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="writing.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header class="phero">
+    <img class="topo" src="assets/img/topography.svg" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="index.html">Home</a><span>/</span><span>Work</span></div>
+        <h1 class="ptitle disp">Work</h1>
+        <p class="psub">Everything I've built, from an 87-table agent platform to an <span class="serif">emergency kit</span> with a GPS chip.</p>
+        <div class="bigstats">
+          <div class="bs"><b>38</b><span>projects on this page, 2023 to now</span></div>
+          <div class="bs"><b>15</b><span>apps I built at Decasonic</span></div>
+          <div class="bs"><b>11</b><span>case studies</span></div>
+          <div class="bs"><b>7</b><span>kinds of work, from infra to hardware</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ INDEX ============ -->
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec" style="padding-top: 56px">
+      <div class="lbl mono"><span class="sq"></span><span>11 case studies</span></div>
+      <div class="cpins anim" data-stagger=".cpin"><a class="cpin" href="case-control-panel.html"><span class="mono">Case 01</span><b>Agent Control Panel</b><small>350+ agents, one control plane</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-mcp-hub.html"><span class="mono">Case 02</span><b>MCP Hub</b><small>One gateway for 35+ apps</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-context-engine.html"><span class="mono">Case 03</span><b>Context Engine</b><small>What each agent should see</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-investor-day.html"><span class="mono">Case 04</span><b>Investor Day</b><small>300 people, matched live</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-dubljly.html"><span class="mono">Case 05</span><b>Dubljly</b><small>English lectures, dubbed into Arabic</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-skills-os.html"><span class="mono">Case 06</span><b>Agent Skills OS</b><small>Skills that improve by losing</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-product-enhancer.html"><span class="mono">Case 07</span><b>AI Product Enhancer</b><small>From demo video to fix prompt</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-flora.html"><span class="mono">Case 08</span><b>Flora AI</b><small>An Arabic AI nutritionist</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-jo-fotara.html"><span class="mono">Case 09</span><b>JoFotara POS</b><small>Tax-ready invoices, zero dependencies</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-masraf.html"><span class="mono">Case 10</span><b>Masraf · مصرف</b><small>A voice co-pilot for freelancers</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a><a class="cpin" href="case-hemolock.html"><span class="mono">Case 11</span><b>Hemolock</b><small>One switch, GPS and a call</small><span class="cpa" aria-hidden="true"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></a></div>
+      <div class="lbl mono" style="margin-top: 64px"><span class="sq"></span><span>Or pick a folder</span></div>
+      <div class="folders" role="tablist" aria-label="Filter projects by kind">
+        <sc-for list="{{folders}}" as="f" hint-placeholder-count="6">
+          <button type="button" class="{{f.cls}}" onClick="{{f.pick}}" role="tab" aria-selected="{{f.sel}}">
+            <span class="fico" aria-hidden="true"><span class="back"></span><span class="paper p2"></span><span class="paper"></span><span class="front">{{f.count}}</span></span>
+            <span class="fl">{{f.name}}<small>{{f.countLabel}}</small></span>
+          </button>
+        </sc-for>
+      </div>
+
+      <div class="shead" style="margin-top: 48px">
+        <h2 class="h3 disp">{{filterTitle}}</h2>
+        <p class="mono">Dark cards open a full case study. The rest open build notes right here.</p>
+      </div>
+
+      <div class="pgrid2" onMouseMove="{{glowMove}}">
+        <sc-for list="{{shown}}" as="p" hint-placeholder-count="9">
+          <sc-if value="{{p.isCase}}" hint-placeholder-val="{{ false }}">
+            <a class="pcard feat" href="{{p.href}}">
+              <span class="pin2">
+                <span class="glyph" aria-hidden="true">{{p.glyph}}</span>
+                <span class="top mono"><span>{{p.no}} · {{p.catName}}</span><span class="{{p.stCls}}">{{p.status}}</span></span>
+                <span class="disp" style="display: block; margin-top: auto; font-size: clamp(30px, 2.8vw, 42px); line-height: .9">{{p.n}}</span>
+                <span style="display: block; color: inherit; opacity: .78; font-size: 15px">{{p.t}}</span>
+                <span class="tags mono" style="display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{p.stack}}" as="s" hint-placeholder-count="3"><span class="pill">{{s}}</span></sc-for></span>
+                <span class="mono" style="color: var(--sig)">Read the case study →</span>
+              </span>
+            </a>
+          </sc-if>
+          <sc-if value="{{p.isNote}}" hint-placeholder-val="{{ true }}">
+            <button type="button" class="pcard" onClick="{{p.open}}" aria-haspopup="dialog">
+              <span class="pin2">
+                <span class="glyph" aria-hidden="true">{{p.glyph}}</span>
+                <span class="top mono"><span>{{p.no}} · {{p.catName}}</span><span class="{{p.stCls}}">{{p.status}}</span></span>
+                <span class="disp" style="display: block; margin-top: auto; font-size: clamp(30px, 2.8vw, 42px); line-height: .9">{{p.n}}</span>
+                <span style="display: block; color: var(--mute); font-size: 15px">{{p.t}}</span>
+                <span class="tags mono" style="display: flex; flex-wrap: wrap; gap: 6px"><sc-for list="{{p.stack}}" as="s" hint-placeholder-count="3"><span class="pill lt">{{s}}</span></sc-for></span>
+                <span class="mono acc">Open build notes +</span>
+              </span>
+            </button>
+          </sc-if>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM DIAGRAM ============ -->
+  <section id="platform" class="band-ink">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>How the Decasonic platform fits together</span></div>
+        <div class="shead rv">
+          <h2 class="h2 disp">One database.<br>Every app. Every agent.</h2>
+        </div>
+        <div class="arch rv">
+          <div class="arch-grid">
+            <svg class="wires" viewBox="0 0 1000 460" preserveAspectRatio="none" aria-hidden="true">
+              <path class="wire" d="M300 38 C 330 38, 330 115, 352 115"></path>
+              <path class="wire" d="M300 115 C 330 115, 330 115, 352 115"></path>
+              <path class="wire" d="M300 192 C 330 192, 330 115, 352 115"></path>
+              <path class="wire" d="M300 268 C 330 268, 330 115, 352 115"></path>
+              <path class="wire" d="M300 345 C 330 345, 330 115, 352 115"></path>
+              <path class="wire" d="M300 422 C 330 422, 330 115, 352 115"></path>
+              <path class="wire" d="M500 165 L 500 300"></path>
+              <path class="wire" d="M648 345 C 675 345, 675 57, 702 57"></path>
+              <path class="wire" d="M648 345 C 675 345, 675 172, 702 172"></path>
+              <path class="wire" d="M648 345 C 675 345, 675 287, 702 287"></path>
+              <path class="wire" d="M648 345 C 675 345, 675 402, 702 402"></path>
+              <path class="pulse" d="M300 38 C 330 38, 330 115, 352 115"></path>
+              <path class="pulse p2" d="M300 192 C 330 192, 330 115, 352 115"></path>
+              <path class="pulse p3" d="M300 345 C 330 345, 330 115, 352 115"></path>
+              <path class="pulse p4" d="M300 422 C 330 422, 330 115, 352 115"></path>
+              <path class="pulse p5" d="M500 165 L 500 300"></path>
+              <path class="pulse p6" d="M648 345 C 675 345, 675 57, 702 57"></path>
+              <path class="pulse p2" d="M648 345 C 675 345, 675 287, 702 287"></path>
+              <path class="pulse p4" d="M648 345 C 675 345, 675 402, 702 402"></path>
+            </svg>
+            <div class="arch-col" style="height: 100%; justify-content: space-around">
+              <div class="anode"><span class="gl">01</span><span>AI Sourcing<small>Deal flow</small></span><span class="tip">One of 35+ apps. It writes signals and companies through the Hub and holds no database key.</span></div>
+              <div class="anode"><span class="gl">02</span><span>AI Coach<small>Team guidance</small></span><span class="tip">Read-heavy: it pulls what it needs from the shared schema.</span></div>
+              <div class="anode"><span class="gl">03</span><span>Action Portal<small>Briefings, actions</small></span><span class="tip">Reads Supabase directly with a read-only key, because analytics need joins the Hub doesn't do.</span></div>
+              <div class="anode"><span class="gl">04</span><span>Investor Day<small>Event platform</small></span><span class="tip">300 attendees, live in Chicago.</span></div>
+              <div class="anode"><span class="gl">05</span><span>Meeting OS<small>Recording to actions</small></span><span class="tip">10-stage pipeline: transcript to decisions, actions and follow-ups.</span></div>
+              <div class="anode"><span class="gl">+30</span><span>More apps<small>35+ in total</small></span><span class="tip">Each new app is onboarded in minutes with a generated integration client.</span></div>
+            </div>
+            <div class="arch-col mid" style="height: 100%; justify-content: space-around">
+              <div class="anode hubn"><span class="gl">GW</span><span><strong style="font-weight: 600">MCP Hub</strong><small>Gateway · table and column permissions · logs</small></span><span class="tip">Every write passes here. Keys are validated, permissions enforced, errors translated.</span></div>
+              <div class="anode dbn"><span class="gl">DB</span><span><strong style="font-weight: 600">DDS v3 · Supabase</strong><small>87 tables · 73 enums · 1 migration</small></span><span class="tip">The contract between all apps. 35 entities, 41 junction tables, 9 structural decisions.</span></div>
+            </div>
+            <div class="arch-col" style="height: 100%; justify-content: space-around">
+              <div class="anode"><span class="gl">CP</span><span>Agent Control Panel<small>350+ agents observed</small></span><span class="tip">Heartbeats, health scores, remote control, prompt versioning.</span></div>
+              <div class="anode"><span class="gl">CE</span><span>Context Engine<small>What each agent sees</small></span><span class="tip">Composes right-sized, replayable context inside a token budget.</span></div>
+              <div class="anode"><span class="gl">SK</span><span>Skills OS<small>206 agents synced</small></span><span class="tip">Skills are A/B tested against real agents and injected at runtime.</span></div>
+              <div class="anode"><span class="gl">DS</span><span>Data Sync<small>CRM, Notion, transcripts</small></span><span class="tip">Bulk writes go direct, with an audit log, because routing them through the Hub would be 395+ round trips.</span></div>
+            </div>
+          </div>
+          <div class="arch-legend mono"><span>Apps write → Hub → one schema → platform services read</span><span class="hov">Hover a node for the reasoning</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail" style="padding-block: 64px">
+      <div class="ctaband rv">
+        <p><b>Want one of these for your team?</b> Book 30 minutes and tell me what you're building. Hiring instead? My CV is one click away.</p>
+        <div class="ctas"><a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a><a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Get my CV</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MODAL ============ -->
+  <sc-if value="{{hasSel}}" hint-placeholder-val="{{ false }}">
+    <div class="modal" onClick="{{closeSel}}">
+      <div class="mbox" role="dialog" aria-modal="true" aria-label="{{sel.n}}" onClick="{{stop}}">
+        <div class="mhead">
+          <img class="topo" src="assets/img/topography.svg" alt="" style="filter: invert(1); opacity: .12">
+          <button type="button" class="mclose" onClick="{{closeSel}}" aria-label="Close build notes"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M2 2l10 10M12 2L2 12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></button>
+          <span class="mono" style="position: relative">{{sel.catName}} · {{sel.status}}</span>
+          <h2 class="disp" style="position: relative">{{sel.n}}</h2>
+        </div>
+        <div class="mbody">
+          <p class="lede2">{{sel.t}}</p>
+          <ul class="pts lt"><sc-for list="{{sel.pts}}" as="x" hint-placeholder-count="3"><li>{{x}}</li></sc-for></ul>
+          <div class="mrow">
+            <div><span class="mono">Role</span><span>{{sel.role}}</span></div>
+            <div><span class="mono">When</span><span>{{sel.y}}</span></div>
+            <div><span class="mono">Where</span><span>{{sel.w}}</span></div>
+          </div>
+          <div class="stack mono" style="margin-top: 0"><sc-for list="{{sel.stack}}" as="s" hint-placeholder-count="3"><span class="pill lt">{{s}}</span></sc-for></div>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <!-- ============ CONTACT ============ -->
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Want one of these for your team, or the person who built them? I'm open to full-time roles, contracts and SKAI Group projects.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="services.html">See use cases</a>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <span>Amman · {{time}} GMT+3</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 5400}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  CATS = [
+    ["all", "Everything"], ["infra", "Agent infrastructure"], ["product", "AI products"], ["startup", "Startups & studio"], ["ml", "ML & vision"], ["ops", "Automation for teams"], ["lab", "Hackathons"], ["hw", "Hardware"]
+  ];
+  P = [
+    { c: "infra", n: "Agent Control Panel", g: "CP", s: "live", y: "Feb–Aug 2026", w: "Decasonic, now a SKAI Group product", href: "case-control-panel.html", t: "Mission control for 350+ agents across 35+ apps.", stack: ["Express 5", "React", "Postgres"] },
+    { c: "infra", n: "MCP Hub", g: "GW", s: "live", y: "Feb–Aug 2026", w: "Decasonic", href: "case-mcp-hub.html", t: "One gateway between 35+ apps and the database. No app holds a credential.", stack: ["Next.js 14", "Supabase", "SSE"] },
+    { c: "infra", n: "Context Engine", g: "CE", s: "live", y: "Jun–Aug 2026", w: "Decasonic", href: "case-context-engine.html", t: "A context compiler that decides what each agent sees, and proves why.", stack: ["Node 24", "TypeScript", "Zod"] },
+    { c: "infra", n: "DDS v3 Schema", g: "DB", s: "live", y: "Jan–Aug 2026", w: "Decasonic", role: "Designed and wrote it", t: "The 87-table schema every app shares. The database is the contract.", stack: ["PostgreSQL", "Supabase", "SQL"], pts: ["87 tables (35 entities, 41 junction tables, plus gateway and sync namespaces) and 73 enum types, shipped as one 1,571-line migration.", "Nine locked decisions, including UUID keys, junction tables over JSONB arrays, audit logging on every change, soft deletes and optimistic concurrency.", "A schema-discovery call returns every table, column, key and human-written description as JSON, so generated integration code never guesses a column name.", "Every app writes what it knows here and reads what it needs here. At 28 apps that is 28 connections instead of 756."] },
+    { c: "infra", n: "Data Sync Platform", g: "DS", s: "live", y: "Mar–Aug 2026", w: "Decasonic", role: "Architect and builder", t: "12 agents syncing CRM, knowledge base and meeting transcripts into one schema.", stack: ["TypeScript", "Supabase", "Agents"], pts: ["Seven core agents run every sync: fetch, map fields, resolve new, update, duplicate or conflict, transform, validate against live constraints, bulk write, reconcile.", "Plugins are database rows, not code. A new source is a config row, set up from a chat window, with no deploy.", "It deliberately skips my own gateway: no bulk upsert there, and a 150-record sync would become 395+ round trips. It still writes audit and source-mapping rows.", "Dry-run mode previews a sync before anything is written; every sync can be rolled back from the audit log."] },
+    { c: "infra", n: "Agent Skills OS", g: "SK", s: "live", y: "May–Aug 2026", w: "Decasonic", role: "Architect and builder", href: "case-skills-os.html", t: "A CMS and test lab for the skills agents load at runtime.", stack: ["TypeScript", "OpenRouter", "Zod"], pts: ["Write, version, A/B test, judge, improve, deploy. Every save is an immutable snapshot you can restore or pin per agent.", "Tests run the same prompt through a real production agent twice, with and without the skill, on that agent’s own model. A judge compares.", "If a skill loses, a frontier model rewrites it into a new version from the test outputs and the judge’s reasoning.", "Fails open: if the service is down, agents fall back to their base prompts instead of breaking. 206 live agents synced."] },
+    { c: "infra", n: "Telegram Bots Control Panel", g: "TB", s: "spec", y: "Jun–Aug 2026", w: "Decasonic", role: "Architecture and design", t: "One delivery and monitoring layer for every messaging bot on the platform.", stack: ["Telegram API", "Postgres", "Queues"], pts: ["The key call: the panel owns the credentials and sends every message. Apps just post an event, so there is no second integration to drift in every app.", "An idempotency key on every message and a per-chat queue with backoff, so a retry can never double-post into a live team channel.", "Errors alert through a non-messaging fallback, because a broken messaging layer cannot report its own failure.", "Execution records split from delivery attempts, and the health score shared with the agent platform through one package so the two cannot drift."] },
+    { c: "product", n: "Investor Day App", g: "ID", s: "live", y: "Apr–Jul 2026", w: "Decasonic · Chicago", href: "case-investor-day.html", t: "Mobile app, admin console and API for a 300-person investor event. Built solo.", stack: ["Expo", "React 19", "Express 5"] },
+    { c: "product", n: "Meeting OS", g: "MO", s: "ship", y: "May–Aug 2026", w: "Decasonic", role: "Led, audited and built", t: "From a live conversation to decisions, actions and follow-ups.", stack: ["Groq Whisper", "Electron", "Supabase"], pts: ["A 10-stage pipeline: transcription, language tagging, voice identification, entity resolution, summary, actions, decisions, signals, series continuity and follow-up chat.", "A web app plus a small desktop helper, because browsers cannot capture audio from native conferencing apps. Settled at design time, before building the wrong thing.", "One-recorder coordination, voice fingerprints for known people, and every decision and action written into the shared schema with a real foreign key.", "Built through discovery, audit, targeted fix and verify. The full pipeline runs green end to end in about 24 seconds."] },
+    { c: "product", n: "AI Product Enhancer", g: "AE", s: "live", y: "Mar–Aug 2026", w: "Decasonic", role: "Architect and builder", href: "case-product-enhancer.html", t: "Reviews an AI product end to end, then writes the prompt to fix it.", stack: ["Gemini", "OpenRouter", "React"], pts: ["Three inputs: a demo video the model actually watches, a product memo parsed into value, features, audience and pricing, and the architecture.", "No repo access, so it hands you a prompt to run in your own AI builder and you paste the answer back. The most reused trick in the product.", "Eight live stages end in a score out of 100, seven scored sections and ranked suggestions, each with severity, category, reasoning and an action.", "Pick the suggestions you want and it writes a ready-to-paste implementation prompt with real code. Critique to fix, in one tool."] },
+    { c: "product", n: "PIM Predictor", g: "PP", s: "live", y: "Jul–Aug 2026", w: "Decasonic", role: "Wrote the memo and built it", t: "What should we build next, and can we prove why?", stack: ["TypeScript", "OpenAPI", "Vitest"], pts: ["Watches operational data across 43 internal AI products and proposes, per person, what to build next.", "Fit and novelty are scored in separate channels that never blend, so it can find what the team is missing, not just more of what it liked before.", "Every score is a value with uncertainty and linked evidence. Parameters that need evidence refuse to score without it.", "Absence as signal: empty cells with open friction rise to the top, and every proposal’s data dependencies are checked live before it can be scoped."] },
+    { c: "product", n: "PromptSmith", g: "PS", s: "ship", y: "2026", w: "Decasonic", role: "Builder", t: "A prompt enhancer and shared prompt library with A/B testing.", stack: ["React", "LLM gateway"], pts: ["Turns a rough prompt into a structured one, then lets the team compare versions side by side.", "A shared prompt library for the whole team."] },
+    { c: "product", n: "Jarvis", g: "JV", s: "ship", y: "2026", w: "Decasonic", role: "Architect and builder", t: "A 15+ agent learning system for the team.", stack: ["Agents", "Claude", "Market data"], pts: ["Five teaching personas: an 80/20 primer, a first-principles analyst, a Socratic mentor, a hands-on guide and an executive briefer.", "Each one writes and grades quizzes; a progress agent notices when you are stuck or ahead.", "A planner and reviewer pair that detects a document’s type and builds a review rubric for it."] },
+    { c: "product", n: "AI Coach", g: "CO", s: "ship", y: "2026", w: "Decasonic", role: "Builder", t: "A coaching app that explains how the firm works and recommends what to do next.", stack: ["LLMs", "Supabase", "DDS v3"], pts: ["Reads across the shared schema (theses, deals, signals, predictions and rapid responses) to answer questions about the firm’s own work.", "Explains processes and recommends next actions to the team, grounded in live data rather than a static knowledge base.", "Mostly read-only by design, so it ran cleanly through the database audit."] },
+    { c: "product", n: "AI Expert Review", g: "ER", s: "ship", y: "2026", w: "Decasonic", role: "Builder", t: "A human-in-the-loop expert review workflow for deals and assessments.", stack: ["LLMs", "Supabase", "Workflows"], pts: ["Routes deals and assessments through a structured review where people and agents both contribute.", "Writes messages, workflow runs, feedback and execution logs into the shared schema, with every change in the audit log."] },
+    { c: "startup", n: "Dubljly · دبلجلي", g: "DB", s: "live", y: "2026", w: "My product", href: "case-dubljly.html", t: "English lectures, dubbed into Arabic, with a study pack and a tutor.", stack: ["FastAPI", "React 18", "Whisper"] },
+    { c: "startup", n: "Flora AI", g: "FL", s: "ship", y: "Jan 2024 – Jan 2025", w: "Jordan · incubated by INJAZ", role: "Founder and AI developer", href: "case-flora.html", t: "An Arabic AI nutritionist, and my first startup.", stack: ["Python", "LangChain", "RAG"], pts: ["Personalized diet plans from a user profile, with retrieval over nutrition knowledge, because a hallucinated meal plan is worse than none.", "1.7K+ video views, 1.1K+ landing-page visitors, 260+ unique visitors and 100+ survey leads in 3 days, with $0 in ads.", "3rd in Jordan at IEEE NETC (on to the Region 8 semi-finals) and Top 7 at the Jordan Entrepreneurship Competition."] },
+    { c: "startup", n: "JoFotara POS", g: "JF", s: "ship", y: "Solo build", w: "Jordan", role: "Solo builder", href: "case-jo-fotara.html", t: "A point of sale for Jordan’s UBL 2.1 e-invoicing, with zero dependencies.", stack: ["Node.js", "SQLite", "UBL 2.1"], pts: ["XML namespaces, the HTTP client, encoding and validation all hand-built to a government schema.", "Idempotent submission retry, because a double-submitted invoice is a compliance problem.", "Multi-tenant, WhatsApp and SMS delivery, a 13-test suite. Sold as a setup fee plus a monthly fee per branch."] },
+    { c: "startup", n: "Al Delma", g: "AD", s: "ship", y: "2026", w: "SKAI Group client", role: "Co-founder, SKAI Group", t: "A bilingual Arabic and English ISO training platform.", stack: ["Next.js 14", "Strapi v5", "PostgreSQL"], pts: ["Built by SKAI Group on a fixed contract with ongoing monthly maintenance.", "A Next.js front end on a Strapi v5 CMS and PostgreSQL."] },
+    { c: "startup", n: "Karam", g: "KR", s: "beta", y: "2026", w: "Private beta · message me for access", role: "Founder and builder", t: "An AI waiter for cafés and restaurants: order from your table and watch your order move.", stack: ["AI assistant", "Live order tracking", "Admin console"], pts: ["Guests see the full menu at their table, order in a tap, and the order goes straight to the kitchen. No queue, no hunting for a waiter.", "Live status from received to cooking to ready, so nobody waits without knowing what is happening.", "An AI assistant answers questions about the menu and asks a few questions to suggest the right meal.", "A staff console to approve and manage incoming orders. Ready, and in testing with selected venues; message me if you want to try it."] },
+    { c: "startup", n: "Mawj · موج", g: "MW", s: "live", y: "2026", w: "SKAI Group client · mawjapp.com", role: "Built with SKAI Group", t: "A wellness audio app for sleep, focus and calm.", stack: ["Next.js", "REST API", "Mobile"], pts: ["Channels by goal (deep sleep, focus, relax, bedtime stories and more), with about 100 tracks of music layered with frequency tones.", "A player that mixes music and frequency, guided breathing, articles and self-assessment tests.", "Web at mawjapp.com alongside the App Store and Google Play apps, built by SKAI Group for the client."] },
+    { c: "ml", n: "Stroke detection", g: "SD", s: "res", y: "2026", w: "Independent research", role: "Researcher", t: "Replicating microwave brain-stroke detection without commercial solvers.", stack: ["Python", "FDTD", "ML"], pts: ["Rebuilds a 2025 paper’s method with a semi-analytical model instead of HFSS or CST, which need too much memory.", "Three tiers: a fast Fresnel and Born model for data, 2D FDTD for validation, 1D FDTD for physics checks.", "Found and fixed a passivity violation and a normalization error along the way. Training and results are still ahead."] },
+    { c: "ml", n: "Solar panel fault detection", g: "SP", s: "ship", y: "Dec 2024 – Feb 2025", w: "Envisionsai", role: "Computer vision engineer", t: "Computer vision that finds faults in solar panels.", stack: ["TensorFlow", "Keras", "Computer vision"], pts: ["Computer vision models that detect faults in solar panels.", "Worked across the whole lifecycle, from building the dataset to training and evaluating the models."] },
+    { c: "ml", n: "Fire detection", g: "FD", s: "proto", y: "Dec 2024", w: "Independent", role: "Builder", t: "Early fire detection from images, at 95% accuracy.", stack: ["Python", "AlexNet", "Streamlit"], pts: ["Relabeled the dataset, balanced it with augmentation and resized it before training.", "An AlexNet classifier reaching 95% accuracy, served as a real-time Fire or No fire app in Streamlit."] },
+    { c: "ml", n: "Seizure detection (EEG)", g: "EG", s: "proto", y: "May 2024", w: "ZINC AI Hackathon · Top 10", role: "Team", t: "A diagnostic tool that reads EEG signals for early epilepsy detection.", stack: ["Python", "Deep learning", "EEG"], pts: ["A web tool that classifies EEG signals as normal or abnormal brain activity.", "95% accuracy, designed for hospitals and neurologists to catch conditions like epilepsy earlier."] },
+    { c: "ops", n: "Event registration system", g: "ER", s: "ship", y: "Sep 2024", w: "Next Step", role: "IT lead", t: "QR tickets, instant emails and live check-in for events of 1,200+ people.", stack: ["Apps Script", "Python", "Google Sheets"], pts: ["Unique QR tickets generated and emailed to every attendee automatically.", "Live attendee tracking for fast check-in and event analytics.", "Part of the event automation that cut manual work by 85%."] },
+    { c: "ops", n: "AI LinkedIn Clinics", g: "LC", s: "ship", y: "2024", w: "Next Step", role: "Builder", t: "AI-powered LinkedIn clinics, run live at a Next Step event.", stack: ["LLMs", "Streamlit"], pts: ["Built with LLMs and Streamlit and demoed live to attendees at a Next Step event."] },
+    { c: "ops", n: "Recruitment dashboard", g: "RD", s: "ship", y: "Aug 2024", w: "AIESEC in Jordan", role: "VP of Outgoing Exchange", t: "Live recruitment analytics across 6+ universities.", stack: ["Google Sheets", "Python", "SQL"], pts: ["Applicant status, gender and per-university breakdowns, updating live from Google Sheets.", "Used to target candidates and improve conversion across the chapter’s universities."] },
+    { c: "lab", n: "Masraf · مصرف", g: "MS", s: "proto", y: "2026", w: "SalamHack 2026", role: "Team of four", href: "case-masraf.html", t: "An Arabic-first voice co-pilot for freelancers’ money.", stack: ["Next.js 14", "Groq", "Supabase"], pts: ["Speak a command in Arabic; the app answers in a Saudi Arabic voice while it navigates and updates the screen.", "Islamic finance built in: Zakat, a purification ledger, and the right words everywhere (\"ربح\", never \"interest\").", "A full spec first: 12 tables, 19 endpoints, 16 voice intents mapped to pages and UI actions."] },
+    { c: "lab", n: "42 Amman chatbot", g: "42", s: "proto", y: "May 2025", w: "42 Amman Hackathon · 2nd place", role: "Team lead, AI and pitch", t: "A campus chatbot on a fine-tuned DistilGPT-2.", stack: ["DistilGPT-2", "Hugging Face", "MiniLM"], pts: ["Grew the training set from about 100 questions to about 3,489: paraphrases generated with Groq, plus deep-search questions from Grok and Gemini.", "An all-MiniLM-L6-v2 similarity gate refuses questions outside 42 and Jordan, which ended the hallucinations.", "Led a team of three: wrote the requirements, designed the architecture, split the work, built the AI, and pitched."] },
+    { c: "lab", n: "Cold-chain recommender", g: "CC", s: "proto", y: "Feb 2025", w: "Global Student Research Hackathon · Top 7%", role: "Team", t: "Placement, routing and demand forecasting for cold supply chains.", stack: ["Python", "Optimization"], pts: ["Intelligent item placement for vehicle space, delivery route optimization and production forecasting for manufacturers.", "Top 7% worldwide; a finalist at the global finals in Saudi Arabia."] },
+    { c: "lab", n: "ARD farming assistant", g: "AR", s: "proto", y: "Oct 2024", w: "NASA Space Apps Amman · Best Strategy", role: "Team", t: "Climate prediction and practical advice for farmers.", stack: ["Python", "Statistics", "Chatbot"], pts: ["Statistical models that anticipate unpredictable weather and recommend actions ahead of it.", "Real-time monitoring and a chatbot that answers farmers’ questions with tailored tips."] },
+    { c: "lab", n: "GazaFind and GazaDon", g: "GZ", s: "proto", y: "Sep 2024", w: "GazaThon · Best Sustainable Project", role: "Team", t: "Medicine stock sharing between Gaza hospitals, and donations that match real need.", stack: ["Web app", "Dashboards"], pts: ["GazaFind: hospitals manage and share drug inventories, cutting expired stock and shortages.", "GazaDon: connects hospitals with donors so donations match real-time needs."] },
+    { c: "lab", n: "Orange Academy AI bot", g: "OR", s: "proto", y: "Jul 2024", w: "Orange Coding Academy · 1st place", role: "AI builder in a team of five", t: "An AI bot trained on Orange Coding Academy data.", stack: ["Hugging Face", "Python"], pts: ["Phase one was two hours of problem solving; the top 15 then built landing pages in teams of five.", "My part was the AI bot: an open-source Hugging Face model trained on the academy’s own data."] },
+    { c: "lab", n: "Arabic legal assistant", g: "AL", s: "proto", y: "Jan 2024", w: "Generative AI Hackathon · 3rd place", role: "Team", t: "A chatbot trained on Jordanian law.", stack: ["LLMs", "Arabic NLP"], pts: ["Answers legal questions in Arabic, grounded in Jordanian law.", "3rd place in a national legal-tech competition."] },
+    { c: "lab", n: "AI e-commerce mentor", g: "EC", s: "proto", y: "Mar 2023", w: "Fintech Hackathon · Top 10 of 300+", role: "Team", t: "A mentor for new online sellers: what to sell, where to source it, where to sell it.", stack: ["Python", "Recommendation"], pts: ["Recommends the week’s top-selling items, sourcing options and the best platforms to sell on.", "A personal learning path for people starting an online business.", "Accepted for incubation with Ahli Fintech."] },
+    { c: "hw", n: "Hemolock", g: "HL", s: "proto", y: "2026", w: "Medical device team", role: "Rebuilt the electronics and firmware", href: "case-hemolock.html", t: "One switch. GPS location to your contacts, and a phone call, in seconds.", stack: ["ESP32", "NEO-6M GPS", "Twilio"], pts: ["Flip the switch and a 5-second cancellable countdown starts, with an LED and buzzer.", "Then it sends a bilingual Telegram alert with a Google Maps link and places automated calls through Twilio.", "Fixed the hard parts: boosting a 3.7V LiPo to a stable 5V, watchdog crashes from blocking tones, and Jordan’s high-risk call permissions."] },
+    { c: "hw", n: "Road damage vehicle", g: "RV", s: "proto", y: "May 2025", w: "Yarmouk University", role: "Builder", t: "A small autonomous car that finds road damage as it drives.", stack: ["Arduino", "Raspberry Pi", "Computer vision"], pts: ["Arduino runs the driving: motor drivers, wheels, GPS and ultrasonic sensors.", "A Raspberry Pi camera takes a photo every 3 seconds, and a trained model flags road faults.", "A web dashboard shows each fault with its image, location, time and prediction."] }
+  ];
+  ST = { live: ['Live', 'status s-live'], ship: ['Shipped', 'status s-ship'], proto: ['Prototype', 'status s-proto'], res: ['Research', 'status s-res'], spec: ['Designed', 'status s-res'], beta: ['Private beta', 'status s-proto'] };
+
+  state = { theme: this.readTheme(), menu: false, cat: 'all', sel: -1, copied: false, time: '' };
+
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tick(); this.clock = setInterval(() => this.tick(), 20000); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.raf) cancelAnimationFrame(this.raf); }
+  tick() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  glowMove = (e) => {
+    const cards = e.currentTarget.querySelectorAll('.pcard');
+    cards.forEach((c) => { const r = c.getBoundingClientRect(); c.style.setProperty('--mx', (e.clientX - r.left) + 'px'); c.style.setProperty('--my', (e.clientY - r.top) + 'px'); });
+  };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  closeSel = () => this.setState({ sel: -1 });
+  stop = (e) => { e.stopPropagation(); };
+
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const catName = {};
+    this.CATS.forEach((c) => { catName[c[0]] = c[1]; });
+    const items = this.P.map((p, i) => ({
+      no: String(i + 1).padStart(2, '0'), n: p.n, t: p.t, glyph: p.g, stack: p.stack, c: p.c,
+      catName: catName[p.c], status: this.ST[p.s][0], stCls: this.ST[p.s][1],
+      isCase: !!p.href, isNote: !p.href, href: p.href || '',
+      open: () => this.setState({ sel: i })
+    }));
+    const shown = s.cat === 'all' ? items : items.filter((p) => p.c === s.cat);
+    const folders = this.CATS.map((c) => {
+      const count = c[0] === 'all' ? items.length : items.filter((p) => p.c === c[0]).length;
+      const on = s.cat === c[0];
+      return { name: c[1], count: count, countLabel: count + (count === 1 ? ' project' : ' projects'),cls: 'folder' + (on ? ' on' : ''), sel: on ? 'true' : 'false', pick: () => this.setState({ cat: c[0] }) };
+    });
+    const raw = s.sel >= 0 ? this.P[s.sel] : null;
+    const sel = raw ? { n: raw.n, t: raw.t, pts: raw.pts || [], role: raw.role || '', y: raw.y, w: raw.w, stack: raw.stack, catName: catName[raw.c], status: this.ST[raw.s][0] } : { n: '', t: '', pts: [], role: '', y: '', w: '', stack: [], catName: '', status: '' };
+    const dark = s.theme === 'dark';
+    return {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      folders: folders, shown: shown,
+      filterTitle: catName[s.cat] + ' · ' + shown.length,
+      hasSel: !!raw, sel: sel, closeSel: this.closeSel, stop: this.stop,
+      glowMove: this.glowMove,
+      ctaAll: mk("LET'S BUILD"),
+      cvA: 'cv/Saad-Al-Tamari-CV-AI-Specialist.pdf', cvT: 'cv/Saad-Al-Tamari-CV-AI-Trainer.pdf',
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    };
+  }
+}
+</script>
+</body>
+</html>

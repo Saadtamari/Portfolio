@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Context Engine · Case study</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and why?">
+<meta name="author" content="Saad Tamari">
+<meta name="theme-color" content="#EFEDE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Context Engine · Case study">
+<meta property="og:description" content="A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and why?">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>x-dc{display:none}</style>
+<script src="./dc-runtime.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="index.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="index.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl on" href="work.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="services.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="about.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl" href="writing.html"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="index.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="work.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="services.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="about.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="writing.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero chero s-ctx">
+    <span class="sh-art" aria-hidden="true"><i class="band b1"></i><i class="band b2"></i><i class="band b3"></i><i class="band b4"></i><i class="band b5"></i><i class="stop"></i></span>
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="index.html">Home</a><span>/</span><a href="work.html">Work</a><span>/</span><span>Case 03</span></div>
+        <h1 class="ptitle disp">Context<br>Engine</h1>
+        <p class="psub">A context compiler for investment agents. It answers one question: what should this agent see, inside this budget, and <span class="serif">why</span>?</p>
+        <div class="meta">
+          <div><span class="mono">Role</span><strong>Wrote the memo, built the engine</strong></div>
+          <div><span class="mono">When</span><strong>Jun–Aug 2026 · Decasonic</strong></div>
+          <div><span class="mono">Stack</span><strong>Node 24 · TypeScript 5.9 · Express 5</strong></div>
+          <div><span class="mono">Console</span><strong>React · Vite · TanStack Query</strong></div>
+        </div>
+        <div class="bigstats">
+          <div class="bs"><b>9</b><span>stages per compose</span></div>
+          <div class="bs"><b>2s</b><span>hard budget, then a deterministic fallback</span></div>
+          <div class="bs"><b>0</b><span>500 errors, by design</span></div>
+          <div class="bs"><b>22</b><span>assertions in the verification suite</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>01 / The problem</span></div>
+      <div class="prob">
+        <div>
+          <h2 class="h3 disp" style="margin-bottom: 22px">Three ways context<br>goes wrong.</h2>
+          <p>An agent asks: I'm agent X, my task is Y, it's about company Z, and I have about 6,000 tokens. What should I actually be looking at?</p>
+          <p>Most systems answer with "the top results from a vector search". That fails in three ways, and each one needed its own fix.</p>
+        </div>
+        <div class="bad">
+          <div class="badrow">Too much: cost, latency and diluted signal.</div>
+          <div class="badrow">Wrong: stale, cross-tenant, personal, or web text carrying an injection.</div>
+          <div class="badrow">Unexplainable: nobody can say why the agent saw what it saw.</div>
+          <div class="badrow ok">Rank by value per token, gate before ranking, and make every answer replayable.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band-ink">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>02 / How a compose works</span></div>
+        <div class="shead rv"><h2 class="h2 disp">Safety first.<br>Then value.</h2><p class="mono">Four ideas carry the nine stages.</p></div>
+        <div class="sticky">
+          <div class="steps">
+            <div class="{{sc0}}" data-i="0"><span class="mono">Idea 01 · Gate before value</span><h3>Reject first, with a reason.</h3><p>Before anything is ranked, sources are filtered: inactive ones, human exclusions, untrusted sources for agents that can write, tenancy mismatches, personal data, workflow restrictions. Every rejection is written down with its reason.</p></div>
+            <div class="{{sc1}}" data-i="1"><span class="mono">Idea 02 · Value per token</span><h3>Stop when the next slice isn't worth it.</h3><p>Pinned sources go in first. The rest are sorted by value per token, penalized for redundancy, and packed until the marginal utility falls below a floor. Allocation stops there, even with budget left.</p></div>
+            <div class="{{sc2}}" data-i="2"><span class="mono">Idea 03 · Band the prompt</span><h3>Untrusted text never gives orders.</h3><p>The prompt is built as directive, task, evidence and a tail restatement. The lowest trust tier can never reach the directive band, enforced in code and by a database CHECK constraint. Low-trust text is wrapped as data to analyse.</p></div>
+            <div class="{{sc3}}" data-i="3"><span class="mono">Idea 04 · Learn with a human gate</span><h3>It can find improvements. It can't ship them.</h3><p>Shadow A/B runs, ablations and inclusion trials measure what each source is worth. The proposer drafts a change only with enough evidence, and a person approves it. Revert is one click.</p></div>
+          </div>
+          <div class="stage" aria-hidden="true">
+            <sc-if value="{{s0}}" hint-placeholder-val="{{ true }}">
+              <div class="scr">
+                <h4><span>Gate · rejected before ranking</span><span class="mono" style="color: var(--invmute)">with reasons</span></h4>
+                <div class="vlist">
+                  <div class="vrow"><span class="mono">src</span><span>Old CRM export</span><span class="mono" style="color: var(--sig2)">inactive</span></div>
+                  <div class="vrow"><span class="mono">src</span><span>Public web page</span><span class="mono" style="color: var(--sig2)">tier 0 · write-scope agent</span></div>
+                  <div class="vrow"><span class="mono">src</span><span>Other fund's notes</span><span class="mono" style="color: var(--sig2)">tenancy mismatch</span></div>
+                  <div class="vrow"><span class="mono">src</span><span>Founder's personal email</span><span class="mono" style="color: var(--sig2)">personal data</span></div>
+                  <div class="vrow cur"><span class="mono">src</span><span>Deal memo, call notes, data room</span><span class="mono" style="color: #5FD08E">admitted</span></div>
+                </div>
+                <span class="vcap mono">Sketch · sample sources</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s1}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Allocate · value per token</span><span class="mono" style="color: var(--invmute)">budget ~6,000</span></h4>
+                <div class="rank">
+                  <div class="rk"><span>Deal memo · pinned</span><span class="bar3"><span style="width: 100%"></span></span><span class="mono">full</span></div>
+                  <div class="rk"><span>Last call summary</span><span class="bar3"><span style="width: 82%"></span></span><span class="mono">full</span></div>
+                  <div class="rk"><span>Data room index</span><span class="bar3"><span style="width: 64%"></span></span><span class="mono">extract</span></div>
+                  <div class="rk"><span>Market signals</span><span class="bar3"><span style="width: 41%"></span></span><span class="mono">summary</span></div>
+                  <div class="cutline">marginal utility floor</div>
+                  <div class="rk cut"><span>Older news</span><span class="bar3"><span style="width: 18%"></span></span><span class="mono">dropped</span></div>
+                  <div class="rk cut"><span>Near-duplicate memo</span><span class="bar3"><span style="width: 9%"></span></span><span class="mono">dedupe</span></div>
+                </div>
+                <div class="formula">value = w·<b>task fit</b> + w·<b>entity match</b> + w·<b>trust</b> + w·<b>freshness</b></div>
+                <span class="vcap mono">Sketch · sample sources</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s2}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Band · prompt layout</span><span class="mono" style="color: var(--invmute)">CHECK enforced</span></h4>
+                <div class="bandstk">
+                  <div class="bd dir"><span>Directive</span><span class="mono">trusted only</span></div>
+                  <div class="bd"><span>Task</span><span class="mono">the agent's objective</span></div>
+                  <div class="bd"><span>Evidence</span><span class="mono">ranked slices</span></div>
+                  <div class="bd unt"><span>&lt;untrusted_data&gt; web text &lt;/untrusted_data&gt;</span><span class="mono">data, not instructions</span></div>
+                  <div class="bd tail"><span>Tail restatement</span><span class="mono">best evidence, repeated last</span></div>
+                </div>
+              </div>
+            </sc-if>
+            <sc-if value="{{s3}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Proposal · screener profile</span><span class="mono" style="color: #F2B544">canary only</span></h4>
+                <div class="diffc">
+                  <div class="h">profile v7 → v8 · needs approval</div>
+                  <div class="m">- market_signals.weight: 0.30</div>
+                  <div class="p">+ market_signals.weight: 0.18</div>
+                  <div class="p">+ call_notes.pinned: true</div>
+                </div>
+                <div class="formula">propose only if <b>n ≥ 5</b> and <b>|mean delta| &gt; std error</b></div>
+                <div class="approve"><span>Reject</span><span class="go">Approve as v8</span></div>
+                <span class="vcap mono">Sketch · sample values</span>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+        <details class="thought">
+          <summary><span class="spark" aria-hidden="true"></span><span>Composed inside the 2,000 ms budget · open the trace</span><span class="chev" aria-hidden="true">⌄</span></summary>
+          <ol>
+            <li>Classify: the objective sorted into one of eight task types, or "general" when unsure.</li>
+            <li>Load: the profile for this agent and task, the source catalog, measured utility and today's spend.</li>
+            <li>Gate: rejections written down with reasons.</li>
+            <li>Value: each source scored on task fit, entity match, trust and freshness.</li>
+            <li>Allocate: packed by value per token until the floor.</li>
+            <li>Assemble: fetched through the gateway, injection-scanned, tokens counted for real, near-duplicates removed.</li>
+            <li>Band: directive, task, evidence, tail.</li>
+            <li>Probe: an advisory check that the context is sufficient.</li>
+            <li>Emit: a content-addressed object that replays byte for byte.</li>
+          </ol>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>03 / The contract</span></div>
+      <div class="shead rv"><h2 class="h2 disp">Ask once.<br>Replay forever.</h2><p class="mono">What an agent sends, and what it gets back.</p></div>
+      <div class="cmp">
+        <div class="code"><div class="ch"><b>Request</b><span>POST /api/dce/context/compose</span></div><span class="ln2"> </span><span class="ln2">{</span><span class="ln2">  <span class="s">"agent"</span>: <span class="s">"screener"</span>,</span><span class="ln2">  <span class="s">"objective"</span>: <span class="s">"Screen this inbound deck"</span>,</span><span class="ln2">  <span class="s">"entity"</span>: <span class="s">"company:…"</span>,</span><span class="ln2">  <span class="s">"budget_tokens"</span>: 6000</span><span class="ln2">}</span></div>
+        <div class="code"><div class="ch"><b>Response</b><span>a context object</span></div><span class="ln2"> </span><span class="ln2">{</span><span class="ln2 add">  <span class="s">"hash"</span>: <span class="s">"sha256:…"</span>,</span><span class="ln2">  <span class="s">"bands"</span>: [<span class="s">"directive"</span>, <span class="s">"task"</span>, <span class="s">"evidence"</span>, <span class="s">"tail"</span>],</span><span class="ln2">  <span class="s">"slices"</span>: [ … ],</span><span class="ln2">  <span class="s">"excluded"</span>: [ { <span class="s">"reason"</span>: … } ],</span><span class="ln2 add">  <span class="s">"fallback_used"</span>: <span class="k">false</span></span><span class="ln2">}</span></div>
+      </div>
+      <div class="prob" style="margin-top: 56px">
+        <div>
+          <h3 class="h3 disp" style="font-size: clamp(30px, 3vw, 44px); margin-bottom: 16px">The judge is judged too.</h3>
+          <p>An LLM scores outputs criterion by criterion, but the overall score is recomputed in code from fixed weights. The model's own total is never trusted. Rubrics are immutable: a change is a new version.</p>
+          <p>Humans label a golden set, and the system measures rank correlation, mean error and bias between its judge and the humans, so it knows how much to trust itself.</p>
+        </div>
+        <div>
+          <h3 class="h3 disp" style="font-size: clamp(30px, 3vw, 44px); margin-bottom: 16px">Six operator screens.</h3>
+          <div class="bad">
+            <div class="badrow ok">Compose inspector, with "replay from snapshots".</div>
+            <div class="badrow ok">"Why this context", a printable decision record.</div>
+            <div class="badrow ok">Frontier: quality against input tokens.</div>
+            <div class="badrow ok">Utility, proposals and the golden set.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>04 / Decisions worth explaining</span></div>
+      <div class="decisions">
+        <details class="dq" open="{{ true }}"><summary><span class="mono muted">01</span><span class="q">Why stop with budget left?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Because the last few slices usually cost more attention than they add. Past the marginal-utility floor, more context dilutes the signal and raises cost and latency.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">02</span><span class="q">How does it never return a 500?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>A 2-second timeout races the whole pipeline. A timeout, an exception or a rate-limit breach all return a deterministic static prompt with fallback_used set to true. Summaries degrade to deterministic extracts under 2.5 seconds, and embedding dedupe falls back to shingle overlap.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">03</span><span class="q">Where does it stop and another system start?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>A clean boundary with the firm's context graph: the graph owns the directive band, meaning truth and routing. The engine owns the evidence band: fetch, budget, order and format. The graph never retrieves, and the engine never judges truth.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">04</span><span class="q">How do you know it works?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>A 22-assertion verification suite runs against a live server and checks determinism, replay identity, trust-tier protection, tenancy isolation, fail-open behaviour and token accounting. The spec is executable.</p></div></details>
+      </div>
+      <div class="stack mono" style="margin-top: 40px"><span class="pill lt">Node 24</span><span class="pill lt">TypeScript 5.9</span><span class="pill lt">Express 5</span><span class="pill lt">Zod</span><span class="pill lt">Pino</span><span class="pill lt">gpt-tokenizer</span><span class="pill lt">Supabase</span><span class="pill lt">Claude · OpenAI · Gemini · xAI</span></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail" style="padding-block: 8px 56px">
+      <div class="ctaband rv">
+        <p><b>Need something like this?</b> I build these end to end, as a full-time engineer, on contract, or with SKAI Group.</p>
+        <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a 30-min call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="case-investor-day.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Next case · 04</span><span class="disp" style="display: block; margin-top: 10px">Investor Day</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Agents giving answers nobody can explain? Let's look at what they're seeing.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="work.html">← All work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9200}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      ctaAll: mk("LET'S BUILD"),
+      cvA: 'cv/Saad-Al-Tamari-CV-AI-Specialist.pdf', cvT: 'cv/Saad-Al-Tamari-CV-AI-Trainer.pdf',
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>

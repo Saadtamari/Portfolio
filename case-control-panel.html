@@ -1,0 +1,387 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Agent Control Panel · Case study</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Mission control for 350+ agents across 35+ apps. One login, and every agent is observable, measurable and remotely controllable.">
+<meta name="author" content="Saad Tamari">
+<meta name="theme-color" content="#EFEDE7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111110" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Agent Control Panel · Case study">
+<meta property="og:description" content="Mission control for 350+ agents across 35+ apps. One login, and every agent is observable, measurable and remotely controllable.">
+<meta property="og:image" content="assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<style>x-dc{display:none}</style>
+<script src="./dc-runtime.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="index.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="index.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl on" href="work.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="services.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="about.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl" href="writing.html"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="index.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="work.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="services.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="about.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="writing.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <!-- ============ HERO ============ -->
+  <header class="phero chero s-acp">
+    <span class="sh-art" aria-hidden="true"><i class="heat"></i></span>
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="index.html">Home</a><span>/</span><a href="work.html">Work</a><span>/</span><span>Case 01</span></div>
+        <h1 class="ptitle disp">Agent<br>Control Panel</h1>
+        <p class="psub">Mission control for 350+ agents across 35+ apps. One login, and every agent is <span class="serif">observable</span>, measurable and remotely controllable.</p>
+        <div class="meta">
+          <div><span class="mono">Role</span><strong>Architect &amp; builder</strong></div>
+          <div><span class="mono">When</span><strong>Feb–Aug 2026 · Decasonic, now SKAI Group</strong></div>
+          <div><span class="mono">Stack</span><strong>Express 5 · React 18 · Postgres · Drizzle</strong></div>
+          <div><span class="mono">Now</span><strong>A SKAI Group product · mySTARTUP</strong></div>
+        </div>
+        <div class="bigstats">
+          <div class="bs"><b>350+</b><span>agents registered</span></div>
+          <div class="bs"><b>35+</b><span>apps reporting in</span></div>
+          <div class="bs"><b>6</b><span>model providers, one fallback chain</span></div>
+          <div class="bs"><b>~60</b><span>API endpoints on 9 tables</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ PROBLEM ============ -->
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>01 / The problem</span></div>
+      <div class="prob">
+        <div>
+          <h2 class="h3 disp" style="margin-bottom: 22px">Hundreds of agents.<br>Zero visibility.</h2>
+          <p>The firm had agents spread across dozens of apps, each built separately. When one went quiet, nobody knew. When a prompt needed changing, someone redeployed an app. Nobody could say what an agent cost per day.</p>
+          <p>Four people needed four different things: operators wanted outages and runaway spend, prompt engineers wanted to edit without a deploy, finance wanted real token cost, and developers wanted a fast way to wire a new app in.</p>
+        </div>
+        <div class="bad">
+          <div class="badrow">An agent fails silently and nobody notices for days.</div>
+          <div class="badrow">Changing a prompt means redeploying the app it lives in.</div>
+          <div class="badrow">There is no cost per agent, per app or per day.</div>
+          <div class="badrow">The platform's own AI features are invisible too.</div>
+          <div class="badrow ok">One control plane that fixes all four.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ WALKTHROUGH ============ -->
+  <section class="band-ink">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>02 / How it works</span></div>
+        <div class="shead rv"><h2 class="h2 disp">Four jobs.<br>One screen.</h2><p class="mono">What an operator sees, in the order they'd use it.</p></div>
+        <div class="sticky">
+          <div class="steps">
+            <div class="{{sc0}}" data-i="0"><span class="mono">Step 01 · Observe</span><h3>Every app reports in.</h3><p>Registered apps push heartbeats and run reports. Each agent's status becomes running, idle, paused, stopped or error, and a rolling health score recalculates on every run. Agents can have parents, so hierarchies show up as hierarchies.</p></div>
+            <div class="{{sc1}}" data-i="1"><span class="mono">Step 02 · Control</span><h3>Change a live agent without a deploy.</h3><p>Pause, resume, stop, restart, swap the model or push a new system prompt. Each command is an HMAC-signed webhook to the live app, retried with backoff and tracked from pending to acknowledged.</p></div>
+            <div class="{{sc2}}" data-i="2"><span class="mono">Step 03 · Version</span><h3>Prompts become assets.</h3><p>Every prompt keeps its full history with one-click rollback. Feedback folds straight in with tags, and an AI reviewer scores answers from 0 to 100 with a written reason.</p></div>
+            <div class="{{sc3}}" data-i="3"><span class="mono">Step 04 · Watch itself</span><h3>The platform is its own customer.</h3><p>Its 8 internal AI features run as real tracked agents, from the integration analyzer to the error solver, so platform spend is measured with the same meters as everything else.</p></div>
+          </div>
+          <div class="stage" aria-hidden="true">
+            <sc-if value="{{s0}}" hint-placeholder-val="{{ true }}">
+              <div class="scr">
+                <h4><span>Monitor</span><span class="live mono">Live</span></h4>
+                <div class="tbl">
+                  <div class="trow th mono"><span>Agent</span><span>Status</span><span>Health</span><span class="mdl">Model</span></div>
+                  <div class="trow"><span>Integration Analyzer</span><span class="st run">Running</span><span class="hb"><i><b style="width: 98%"></b></i>98</span><span class="mdl">opus</span></div>
+                  <div class="trow"><span>Code Generator</span><span class="st run">Running</span><span class="hb"><i><b style="width: 94%"></b></i>94</span><span class="mdl">sonnet<span class="fb">fallback</span></span></div>
+                  <div class="trow"><span>Quality Reviewer</span><span class="st idle">Idle</span><span class="hb"><i><b style="width: 100%"></b></i>100</span><span class="mdl">gpt</span></div>
+                  <div class="trow"><span>Pricing Judge</span><span class="st pause">Paused</span><span class="hb"><i><b style="width: 85%"></b></i>85</span><span class="mdl">grok</span></div>
+                  <div class="trow"><span>Error Explainer</span><span class="st err">Error</span><span class="hb"><i><b style="width: 60%; background: var(--sig)"></b></i>60</span><span class="mdl">gemini</span></div>
+                </div>
+                <div class="formula">health = 100 − (<b>errors</b> ÷ last 20 runs × 100)</div>
+                <span class="vcap mono">Interface sketch · sample values</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s1}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Command · Code Generator</span><span class="mono" style="color: var(--invmute)">HMAC-SHA256</span></h4>
+                <div class="life"><span>Pending</span><i>→</i><span>Sent</span><i>→</i><span>Acknowledged</span><i>or</i><span>Failed</span></div>
+                <div class="cmdrow"><span>Pause agent</span><code>POST /api/dcp/webhook</code></div>
+                <div class="cmdrow"><span>Swap model to sonnet</span><code>retry · exp backoff</code></div>
+                <div class="cmdrow"><span>Push system prompt v14</span><code>signed · idempotent</code></div>
+                <div class="cmdrow"><span>Resume</span><code>no redeploy</code></div>
+                <span class="vcap mono">Interface sketch</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s2}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Prompt history · Deal Screener</span><span class="mono" style="color: var(--invmute)">AI review 0–100</span></h4>
+                <div class="vlist">
+                  <div class="vrow cur"><span class="mono">v14</span><span>Tighter output schema</span><span class="mono" style="color: #5FD08E">92 · live</span></div>
+                  <div class="vrow"><span class="mono">v13</span><span>Feedback folded in</span><button type="button" tabindex="-1">Roll back</button></div>
+                  <div class="vrow"><span class="mono">v12</span><span>Model swap</span><button type="button" tabindex="-1">Roll back</button></div>
+                  <div class="vrow"><span class="mono">v11</span><span>First version</span><button type="button" tabindex="-1">Roll back</button></div>
+                </div>
+                <div class="tagsr"><span>[INSTRUCTION]</span><span>[IMPROVEMENT]</span><span>[BUG FIX]</span><span>[KEEP DOING]</span></div>
+                <span class="vcap mono">Interface sketch · sample prompt names</span>
+              </div>
+            </sc-if>
+            <sc-if value="{{s3}}" hint-placeholder-val="{{ false }}">
+              <div class="scr">
+                <h4><span>Internal agents</span><span class="mono" style="color: var(--invmute)">isInternal: true</span></h4>
+                <div class="bento2">
+                  <div class="bx"><span class="mono">Agent pipeline</span><div class="minis"><span>Integration Analyzer</span><span>Code Generator</span><span>Quality Reviewer</span></div></div>
+                  <div class="bx"><span class="mono">Pricing protocol</span><div class="minis"><span>Searcher A</span><span>Searcher B</span><span>Judge</span></div><span style="font-size: 12px; color: var(--invmute)">Free lookup first. AI only on failure.</span></div>
+                  <div class="bx"><span class="mono">Failure triage</span><div class="minis"><span>Error Explainer</span><span>Error Solver</span></div></div>
+                  <div class="bx"><span class="mono">Token monitor</span><b>8</b><span style="font-size: 12px; color: var(--invmute)">internal agents, metered like the rest</span><div class="spark2"><i style="height: 30%"></i><i style="height: 55%"></i><i style="height: 42%"></i><i style="height: 70%"></i><i class="hot" style="height: 92%"></i><i style="height: 48%"></i><i style="height: 60%"></i></div></div>
+                </div>
+              </div>
+            </sc-if>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ LIVE FEED + CODE ============ -->
+  <section class="wrap">
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>03 / What it feels like</span></div>
+      <div class="prob" style="align-items: center">
+        <div>
+          <h2 class="h3 disp" style="margin-bottom: 22px">A feed you can<br>actually read.</h2>
+          <p>Every heartbeat, report and command lands in one stream. Fallbacks get an amber badge, so an operator is never told the primary model answered when it didn't.</p>
+          <p class="muted" style="font-size: 15px">The feed on the right is a live sketch. It is generated in your browser, not pulled from real data.</p>
+        </div>
+        <div class="viz" style="min-height: 0" aria-hidden="true">
+          <div class="dtop"><strong>Activity</strong><span class="live mono">Streaming</span></div>
+          <div class="feed">
+            <sc-for list="{{feed}}" as="f" hint-placeholder-count="6">
+              <div class="{{f.cls}}"><span class="evi" style="background: {{f.c}}">{{f.i}}</span><span><strong>{{f.t}}</strong><small>{{f.s}}</small></span><span class="tm">{{f.tm}}</span></div>
+            </sc-for>
+          </div>
+        </div>
+      </div>
+      <div class="cmp">
+        <div class="code"><div class="ch"><b>Before</b><span>the prompt lives in the app</span></div><span class="ln2"> </span><span class="ln2 del"><span class="k">const</span> SYSTEM = <span class="s">"You are a deal screener…"</span>;</span><span class="ln2 c2">// changing this means a redeploy</span><span class="ln2"><span class="k">const</span> res = <span class="k">await</span> openai.chat(SYSTEM, input);</span><span class="ln2 c2">// cost? errors? nobody knows</span></div>
+        <div class="code"><div class="ch"><b>After</b><span>the Control Panel owns it</span></div><span class="ln2"> </span><span class="ln2 add"><span class="k">const</span> { prompt, model } = <span class="k">await</span> cp.prompt(AGENT_ID);</span><span class="ln2 c2">// GET /api/prompts/:agentId</span><span class="ln2"><span class="k">const</span> res = <span class="k">await</span> llm(model, prompt, input);</span><span class="ln2 add"><span class="k">await</span> cp.report({ agentId, tokens, ok });</span><span class="ln2 c2">// POST /api/report → health, cost, feed</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DECISIONS ============ -->
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <div class="lbl mono"><span class="sq"></span><span>04 / Decisions worth explaining</span></div>
+      <div class="decisions">
+        <details class="dq" open="{{ true }}"><summary><span class="mono muted">01</span><span class="q">Why a modular monolith, not microservices?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>One Node process serves the JSON API and the compiled React app, split by module rather than by process. No broker, no worker fleet. A tool that watches moving parts should have as few of its own as possible.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">02</span><span class="q">How do you keep price discovery from costing money?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Ask a free, deterministic public price API first. Only if that fails do two AI searchers research in parallel. If they disagree, each sees the other's answer and re-checks; if they still disagree, a third model judges. Everything goes to an audit log, with per-model cooldowns and a global concurrency cap.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">03</span><span class="q">Why can't a heartbeat un-pause an agent?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>Because a stopped agent has to stay stopped, even if its app keeps reporting in. Token counts are upserted atomically too, so two concurrent heartbeats can't lose a count.</p></div></details>
+        <details class="dq"><summary><span class="mono muted">04</span><span class="q">What was the strangest production bug?</span><span class="pls" aria-hidden="true"><svg width="14" height="14" viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span></summary><div class="a"><p>A production firewall read legitimate prompt text as an attack and blocked saves. Base64-encoding the prompt and feedback write paths got past it without weakening the firewall.</p></div></details>
+      </div>
+      <div class="stack mono" style="margin-top: 40px"><span class="pill lt">Express 5</span><span class="pill lt">React 18</span><span class="pill lt">PostgreSQL</span><span class="pill lt">Drizzle ORM</span><span class="pill lt">HMAC webhooks</span><span class="pill lt">OpenRouter</span><span class="pill lt">6 LLM providers</span></div>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="rail" style="padding-block: 8px 56px">
+      <div class="ctaband rv">
+        <p><b>Need something like this?</b> I build these end to end, as a full-time engineer, on contract, or with SKAI Group.</p>
+        <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener">Book a 30-min call <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="case-mcp-hub.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Next case · 02</span><span class="disp" style="display: block; margin-top: 10px">MCP Hub</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Running agents nobody can see? This is the problem I like most.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="work.html">← All work</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9200}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  POOL = [
+    { i: 'HB', c: '#5FD08E', t: 'Heartbeat · Integration Analyzer', s: 'running · health 98' },
+    { i: 'RP', c: '#EFEDE7', t: 'Run report · Code Generator', s: 'answered by sonnet · fallback' },
+    { i: 'CM', c: 'var(--sig)', t: 'Command acknowledged', s: 'paused Pricing Judge · signed webhook' },
+    { i: 'QR', c: '#EFEDE7', t: 'Quality review · Deal Screener', s: 'scored with a written reason' },
+    { i: 'PV', c: '#F2B544', t: 'Prompt v14 published', s: 'previous version kept for rollback' },
+    { i: 'ER', c: 'var(--sig2)', t: 'Error · Error Explainer', s: 'triage agents attached' },
+    { i: 'TK', c: '#EFEDE7', t: 'Token usage updated', s: 'cost rolled up per app and day' },
+    { i: 'HB', c: '#5FD08E', t: 'Heartbeat · Quality Reviewer', s: 'idle · health 100' }
+  ];
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '', tick: 0 };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() {
+    this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000);
+    this.feedT = setInterval(() => this.setState((p) => ({ tick: p.tick + 1 })), 2300);
+    this.watchSteps();
+  }
+  componentWillUnmount() { clearInterval(this.clock); clearInterval(this.feedT); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const n = this.POOL.length;
+    const feed = [];
+    for (let k = 0; k < 6; k++) {
+      const it = this.POOL[(s.tick - k + n * 100) % n];
+      feed.push({ i: it.i, c: it.c, t: it.t, s: it.s, tm: k === 0 ? 'now' : (k * 2) + 's ago', cls: k === 0 ? ('ev n' + (s.tick % 2)) : 'ev' });
+    }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--', feed: feed,
+      ctaAll: mk("LET'S BUILD"),
+      cvA: 'cv/Saad-Al-Tamari-CV-AI-Specialist.pdf', cvT: 'cv/Saad-Al-Tamari-CV-AI-Trainer.pdf',
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>An AGI benchmark score is not a coding score · Saad Al-Tamari</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<meta name="description" content="What ARC-AGI-3 measures, why GPT-6 Astra scored 62.7% or 99.9% depending on the harness, why its reasoning jump barely moved coding indexes, and how to read benchmark claims after SWE-bench Verified. With references.">
+<meta name="author" content="Saad Al-Tamari">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="Main.dc.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="Main.dc.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="Work.dc.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="Services.dc.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="About.dc.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl on" href="Notes.dc.html" aria-current="page"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="Main.dc.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="Work.dc.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="Services.dc.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="About.dc.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="Notes.dc.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero nhero">
+    <img class="topo" src="/_blob/e5475fa57534c430364755ccaffa5714" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="Main.dc.html">Home</a><span>/</span><a href="Notes.dc.html">Writing</a><span>/</span><span>Field guide</span></div>
+        <h1 class="ntitle">An AGI benchmark score is not a coding score</h1>
+        <p class="psub">GPT-6 Astra hit 99.9% on ARC-AGI-3 and gained about two points on the coding indexes. Here is why both are true, and what it says about reading any benchmark.</p>
+        <div class="nmeta mono"><span><img class="hav" src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt="">Saad Al-Tamari</span><span>Field guide · AGI benchmarks and coding</span><span>8 min read</span></div>
+        <div class="stack mono" style="margin-top: 18px"><span class="pill lt mono">Benchmarks</span><span class="pill lt mono">ARC-AGI</span><span class="pill lt mono">Evaluation</span><span class="pill lt mono">Coding agents</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <article class="art">
+
+<p>In September, GPT-6 Astra posted 99.9% on ARC-AGI-3, the benchmark designed to measure general intelligence. In the same launch, its numbers on the coding agent indexes moved by about two points. Both facts are true. The gap between them is the most useful thing to understand about benchmarks right now.</p>
+
+<h2>What ARC is trying to measure</h2>
+<p>ARC starts from François Chollet’s definition of intelligence as skill-acquisition efficiency: how quickly a system learns new tasks relative to its priors and experience, not how much it already knows <span class="cite">[<a href="#r1">1</a>]</span>. ARC-AGI-1 tested that with small grid puzzles, each a new rule to infer from a few examples. It held for five years, until a preview of OpenAI’s o3 scored 75.7% on the semi-private set at $26 per task, and 87.5% with about 172 times the compute, at $4,560 per task <span class="cite">[<a href="#r2">2</a>]</span>.</p>
+<p>ARC-AGI-2 raised the difficulty and calibrated its tasks against a human panel <span class="cite">[<a href="#r3">3</a>]</span>. ARC-AGI-3, launched on 25 March 2026, changed the format entirely: hundreds of turn-based game environments with no instructions, no rules and no stated goals. An agent has to explore, work out how the world behaves, discover what winning means, and carry that knowledge into harder levels. At launch, humans solved 100% of the environments and frontier AI scored 0.51% <span class="cite">[<a href="#r4">4</a>]</span>. Scoring rewards action efficiency against a human baseline: for each level, the median action count of the roughly 500 members of the public who completed it <span class="cite">[<a href="#r5">5</a>]</span>.</p>
+
+<h2>Six months from 0.51%</h2>
+<figure class="nfig"><div class="nviz"><div class="vb"><div class="r"><span class="l">25 Mar · frontier AI at launch</span><span class="t"><i class="mute" style="width: 0.6%"></i></span><b>0.51%</b></div><div class="r"><span class="l">24 Jul · Claude Opus 5, high effort</span><span class="t"><i class="mute" style="width: 30.2%"></i></span><b>30.2%</b></div><div class="r"><span class="l">3 Sep · GPT-6 Astra, standard harness, max</span><span class="t"><i class="" style="width: 62.7%"></i></span><b>62.7%</b></div><div class="r"><span class="l">3 Sep · GPT-6 Astra, provider adapter, high</span><span class="t"><i class="" style="width: 99.9%"></i></span><b>99.9%</b></div></div></div><figcaption class="mono">ARC-AGI-3 results verified by ARC Prize</figcaption></figure>
+
+<p>Those are ARC Prize’s verified results <span class="cite">[<a href="#r6">6</a>, <a href="#r7">7</a>]</span>. On ARC-AGI-2 the frontier is now in the 90s: ARC Prize lists Claude Opus 5 at 90.4% and GPT-6 Astra at 95.0% at maximum reasoning effort. ARC-AGI-2 launched in March 2025. It took about eighteen months to get from hard to nearly saturated.</p>
+
+<h2>The harness is part of the score</h2>
+<p>The same model at the same maximum effort scored 62.7% under ARC Prize’s standard harness and 98.6% under OpenAI’s provider-adapter harness <span class="cite">[<a href="#r5">5</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><div class="vtable tight"><table><thead><tr><th>Reasoning effort</th><th>Standard</th><th>Cost</th><th>Provider adapter</th><th>Cost</th></tr></thead><tbody><tr class="hi"><td data-l="Reasoning effort">Max</td><td data-l="Standard">62.7%</td><td data-l="Cost">$26,098</td><td data-l="Provider adapter">98.6%</td><td data-l="Cost">$17,332</td></tr><tr><td data-l="Reasoning effort">XHigh</td><td data-l="Standard">59.3%</td><td data-l="Cost">$37,317</td><td data-l="Provider adapter">98.4%</td><td data-l="Cost">$18,147</td></tr><tr><td data-l="Reasoning effort">High</td><td data-l="Standard">54.8%</td><td data-l="Cost">$40,705</td><td data-l="Provider adapter">99.9%</td><td data-l="Cost">$18,817</td></tr><tr><td data-l="Reasoning effort">Medium</td><td data-l="Standard">38.6%</td><td data-l="Cost">$48,090</td><td data-l="Provider adapter">98.4%</td><td data-l="Cost">$19,285</td></tr><tr><td data-l="Reasoning effort">Low</td><td data-l="Standard">17.5%</td><td data-l="Cost">$38,166</td><td data-l="Provider adapter">98.0%</td><td data-l="Cost">$21,298</td></tr><tr><td data-l="Reasoning effort">None</td><td data-l="Standard">35.2%</td><td data-l="Cost">$49,791</td><td data-l="Provider adapter">96.7%</td><td data-l="Cost">$23,457</td></tr></tbody></table></div></div><figcaption class="mono">GPT-6 Astra on ARC-AGI-3 by harness and effort, as verified by ARC Prize. Costs are totals for the run</figcaption></figure>
+
+<p>The difference is memory. The standard harness is provider-neutral and lets the model carry forward notes it chooses to keep. The provider adapter preserves the model’s opaque reasoning state between requests and compacts long conversations. On the 167 game runs both harnesses solved, the adapter was about 3.66 times faster and used 49% fewer tokens. OpenAI’s footnote says its harness changes two settings to better match real-world performance and does not target ARC-AGI-3 specifically <span class="cite">[<a href="#r8">8</a>]</span>.</p>
+<p>Three details in that table are easy to miss. Under the standard harness, no reasoning (35.2%) beat low reasoning (17.5%): effort is not monotonic once the model has to manage its own memory. The adapter runs were cheaper as well as better, because carrying state forward avoids re-deriving it every turn. And the 36-point gap between harnesses is larger than the gap between Claude Opus 5 and Astra on the standard harness (30.2% against 62.7%). A score belongs to a model, a harness, an effort setting and a budget, together.</p>
+<p>ARC Prize’s own position is careful. It reports both harnesses, says it believes a future AGI should be able to solve ARC-AGI-3 under the standard conditions, and states that saturating the benchmark would not be proof of AGI <span class="cite">[<a href="#r5">5</a>]</span>.</p>
+
+<h2>Why the reasoning jump didn’t show up in coding</h2>
+<figure class="nfig"><div class="nviz"><div class="vb"><div class="r"><span class="l">ARC-AGI-3</span><span class="t"><i class="" style="width: 100%"></i></span><b>+82.1 pts</b></div><div class="r"><span class="l">Terminal-Bench 4.0</span><span class="t"><i class="mute" style="width: 25.09135200974421%"></i></span><b>+20.6</b></div><div class="r"><span class="l">Artificial Analysis Coding Agent Index v1.4</span><span class="t"><i class="mute" style="width: 2.3142509135200973%"></i></span><b>+1.9</b></div><div class="r"><span class="l">DeepSWE v1.1</span><span class="t"><i class="mute" style="width: 1.7052375152253347%"></i></span><b>+1.4</b></div></div></div><figcaption class="mono">Gains from GPT-5.6 Sol to GPT-6 Astra, taken from OpenAI’s own launch table</figcaption></figure>
+
+<p>Those deltas come from OpenAI’s launch table <span class="cite">[<a href="#r8">8</a>]</span>. Independently, Artificial Analysis placed Astra at 67 on its Coding Agent Index when run through Codex: roughly level with Claude Opus 5 and Fable 5, and three points behind Claude Fable 5.1 in Claude Code at 70 <span class="cite">[<a href="#r9">9</a>]</span>. At launch, the coding picture was a tie at the top, not a leap.</p>
+<p>That is not a contradiction. ARC-AGI-3 rewards inducing the rules of a small, novel world from scratch, with little state and few actions. Everyday software engineering rewards nearly the opposite: navigating a large existing codebase, following conventions nobody wrote down, keeping long chains of edits consistent, and knowing when a change is actually done. The bottleneck there is context management and engineering judgment inside a huge, specific world, not abstraction from nothing. The largest coding-adjacent gain in OpenAI’s table, Terminal-Bench, is also the task closest to ARC’s interactive explore-and-act format. That last point is my reading of the numbers, not a claim either lab makes.</p>
+
+<h2>Coding benchmarks have their own problems</h2>
+<p>The coding side is not a clean yardstick either. SWE-bench turned real GitHub issues into tasks <span class="cite">[<a href="#r10">10</a>]</span>, and its human-validated Verified subset became the standard score. In February 2026 OpenAI stopped reporting it: auditing 138 problems that o3 did not solve consistently, it found 59.4% had material problems in their tests or descriptions, and every frontier model it tested could reproduce gold patches or verbatim problem details for some tasks <span class="cite">[<a href="#r11">11</a>]</span>. Earlier, Liang et al. showed models could identify the buggy file from the issue text alone up to 76% of the time on SWE-bench repositories, against up to 53% on repositories outside it, a gap consistent with memorisation <span class="cite">[<a href="#r12">12</a>]</span>.</p>
+<figure class="nfig"><div class="nviz"><div class="vb"><div class="r"><span class="l">Buggy file named from issue text alone: SWE-bench repos</span><span class="t"><i class="mute" style="width: 76%"></i></span><b>up to 76%</b></div><div class="r"><span class="l">The same test on repos outside SWE-bench</span><span class="t"><i class="" style="width: 53%"></i></span><b>up to 53%</b></div><div class="r"><span class="l">Audited Verified problems with flawed tests or descriptions</span><span class="t"><i class="mute" style="width: 59.4%"></i></span><b>59.4%</b></div></div></div><figcaption class="mono">Two independent signs that a famous coding benchmark stopped measuring what it claimed</figcaption></figure>
+
+<p>Benchmarks can also disagree with people. In METR’s randomised controlled trial, 16 experienced open-source developers took 19% longer on 246 real tasks when allowed to use early-2025 AI tools, after forecasting a 24% speedup and while estimating afterwards that they had been 20% faster <span class="cite">[<a href="#r13">13</a>]</span>. The tools have improved a lot since, so the number shouldn’t be generalised. The method should: self-reported productivity is not a measurement.</p>
+<p>Leaderboards built on human votes have their own version of this. The Leaderboard Illusion documented 27 private variants tested by Meta ahead of the Llama 4 release, and estimated that Google and OpenAI received about 19.2% and 20.4% of all arena data, against 29.7% for 83 open-weight models combined <span class="cite">[<a href="#r14">14</a>]</span>. Contamination-resistant designs exist: LiveCodeBench only scores problems published after a model’s training cutoff <span class="cite">[<a href="#r15">15</a>]</span>.</p>
+
+<h2>How I read a benchmark claim now</h2>
+<ol>
+<li><b>Which set?</b> Public, semi-private or private. Public sets leak into training data.</li>
+<li><b>Who ran it?</b> Vendor-reported or independently verified, and under which harness and effort setting.</li>
+<li><b>What did it cost?</b> Cost per task changes the meaning of a score. 87.5% at $4,560 a task is a research result, not a product.</li>
+<li><b>How many attempts?</b> pass@1, pass@k or best-of-n, and whether the intervals overlap.</li>
+<li><b>Saturated or contaminated?</b> Near-ceiling scores and pre-cutoff public data both shrink what a benchmark can tell you.</li>
+<li><b>Does it look like my work?</b> If not, build a small private eval from my own repositories and tickets, and trust it over any leaderboard.</li>
+</ol>
+<p class="nclose">A benchmark measures a model, a harness and a budget on one kind of task. The skill is reading which of those actually moved.</p>
+<h2 id="refs">References</h2>
+<ol class="refs"><li id="r1"><span class="rn mono">01</span><span><b>Chollet, 2019.</b> <a href="https://arxiv.org/abs/1911.01547" target="_blank" rel="noopener">On the Measure of Intelligence</a>. <span class="rv">arXiv.</span></span></li><li id="r2"><span class="rn mono">02</span><span><b>ARC Prize, 2024.</b> <a href="https://arcprize.org/blog/oai-o3-pub-breakthrough" target="_blank" rel="noopener">OpenAI o3 Breakthrough High Score on ARC-AGI-Pub</a>. <span class="rv">ARC Prize blog, 20 Dec 2024.</span></span></li><li id="r3"><span class="rn mono">03</span><span><b>Chollet et al., 2025.</b> <a href="https://arxiv.org/abs/2505.11831" target="_blank" rel="noopener">ARC-AGI-2: A New Challenge for Frontier AI Reasoning Systems</a>. <span class="rv">arXiv.</span></span></li><li id="r4"><span class="rn mono">04</span><span><b>ARC Prize, 2026.</b> <a href="https://arcprize.org/blog/arc-agi-3-launch" target="_blank" rel="noopener">ARC-AGI-3 Launch</a>. <span class="rv">ARC Prize blog, 25 Mar 2026.</span></span></li><li id="r5"><span class="rn mono">05</span><span><b>Kamradt, 2026.</b> <a href="https://arcprize.org/blog/astra" target="_blank" rel="noopener">OpenAI’s GPT-6 Astra on ARC-AGI-3</a>. <span class="rv">ARC Prize blog, 3 Sep 2026.</span></span></li><li id="r6"><span class="rn mono">06</span><span><b>ARC Prize, 2026.</b> <a href="https://arcprize.org/results/anthropic-claude-opus-5" target="_blank" rel="noopener">Claude Opus 5: ARC-AGI Results</a>. <span class="rv">ARC Prize verified results, 24 Jul 2026.</span></span></li><li id="r7"><span class="rn mono">07</span><span><b>ARC Prize, 2026.</b> <a href="https://arcprize.org/results/openai-gpt-6-astra" target="_blank" rel="noopener">GPT-6 Astra: ARC-AGI Results</a>. <span class="rv">ARC Prize verified results.</span></span></li><li id="r8"><span class="rn mono">08</span><span><b>OpenAI, 2026.</b> <a href="https://openai.com/index/gpt-6-astra/" target="_blank" rel="noopener">GPT-6 Astra: A New Generation of Intelligence</a>. <span class="rv">OpenAI.</span></span></li><li id="r9"><span class="rn mono">09</span><span><b>AI Weekly, 2026.</b> <a href="https://aiweekly.co/alerts/gpt-6-astra-lands-at-67-on-coding-index-behind-fable-51s-70" target="_blank" rel="noopener">GPT-6 Astra Lands at 67 on Coding Index, Behind Fable 5.1’s 70 (reporting Artificial Analysis)</a>. <span class="rv">AI Weekly, 4 Sep 2026.</span></span></li><li id="r10"><span class="rn mono">10</span><span><b>Jimenez et al., 2024.</b> <a href="https://arxiv.org/abs/2310.06770" target="_blank" rel="noopener">SWE-bench: Can Language Models Resolve Real-World GitHub Issues?</a>. <span class="rv">ICLR 2024.</span></span></li><li id="r11"><span class="rn mono">11</span><span><b>OpenAI, 2026.</b> <a href="https://openai.com/index/why-we-no-longer-evaluate-swe-bench-verified/" target="_blank" rel="noopener">Why SWE-bench Verified No Longer Measures Frontier Coding Capabilities</a>. <span class="rv">OpenAI, 23 Feb 2026.</span></span></li><li id="r12"><span class="rn mono">12</span><span><b>Liang et al., 2025.</b> <a href="https://arxiv.org/abs/2506.12286" target="_blank" rel="noopener">The SWE-Bench Illusion: When State-of-the-Art LLMs Remember Instead of Reason</a>. <span class="rv">arXiv.</span></span></li><li id="r13"><span class="rn mono">13</span><span><b>Becker et al., 2025.</b> <a href="https://arxiv.org/abs/2507.09089" target="_blank" rel="noopener">Measuring the Impact of Early-2025 AI on Experienced Open-Source Developer Productivity</a>. <span class="rv">METR.</span></span></li><li id="r14"><span class="rn mono">14</span><span><b>Singh et al., 2025.</b> <a href="https://arxiv.org/abs/2504.20879" target="_blank" rel="noopener">The Leaderboard Illusion</a>. <span class="rv">arXiv.</span></span></li><li id="r15"><span class="rn mono">15</span><span><b>Jain et al., 2025.</b> <a href="https://arxiv.org/abs/2403.07974" target="_blank" rel="noopener">LiveCodeBench: Holistic and Contamination Free Evaluation of Large Language Models for Code</a>. <span class="rv">ICLR 2025.</span></span></li></ol>
+
+      </article>
+      <div class="byline">
+        <span class="bymark ph" aria-hidden="true"><img src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt=""></span>
+        <div><b>Saad Al-Tamari</b><span>Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.</span></div>
+        <a class="btn btn-line" href="About.dc.html">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="Note-ControlPlane.dc.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Read next · Build note</span><span class="disp" style="display: block; margin-top: 10px">Mission control for 350 agents</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Building something like this, or want me to write about your problem next? One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="Notes.dc.html">← All notes</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9600}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      ctaAll: mk("LET'S BUILD"),
+      cvA: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/f7f37eb38bce1c4eab8e0bea5214dea4'; })(), cvT: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/befad928a1065a524caf917c104e529f'; })(),
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>

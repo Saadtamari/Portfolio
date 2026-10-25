@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Why my context engine leaves budget unspent · Saad Al-Tamari</title>
+<script src="./support.js"></script>
+<link rel="stylesheet" href="./site.css">
+<script src="./motion.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Anybody:wdth,wght@50..150,100..900&amp;family=Archivo:wdth,wght@62..125,100..900&amp;family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&amp;family=Geist:wght@300..700&amp;family=Geist+Mono:wght@400..600&amp;family=Instrument+Serif:ital@0;1&amp;display=swap">
+<meta name="description" content="More context is not better context. How a context compiler packs by value per token, stops at a utility threshold, and records why every item was left out.">
+<meta name="author" content="Saad Al-Tamari">
+<style>
+body { margin: 0; }
+</style>
+</helmet>
+
+<div class="{{siteCls}}" id="top" ref="{{setRoot}}" style="--sig: {{accent}}; --fd: {{fontD}}; --fz: {{fontZ}}">
+  <div class="prog" aria-hidden="true"></div>
+  <div class="island">
+    <nav class="isl" aria-label="Primary">
+      <a class="mark" href="Main.dc.html" aria-label="Saad Tamari, home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 5H7.3C5.5 5 4.2 6.3 4.2 8s1.3 3 3.1 3h1.5c1.8 0 3.1 1.4 3.1 3.1 0 1.8-1.3 3.1-3.1 3.1H4.2M13.6 5h6.6M16.9 5v14" style="fill: none; stroke: #111110; stroke-width: 2.3; stroke-linecap: square"></path></svg></a>
+      <a class="nl" href="Main.dc.html"><span class="roll"><span>Home</span><span>Home</span></span></a>
+      <a class="nl" href="Work.dc.html"><span class="roll"><span>Work</span><span>Work</span></span></a>
+      <a class="nl" href="Services.dc.html"><span class="roll"><span>Services</span><span>Services</span></span></a>
+      <a class="nl" href="About.dc.html"><span class="roll"><span>About</span><span>About</span></span></a>
+      <a class="nl on" href="Notes.dc.html" aria-current="page"><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+      <span class="more mono" aria-hidden="true">Amman · {{time}}</span>
+      <button class="icon-btn tt" type="button" onClick="{{toggleTheme}}" aria-label="{{themeLabel}}">
+        <sc-if value="{{isDark}}" hint-placeholder-val="{{ false }}"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" style="fill: none; stroke: currentColor; stroke-width: 1.8"></circle><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></sc-if>
+        <sc-if value="{{isLight}}" hint-placeholder-val="{{ true }}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.6A8.2 8.2 0 0 1 9.4 4a8.2 8.2 0 1 0 10.6 10.6z" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round"></path></svg></sc-if>
+      </button>
+      <button class="icon-btn burger" type="button" onClick="{{toggleMenu}}" aria-label="{{menuLabel}}" aria-expanded="{{menuExp}}"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="{{menuPath}}" style="fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round"></path></svg></button>
+      <a class="stat" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><span class="dot"></span><span>Book a call</span></a>
+    </nav>
+  </div>
+  <div class="menu" aria-hidden="{{menuHidden}}">
+    <a class="mlink disp" href="Main.dc.html" onClick="{{closeMenu}}"><span class="mono">01</span><span class="roll"><span>Home</span><span>Home</span></span></a>
+    <a class="mlink disp" href="Work.dc.html" onClick="{{closeMenu}}"><span class="mono">02</span><span class="roll"><span>Work</span><span>Work</span></span></a>
+    <a class="mlink disp" href="Services.dc.html" onClick="{{closeMenu}}"><span class="mono">03</span><span class="roll"><span>Services</span><span>Services</span></span></a>
+    <a class="mlink disp" href="About.dc.html" onClick="{{closeMenu}}"><span class="mono">04</span><span class="roll"><span>About</span><span>About</span></span></a>
+    <a class="mlink disp" href="Notes.dc.html" onClick="{{closeMenu}}"><span class="mono">05</span><span class="roll"><span>Writing</span><span>Writing</span></span></a>
+    <a class="mlink disp" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener" onClick="{{closeMenu}}"><span class="mono">06</span><span class="roll"><span>Book a call</span><span>Book a call</span></span></a>
+    <div class="mfoot mono"><span>saadaltamari@gmail.com</span><span>Amman · {{time}} GMT+3</span></div>
+  </div>
+
+  <header class="phero nhero">
+    <img class="topo" src="/_blob/e5475fa57534c430364755ccaffa5714" alt="">
+    <div class="wrap">
+      <div class="rail inner">
+        <div class="crumbs mono"><a href="Main.dc.html">Home</a><span>/</span><a href="Notes.dc.html">Writing</a><span>/</span><span>Build note</span></div>
+        <h1 class="ntitle">Why my context engine leaves budget unspent</h1>
+        <p class="psub">Past a point, adding context makes answers worse while cost and latency keep rising. Most retrieval systems have nothing that ever says stop. I built one that does.</p>
+        <div class="nmeta mono"><span><img class="hav" src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt="">Saad Al-Tamari</span><span>From the work: Predictive Context Engine · Jun–Aug 2026</span><span>2 min read</span></div>
+        <div class="stack mono" style="margin-top: 18px"><span class="pill lt mono">Context engineering</span><span class="pill lt mono">Agents</span><span class="pill lt mono">LLM cost</span></div>
+      </div>
+    </div>
+  </header>
+
+  <section class="wrap">
+    <div class="hr"></div>
+    <div class="rail sec">
+      <article class="art">
+
+<p>The Predictive Context Engine decides what an investment agent should actually see for a given task. It is a compiler, not a search box: every compose runs through nine stages and leaves a record you can audit months later.</p>
+<figure class="nfig"><div class="nviz"><div class="vf wrap"><div class="n "><b>Classify</b></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Profile</b><small>versioned</small></div><span class="a" aria-hidden="true">→</span><div class="n warn"><b>Safety gate</b></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Score value</b></div><span class="a" aria-hidden="true">→</span><div class="n hot"><b>Allocate</b><small>budget</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Assemble</b></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Band</b><small>trust</small></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Probe</b></div><span class="a" aria-hidden="true">→</span><div class="n "><b>Emit</b><small>snapshot</small></div></div></div><figcaption class="mono">The nine stages of one compose, each inspectable in the operator console</figcaption></figure>
+
+<h2>Pack by value per token, then stop</h2>
+<p>Candidates are ranked by the value they add per token. Packing continues only while the next item clears a marginal-utility threshold. When it doesn’t, allocation stops, even with budget left over.</p>
+<figure class="nfig"><div class="nviz"><svg class="vsvg" viewBox="0 0 560 230" role="img" aria-label="Illustrative curve: answer quality rises quickly with the first, most valuable context, flattens, then falls as low-value context is added. The engine stops where the next item's value drops below a threshold.">
+<line x1="40" x2="546" y1="202" y2="202" style="stroke: var(--line2); stroke-width: 1"></line><line x1="40" x2="40" y1="14" y2="202" style="stroke: var(--line2); stroke-width: 1"></line>
+<rect x="252.5" y="14" width="293.5" height="188" style="fill: var(--bg3); opacity: .7"></rect>
+<polyline points="40.0,202.0 45.1,192.8 50.1,184.0 55.2,175.7 60.2,167.8 65.3,160.3 70.4,153.2 75.4,146.5 80.5,140.1 85.5,134.0 90.6,128.2 95.7,122.7 100.7,117.5 105.8,112.6 110.8,107.9 115.9,103.4 121.0,99.2 126.0,95.2 131.1,91.4 136.1,87.8 141.2,84.3 146.3,81.1 151.3,78.0 156.4,75.0 161.4,72.2 166.5,69.6 171.6,67.1 176.6,64.7 181.7,62.4 186.7,60.3 191.8,58.2 196.9,56.3 201.9,54.5 207.0,52.7 212.0,51.1 217.1,49.5 222.2,48.0 227.2,46.6 232.3,45.2 237.3,44.0 242.4,42.7 247.5,41.6 252.5,40.5 257.6,39.5 262.6,38.5 267.7,37.5 272.8,36.7 277.8,35.8 282.9,35.1 287.9,34.4 293.0,33.8 298.1,33.2 303.1,32.7 308.2,32.2 313.2,31.8 318.3,31.4 323.4,31.1 328.4,30.8 333.5,30.6 338.5,30.4 343.6,30.3 348.7,30.2 353.7,30.1 358.8,30.1 363.8,30.1 368.9,30.2 374.0,30.3 379.0,30.4 384.1,30.6 389.1,30.8 394.2,31.0 399.3,31.3 404.3,31.6 409.4,31.9 414.4,32.3 419.5,32.7 424.6,33.1 429.6,33.6 434.7,34.1 439.7,34.6 444.8,35.1 449.9,35.7 454.9,36.3 460.0,36.9 465.0,37.5 470.1,38.2 475.2,38.9 480.2,39.6 485.3,40.4 490.3,41.2 495.4,42.0 500.5,42.8 505.5,43.6 510.6,44.5 515.6,45.4 520.7,46.3 525.8,47.3 530.8,48.2 535.9,49.2 540.9,50.2 546.0,51.3" style="fill: none; stroke: var(--sig); stroke-width: 3"></polyline>
+<line x1="252.5" x2="252.5" y1="14" y2="202" style="stroke: var(--fg); stroke-width: 1.5; stroke-dasharray: 4 4"></line>
+<text x="260.5" y="32" class="lb">Stop here</text><text x="260.5" y="48" class="sm">budget left unspent</text>
+<text x="40" y="222" class="tk">context tokens →</text><text x="46" y="26" class="tk">answer quality</text>
+</svg></div><figcaption class="mono">Illustrative shape, not measured data: the engine stops where the next item adds less than it costs</figcaption></figure>
+
+<div class="code nscode"><div class="ch"><b>Allocation</b><span>simplified</span></div><span class="ln2"> </span><span class="ln2"><span class="k">for</span> item <span class="k">in</span> ranked_by_value_per_token(candidates):</span><span class="ln2">    <span class="k">if</span> marginal_utility(item) &lt; threshold:</span><span class="ln2 add">        <span class="k">break</span>                 <span class="c2"># stop, even with budget left</span></span><span class="ln2">    <span class="k">if</span> item.tokens &gt; budget_left:</span><span class="ln2">        reject(item, <span class="s">"over budget"</span>); <span class="k">continue</span></span><span class="ln2">    pack(item)</span><span class="ln2">reject_rest(reason=<span class="s">"below threshold"</span>)</span></div>
+<h2>“Why not” is as auditable as “why”</h2>
+<p>Every item that was left out is recorded with its reason. When an answer is wrong, the question is usually what the agent didn’t see, and that is now a query rather than a guess.</p>
+<h2>Injection is a boundary, not a filter</h2>
+<p>Untrusted content is scanned and dropped rather than cleaned up, and low-trust sources are structurally barred from the instruction band. That rule is enforced in code and again by a database constraint, so a bug in one layer doesn’t open the door.</p>
+<figure class="nfig"><div class="nviz"><div class="vc"><div class="bad2"><span class="mono">Filter approach</span><p>Clean up suspicious text, then pass it along with everything else. One missed pattern and it reaches the instructions.</p></div><div class="good"><span class="mono">Boundary approach</span><p>Low-trust sources can never enter the instruction band. Enforced in code, and again by a database CHECK constraint.</p></div></div></div><figcaption class="mono">Two ways to handle prompt injection; the engine uses the second</figcaption></figure>
+
+<h2>It never hard-fails</h2>
+<p>An LLM summary degrades to a deterministic extract, embeddings degrade to lexical similarity, and a timeout returns a valid fallback instead of an error.</p>
+<h2>A learning loop that can’t approve itself</h2>
+<p>Every compose is content-addressed and snapshot-backed, so it replays byte for byte. The engine proposes its own policy changes from measured evidence, and is structurally forbidden from applying them. A person approves, and reverting is one click. Before it trusts its own measurements, it calibrates its LLM judge against human labels.</p>
+<p class="nclose">Leaving budget unspent looks like waste. It is the cheapest quality improvement I know.</p>
+
+      </article>
+      <div class="byline">
+        <span class="bymark ph" aria-hidden="true"><img src="/_blob/58e3b5c19eeea79cc3b4d443bc5a20a7" alt=""></span>
+        <div><b>Saad Al-Tamari</b><span>Full-stack AI engineer in Amman and co-founder of SKAI Group. I build AI products end to end, from the agents and data underneath to the app people use.</span></div>
+        <a class="btn btn-line" href="About.dc.html">About me</a>
+      </div>
+    </div>
+  </section>
+
+  <a class="nextcase wrap" href="Note-FairMatching.dc.html" style="display: flex; border-top: 1px solid var(--line)">
+    <span><span class="mono muted">Read next · Build note</span><span class="disp" style="display: block; margin-top: 10px">Let the code decide, let the model explain</span></span>
+    <span class="arr" aria-hidden="true"><svg width="22" height="22" viewBox="0 0 16 16"><path d="M1 8h14M9 2l6 6-6 6" style="fill: none; stroke: currentColor; stroke-width: 1.6"></path></svg></span>
+  </a>
+
+  <section id="contact" class="contact">
+    <div class="wrap">
+      <div class="rail sec">
+        <div class="lbl mono"><span class="sq"></span><span>Contact</span></div>
+        <h2 class="cname disp" aria-label="Let's build" onMouseMove="{{pressMove}}" onMouseLeave="{{pressLeave}}">
+          <span class="nw"><sc-for list="{{ctaAll}}" as="l" hint-placeholder-count="11"><span class="pl" aria-hidden="true">{{l.ch}}</span></sc-for></span>
+        </h2>
+        <div class="cgrid">
+          <p>Building something like this, or want me to write about your problem next? One email is enough to start.</p>
+          <div class="clinks">
+            <a class="btn btn-ink" href="https://cal.com/saad-altamari-y0upir/30min" target="_blank" rel="noopener"><svg viewBox="0 0 16 16" aria-hidden="true"><rect x="1.5" y="2.5" width="13" height="12" rx="2" style="fill: none; stroke: currentColor; stroke-width: 1.5"></rect><path d="M1.5 6.5h13M5 1v3M11 1v3" style="fill: none; stroke: currentColor; stroke-width: 1.5"></path></svg><span>Book a 30-min call</span></a>
+            <button type="button" class="btn btn-line" onClick="{copyEmail}" aria-label="Copy email address saadaltamari@gmail.com"><span>{{copyLabel}}</span></button>
+            <a class="btn btn-line" href="{{cvA}}" target="_blank" rel="noopener">Download CV</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer class="foot">
+    <div class="frow2 mono">
+      <span>© 2026 Saad Tamari</span>
+      <a href="Notes.dc.html">← All notes</a>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview": {"width": 1440, "height": 9600}, "accent": {"editor": "color", "default": "#FF5A1F", "options": ["#FF5A1F", "#E5463B", "#3D7BFF", "#19C37D", "#B69CFF"], "section": "Theme"}, "displayFont": {"editor": "enum", "default": "Anybody", "options": ["Anybody", "Archivo", "Bricolage Grotesque"], "section": "Theme"}, "mood": {"editor": "enum", "default": "Paper", "options": ["Paper", "Ember"], "section": "Theme"}}'>
+class Component extends DCLogic {
+  state = { theme: this.readTheme(), menu: false, step: 0, copied: false, time: '' };
+  readTheme() {
+    try { const s = window.localStorage.getItem('st-theme'); if (s === 'dark' || s === 'light') return s; } catch (e) {}
+    try { return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; } catch (e) { return 'light'; }
+  }
+  componentDidMount() { this.tickClock(); this.clock = setInterval(() => this.tickClock(), 20000); this.watchSteps(); }
+  componentWillUnmount() { clearInterval(this.clock); clearTimeout(this.ct); if (this.io) this.io.disconnect(); if (this.raf) cancelAnimationFrame(this.raf); }
+  watchSteps() {
+    try {
+      let ticking = false;
+      const pick = () => {
+        ticking = false;
+        const root = (this.root && this.root.isConnected) ? this.root : document;
+        const steps = [...root.querySelectorAll('.step')];
+        const stage = root.querySelector('.stage');
+        if (!steps.length) return;
+        const vh = window.innerHeight || document.documentElement.clientHeight;
+        let line = vh * 0.5;
+        let stacked = false;
+        try { stacked = window.matchMedia('(max-width: 1024px)').matches; } catch (e) {}
+        if (stacked && stage && getComputedStyle(stage).position === 'sticky') {
+          const sr = stage.getBoundingClientRect();
+          if (sr.bottom > 0 && sr.bottom < vh) line = (sr.bottom + vh) / 2;
+        }
+        let best = 0, bd = Infinity;
+        steps.forEach((s, i) => { const r = s.getBoundingClientRect(); const d = Math.abs(r.top + r.height / 2 - line); if (d < bd) { bd = d; best = i; } });
+        const i = Number(steps[best].getAttribute('data-i'));
+        if (!isNaN(i) && i !== this.state.step) this.setState({ step: i });
+      };
+      const on = () => { if (!ticking) { ticking = true; requestAnimationFrame(pick); } };
+      document.addEventListener('scroll', on, { passive: true, capture: true });
+      window.addEventListener('resize', on);
+      this.io = { disconnect: () => { document.removeEventListener('scroll', on, { capture: true }); window.removeEventListener('resize', on); } };
+      pick();
+    } catch (e) {}
+  }
+  tickClock() {
+    try { this.setState({ time: new Intl.DateTimeFormat('en-GB', { timeZone: 'Asia/Amman', hour: '2-digit', minute: '2-digit', hour12: false }).format(new Date()) }); } catch (e) {}
+  }
+  setRoot = (el) => { this.root = el; };
+  toggleTheme = (e) => {
+    const next = this.state.theme === 'dark' ? 'light' : 'dark';
+    try { window.localStorage.setItem('st-theme', next); } catch (err) {}
+    const apply = () => { const root = this.root || document.querySelector('.site'); if (root) root.classList.toggle('t-dark', next === 'dark'); };
+    let reduce = false;
+    try { reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches; } catch (err) {}
+    if (document.startViewTransition && !reduce && e && typeof e.clientX === 'number') {
+      const x = e.clientX, y = e.clientY;
+      const r = Math.hypot(Math.max(x, window.innerWidth - x), Math.max(y, window.innerHeight - y));
+      try {
+        const t = document.startViewTransition(apply);
+        t.ready.then(() => { document.documentElement.animate({ clipPath: ['circle(0px at ' + x + 'px ' + y + 'px)', 'circle(' + r + 'px at ' + x + 'px ' + y + 'px)'] }, { duration: 650, easing: 'cubic-bezier(.7,0,.2,1)', pseudoElement: '::view-transition-new(root)' }); }).catch(() => {});
+        t.finished.then(() => this.setState({ theme: next }), () => this.setState({ theme: next }));
+        return;
+      } catch (err) {}
+    }
+    apply(); this.setState({ theme: next });
+  };
+  toggleMenu = () => this.setState((p) => ({ menu: !p.menu }));
+  closeMenu = () => this.setState({ menu: false });
+  pressMove = (e) => {
+    this.pbox = e.currentTarget; this.px = e.clientX; this.py = e.clientY;
+    if (this.raf) return;
+    this.raf = requestAnimationFrame(() => {
+      this.raf = 0; const box = this.pbox; if (!box) return;
+      const R = Math.max(80, box.getBoundingClientRect().width * 0.2);
+      box.querySelectorAll('.pl').forEach((s) => {
+        const r = s.getBoundingClientRect();
+        const t = Math.max(0, 1 - Math.hypot(this.px - (r.left + r.width / 2), (this.py - (r.top + r.height / 2)) * 0.8) / R);
+        s.style.fontVariationSettings = "'wdth' " + Math.round(50 + t * 72) + ", 'wght' " + Math.round(240 + t * 660); if (box.classList.contains('cname')) s.style.transform = 'scale(' + (0.92 + t * 0.2).toFixed(3) + ')';
+      });
+    });
+  };
+  pressLeave = (e) => { const box = e.currentTarget; this.pbox = null; if (this.raf) { cancelAnimationFrame(this.raf); this.raf = 0; } box.querySelectorAll('.pl').forEach((s) => { s.style.fontVariationSettings = ''; s.style.transform = ''; }); };
+  copyEmail = () => {
+    const done = () => { this.setState({ copied: true }); clearTimeout(this.ct); this.ct = setTimeout(() => this.setState({ copied: false }), 2200); };
+    try { navigator.clipboard.writeText('saadaltamari@gmail.com').then(done, () => {}); } catch (e) {}
+  };
+  renderVals() {
+    const s = this.state;
+    const mk = (str) => str.split('').map((ch) => ({ ch: ch }));
+    const out = {};
+    for (let i = 0; i < 4; i++) { out['s' + i] = s.step === i; out['sc' + i] = 'step' + (s.step === i ? ' on' : ''); }
+    const dark = s.theme === 'dark';
+    return Object.assign(out, {
+      siteCls: 'site' + (dark || this.props.mood === 'Ember' ? ' t-dark' : '') + (this.props.mood === 'Ember' ? ' m-ember' : '') + (s.menu ? ' menu-open' : ''),
+      setRoot: this.setRoot, isDark: dark, isLight: !dark,
+      themeLabel: dark ? 'Switch to light mode' : 'Switch to dark mode',
+      toggleTheme: this.toggleTheme, toggleMenu: this.toggleMenu, closeMenu: this.closeMenu,
+      menuExp: s.menu ? 'true' : 'false', menuHidden: s.menu ? 'false' : 'true',
+      menuLabel: s.menu ? 'Close menu' : 'Open menu', menuPath: s.menu ? 'M6 6l12 12M18 6L6 18' : 'M4 8h16M4 16h16',
+      time: s.time || '--:--',
+      ctaAll: mk("LET'S BUILD"),
+      cvA: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/f7f37eb38bce1c4eab8e0bea5214dea4'; })(), cvT: (() => { let o = ''; try { o = window.location.origin; } catch (e) {} return (o && o !== 'null' ? o : '') + '/_blob/befad928a1065a524caf917c104e529f'; })(),
+      accent: (/^#[0-9a-fA-F]{6}$/.test(this.props.accent || '') && !(this.props.mood === 'Ember' && String(this.props.accent).toUpperCase() === '#FF5A1F')) ? this.props.accent : (this.props.mood === 'Ember' ? '#E5463B' : '#FF5A1F'),
+      fontD: ({ 'Archivo': "'Archivo'", 'Bricolage Grotesque': "'Bricolage Grotesque'" })[this.props.displayFont] || "'Anybody'",
+      fontZ: this.props.displayFont === 'Archivo' ? '0.86' : '1',
+      copyLabel: s.copied ? 'Copied to clipboard' : 'Copy email',
+      copyEmail: this.copyEmail, pressMove: this.pressMove, pressLeave: this.pressLeave
+    });
+  }
+}
+</script>
+</body>
+</html>
