@@ -229,6 +229,7 @@ def main():
             '<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">',
             f'<meta name="description" content="{e(desc)}">',
             '<meta name="author" content="Saad Tamari">',
+            '<meta name="msvalidate.01" content="DAE7C7DDD865BD4352E0B73989D57F77">',
             '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">',
             f'<link rel="canonical" href="{url}">',
             '<meta name="theme-color" content="#EFEDE7" media="(prefers-color-scheme: light)">',
